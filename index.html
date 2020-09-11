@@ -455,7 +455,6 @@ a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, bo
 <p data-ym-display="block" data-ym-margin-top="1rem">… Surtout que le langage de requête <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer" href="https://www.w3.org/TR/xpath-31/" title="aller sur la page XML Path Language (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">XML Path Language</a> localise les nœuds.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">Avec le paquet <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer" href="https://www.npmjs.com/package/xpath" title="aller sur la page du paquet xpath (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">xpath</a> dans <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer" href="https://nodejs.org/en/" title="aller sur le site Node.js (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">Node.js</a>, la syntaxe pour identifier ces nœuds s’écrit…</p>
 <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
-
 var prefixDataAttributes = 'data-ym-';
 var nodesYm = xpath.select('//@*[starts-with(name(), "' +  prefixDataAttributes.slice(0, -1) + '")]', doc);</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">En JavaScript, la syntaxe pour identifier ces nœuds s’écrit…</p>
@@ -463,7 +462,6 @@ var nodesYm = xpath.select('//@*[starts-with(name(), "' +  prefixDataAttributes.
 var prefixDataAttributes = 'data-ym-';
 var nodesYm = document.evaluate('//@*[starts-with(name(), "' +  prefixDataAttributes.slice(0, -1) + '")]', document, null, XPathResult.ANY_TYPE, null);</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">La méthode <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer" href="https://developer.mozilla.org/en-US/docs/Web/API/XPathResult/iterateNext" title="lire la documentation à propos de XPathResult.iterateNext() (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">iterateNext()</a> effectue une itération sur chaque nœud.</p>
-
 <p data-ym-display="block" data-ym-margin-top="1rem">En <abbr title="Hypertext Preprocessor">Php</abbr>, la syntaxe pour identifier ces nœuds s’écrit…</p>
 <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 $prefixDataAttributes = 'data-ym-';
@@ -474,7 +472,6 @@ $nodesYm = $xpath->query('//@*[starts-with(name(), "'.substr($prefixDataAttribut
 var tags = document.evaluate('//*', document, null, XPathResult.ANY_TYPE, null);</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">Pour identifier uniquement les balises comportant l'attribut <em>data-ym-</em>, la requête devient…</p>
 <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
-
 var prefixDataAttributes = 'data-ym-';
 var tags = document.evaluate('//*[starts-with(name(@*), "' +  prefixDataAttributes.slice(0, -1) + '")]', document, null, XPathResult.ANY_TYPE, null);</pre>
 <h3 data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--x) * 1rem)" data-ym-margin-top="1rem">Paquet node.js</h3>
