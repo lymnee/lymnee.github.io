@@ -2,7 +2,7 @@
 
 > Attributs de données avec… classe.
 
-> Documentation à propos de [Lymnee](https://github.com/lymnee/lymnee-css) : cette méthode recourt aux attributs de données afin que le code <abbr title="Cascading Styles Sheets">Css</abbr> soit facile à concevoir et à maintenir. Trois librairies sont disponibles pour exploiter cette syntaxe.
+> Documentation à propos de [Lymnee](https://github.com/lymnee/lymnee) : cette méthode recourt aux attributs de données afin que le code <abbr title="Cascading Styles Sheets">Css</abbr> soit facile à concevoir et à maintenir. Trois librairies sont disponibles pour exploiter cette syntaxe.
 
 > Css, Html, JavaScript, Node.js, Php, XPath
 
