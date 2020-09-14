@@ -71,7 +71,7 @@ pre {
     <div data-ym-background="var(--svg-equal) no-repeat" data-ym-filter="var(--red-filter)" data-ym-height="5rem" data-ym-width="5rem"></div>
     <h1 data-ym-color="var(--primary-color)" data-ym-font-size="calc(var(--xxx) * 1rem)" data-ym-font-variant="small-caps" data-ym-font-weight="var(--font-weight-bold)">Lymnee</h1>
 </div>
-<p data-ym-display="block" data-ym-font-size="calc(var(--x) * 1rem)" data-ym-margin-top="1rem"><strong><em>Attributs de données avec… style.</em></strong></p>
+<p data-ym-color="var(--primary-color)::before || var(--primary-color)::after" data-ym-content="'‟ '::before || '”'::after" data-ym-display="inline-block::before || inline-block::after || block" data-ym-font-size="calc(var(--x) * 1rem)" data-ym-margin-top="1rem"><strong>Attributs de données avec<span data-ym-color="var(--primary-color)">…</span> style.</strong></p>
 <nav id="toc" data-ym-display="block || flex@media screen and (min-width: 1024px)" data-ym-align-items="end@media screen and (min-width: 1024px)" data-ym-flex-direction="column@media screen and (min-width: 1024px)">
 </nav>
 <p data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--xx) * 1rem)" data-ym-margin-top="1rem">&#x3c;details&#x3e;</p>
@@ -481,7 +481,7 @@ var tags = document.evaluate('//*', document, null, XPathResult.ANY_TYPE, null);
 var prefixDataAttributes = 'data-ym-';
 var tags = document.evaluate('//*[starts-with(name(@*), "' +  prefixDataAttributes.slice(0, -1) + '")]', document, null, XPathResult.ANY_TYPE, null);</pre>
 <h3 data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--x) * 1rem)" data-ym-margin-top="1rem">Paquet node.js</h3>
-<p data-ym-display="block" data-ym-margin-top="1rem">Au préalable, le script doit être installé&#x202f;: <kbd data-ym-hyphens="none">npm install -g lymnee.js</kbd>. Lors du processsus d’installation, les dépendances sont ajoutées.</p>
+<p data-ym-display="block" data-ym-margin-top="1rem">Au préalable, le script doit être installé&#x202f;: <kbd data-ym-hyphens="none">npm install -g lymnee.js</kbd>. Lors du processus d’installation, les dépendances sont ajoutées.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">Le code-source de <a data-ym-color="var(--opposite-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer" href="https://github.com/lymnee/lymnee/blob/master/lymnee.js" title="consulter le fichier lymnee.js (S’ouvre dans une nouvelle fenêtre)" target="_blank"><em>lymnee.js</em></a> est disponible.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">Le script s’exécute avec la commande <kbd data-ym-hyphens="none">node lymnee.js</kbd>. Dans ce cas, elle est utilisée sans paramètre.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">Sont recherchés par défaut les fichiers au format <abbr title="Hypertext Markup Language">Html</abbr> dans le répertoire courant et les sous-répertoires. Les <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" title="lire l’article Using data attributes (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">attributs de données</a> sous la forme <em>data-ym-</em> sont traités. Une feuille de style intitulée <em>lymnee.css</em> est produite dans le même répertoire que <em>lymnee.js</em>. Elle n’est pas compressée (elle est facile à lire par un humain).</p>
@@ -595,11 +595,11 @@ var entries = document.querySelectorAll('h2, h3, h4, h5, h6');
 
 var tocOutput = '\n';
 
-tocOutput += '<div data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--xx) * 1rem)" data-ym-margin-top="1rem">';
+tocOutput += '<p data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--xx) * 1rem)" data-ym-margin-top="1rem">';
 
 tocOutput += 'Sommaire';
 
-tocOutput += '</div>';
+tocOutput += '</p>';
 
 tocOutput += '\n';
 
