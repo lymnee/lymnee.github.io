@@ -491,6 +491,7 @@ var tags = document.evaluate('//*[starts-with(name(@*), "' +  prefixDataAttribut
 <dl>
     <dt data-ym-display="block" data-ym-margin-top="1rem"><mark data-ym-hyphens="none">cssNameFile</mark></dt>
     <dd data-ym-display="block">C’est le nom du fichier au format <abbr title="Cascading Styles Sheets">Css</abbr> à écrire. Par exemple, <em>style</em> produira <em>style.css</em>.</dd>
+    <dd>Le fichier est écrit dans le répertoire défini avec le paramètre <code>path</code> ou, à défaut, dans le répertoire courant.</dd>
     <dt data-ym-display="block" data-ym-margin-top="1rem"><mark data-ym-hyphens="none">excludeDirectories</mark></dt>
     <dd data-ym-display="block">Un sous-répertoire peut être exclu de la recherche en indiquant son chemin relatif. Par exemple <em>a/b/c</em> voire, s’il y en a plusieurs, <em>a/b/c,d/</em> ou <em>a/b/c, d/</em>. Dans le paramètre, les virgules peuvent être suivies d’une espace.</dd>
     <dt data-ym-display="block" data-ym-margin-top="1rem"><mark data-ym-hyphens="none">excludeFiles</mark></dt>
@@ -551,11 +552,13 @@ var tags = document.evaluate('//*[starts-with(name(@*), "' +  prefixDataAttribut
     <dt data-ym-display="block" data-ym-margin-top="1rem"><mark data-ym-hyphens="none">reset</mark></dt>
     <dd data-ym-display="block">Avec la valeur <em>lymnee</em> sont réinitialisés les styles par défaut des navigateurs des éléments qui reçoivent l’attribut <em>data-ym-</em> ou un espace de nom équivalent. Avec la valeur <em>all</em> sont réinitialisés les styles par défaut des navigateurs de <span data-ym-font-weight="var(--font-weight-bold)">tous</span> les éléments visibles. Par exemple, la balise <code data-ym-hyphens="none">&#x3c;head&#x3e;</code> n’est pas modifiée. Dans les deux cas, en raison de la cascade, la réinitialisation s’affiche avant les autres règles. Si le paramètre est omis ou vaut <em>none</em>, aucune réinitialisation n’est proposée.</dd>
     <dt data-ym-display="block" data-ym-margin-top="1rem"><mark data-ym-hyphens="none">uncompress</mark></dt>
-    <dd data-ym-display="block">La valeur <em>false</em> produit un code <abbr title="Cascading Styles Sheets">Css</abbr> compressé, c’est-à-dire sans saut de ligne et espace inutile.</dd>
+    <dd data-ym-display="block">La valeur <em>false</em> produit un code <abbr title="Cascading Styles Sheets">Css</abbr> compressé, c’est-à-dire sans saut de ligne et espace inutile. Il est toujours judicieux d’économiser de la bande passante, même quelques octets,  en production&#x202f;!</dd>
 </dl>
 <h3 data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--x) * 1rem)" data-ym-margin-top="1rem">Limitations</h3>
 <h4 data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--xs) * 1rem)" data-ym-margin-top="1rem">Attributs</h4>
-<p data-ym-display="block" data-ym-margin-top="1rem">La création d’<a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" title="lire l’article Using data attributes (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">attributs de données</a> supplémentaires avec JavaScript ou <abbr title="Cascading Styles Sheets">Css</abbr> nécessite de ne pas utiliser le préfixe <em>data-ym-</em> ou un espace de nom équivalent afin d’éviter leur localisation par <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer" href="https://www.w3.org/TR/xpath-31/" title="aller sur la page XML Path Language (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">XML Path Language</a>.</p>
+
+<p data-ym-display="block" data-ym-margin-top="1rem">Avec le paquet <a data-ym-color="var(--opposite-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer" href="https://github.com/lymnee/lymnee/blob/master/lymnee.js" title="consulter le fichier lymnee.js (S’ouvre dans une nouvelle fenêtre)" target="_blank"><em>lymnee.js</em> sous <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer" href="https://nodejs.org/en/" title="aller sur le site Node.js (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">Node.js</a>, la création d’<a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" title="lire l’article Using data attributes (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">attributs de données</a> supplémentaires avec JavaScript ou <abbr title="Cascading Styles Sheets">Css</abbr> nécessite de ne pas utiliser le préfixe <em>data-ym-</em> ou un espace de nom équivalent afin d’éviter leur localisation par <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer" href="https://www.w3.org/TR/xpath-31/" title="aller sur la page XML Path Language (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">XML Path Language</a>.</p>
+<p data-ym-display="block" data-ym-margin-top="1rem">A contrario, le script <abbr title="Hypertext Preprocessor" data-my-font-variant="small-caps">Php</abbr> et les fichiers en JavaScript ne reconnaissent pas les <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" title="lire l’article Using data attributes (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">attributs de données</a> contenus dans le code JavaScript.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">L’usage des entités au format décimal ou hexadécimal est impossible dans un attribut. Par exemple, ne fonctionne pas…</p>
 <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;ul data-my-list-style-type="&#x27;\1F34E&#x27;"&#x3e;
@@ -583,7 +586,7 @@ document.querySelector('#bar').dataset.ymColor = '';</pre>
     <li data-ym-color="var(--primary-color)::marker" data-ym-display="list-item">Les tabulations des <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" title="lire l’article Using data attributes (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">attributs de données</a> les plus complexes sont incorrectes quand le code <abbr title="Cascading Styles Sheets">Css</abbr> n’est pas compressé.</li>
     <li data-ym-color="var(--primary-color)::marker" data-ym-display="list-item">Les règles de style pour imprimer la présente page ne sont pas disponibles.</li>
 </ul>
-<p data-ym-display="block" data-ym-margin-top="1rem">Document à parfaire mis à jour le 16 septembre 2020.</p>
+<p data-ym-display="block" data-ym-margin-top="1rem">Document à parfaire mis à jour le 18 septembre 2020.</p>
 <p data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--xx) * 1rem)" data-ym-margin-top="1rem">&#x3c;/details&#x3e;</p>
 <script>
 
@@ -1273,6 +1276,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
     displayAcronyms();
 
 });
+
+/* supprimer id sur styles et unifier. */
+
+/*console.log('In the beginning God created the heaven and the earth. Genesis 1:1')
+
+console.log('Au commencement, Dieu créa les cieux et la terre. Genèse 1:1');
+
+console.log(' ');
+
+console.log(cssOutput);
+
+var style = document.createElement('style');
+
+style.innerHTML = cssOutput;
+
+document.head.insertBefore(style, document.querySelector('#current'));
+
+displayAcronyms();*/
 </script>
 </body>
 </html>
