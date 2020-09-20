@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Lymnee recourt aux attributs de données pour styler un contenu Web.">
+<meta name="keywords" content="Html, Css, JavaScript">
+<meta name="author" content="Vincent Top-Roulet">
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAw0lEQVR42u3cUQ3CQBBF0VeCDIzUCCKLEIzgA1zMtrxzDEwmuV+TzSYAAAAAAAAAAAAAAAAAAAAAAAAAAMB629Sgb/JIsq9e+CLeW/KZGHQfXGpPcgzOu7JnktfEoNvqTVlLAOUEUE4A5QRQTgDlBFBOAOUEUM4p+JzGTsEAAAAAAAAAAADAf/Ao9Jz8D1DO/wDMEEA5AZQTQDkBlBNAOQGUE0A5AZRzCj4n/wMAAAAAAAAAAAAAAAAAAAAAAAAAAECVH8wQD/l56TphAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIwLTA4LTE0VDIyOjE5OjUzKzAwOjAwkwttpgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMC0wOC0xNFQyMjoxOTo1MyswMDowMOJW1RoAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC">
 <title>Lymnee</title>
 </head>
@@ -519,12 +522,8 @@ var tags = document.evaluate('//*[starts-with(name(@*), "' +  prefixDataAttribut
     <dt data-ym-display="block" data-ym-margin-top="1rem"><mark data-ym-hyphens="none">reset</mark></dt>
     <dd data-ym-display="block">Avec la valeur <span class="ym-emphasis">lymnee</span> sont réinitialisés les styles par défaut des navigateurs des éléments qui reçoivent l’attribut <span class="ym-emphasis">data-ym-</span> ou un espace de nom équivalent. Avec la valeur <span class="ym-emphasis">all</span> sont réinitialisés les styles par défaut des navigateurs de <span data-ym-font-weight="var(--font-weight-bold)">tous</span> les éléments visibles. Par exemple, la balise <code data-ym-hyphens="none">&#x3c;head&#x3e;</code> n’est pas modifiée. Dans les deux cas, en raison de la cascade, la réinitialisation s’affiche avant les autres règles. Si le paramètre est omis ou vaut <span class="ym-emphasis">none</span>, aucune réinitialisation n’est proposée.</dd>
 </dl>
-
-
 <p data-ym-display="block" data-ym-margin-top="1rem">Du code <abbr title="Cascading Styles Sheets">Css</abbr> peut être ajouté avant et après <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" title="lire l’article Using data attributes (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">attributs de données</a> qui respectent la syntaxe <span data-ym-color="var(--primary-color)" data-ym-font-variant="small-caps" data-ym-font-weight="var(--font-weight-bold)">Lymnee</span> avec les variables <code>cssAfter</code> et <code>cssBefore</code> (noter l’encadrement du code par les caractères <code>&#x60;</code>&#x202f;: il autorise l’usage des guillemets simples ou doubles).</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">L’avantage d’injecter ainsi le code <abbr title="Cascading Styles Sheets">Css</abbr> est de permettre aux navigateurs dont JavaScript est désactivé de servir le contenu avec les styles par défaut&#x202f;: il reste accessible. De même, le contenu reste visible durant l’exécution du script qui mettra définitivement en forme la page.</p>
-
-
 <p data-ym-display="block" data-ym-margin-top="1rem">Les caractères dans le code <abbr title="Cascading Styles Sheets">Css</abbr> incorporé à JavaScript doivent être échappés. Ainsi…</p>
 <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 em::before {
@@ -575,7 +574,7 @@ document.querySelector('#bar').dataset.ymColor = '';</pre>
     <li data-ym-color="var(--primary-color)::marker" data-ym-display="list-item">Les tabulations des <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" title="lire l’article Using data attributes (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">attributs de données</a> les plus complexes sont incorrectes quand le code <abbr title="Cascading Styles Sheets">Css</abbr> n’est pas compressé.</li>
     <li data-ym-color="var(--primary-color)::marker" data-ym-display="list-item">Les règles de style pour imprimer la présente page ne sont pas disponibles.</li>
 </ul>
-<p data-ym-display="block" data-ym-margin-top="1rem">Document à parfaire mis à jour le 20 septembre 2020.</p>
+<p data-ym-display="block" data-ym-margin-top="1rem">Document à parfaire mis à jour le 21 septembre 2020.</p>
 <p data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--xx) * 1rem)" data-ym-margin-top="1rem">&#x3c;/details&#x3e;</p>
 <script>
 
