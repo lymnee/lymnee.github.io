@@ -515,6 +515,10 @@ var tags = document.evaluate('//*[starts-with(name(@*), "' +  prefixDataAttribut
     <li data-ym-color="var(--primary-color)::marker" data-ym-display="list-item"><a data-ym-color="var(--opposite-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://github.com/lymnee/lymnee/blob/master/lymnee.live.js" title="consulter le fichier lymnee.live.js (S’ouvre dans une nouvelle fenêtre)" target="_blank"><span class="ym-emphasis">lymnee.live.js</span></a>&#x202f;;</li>
     <li data-ym-color="var(--primary-color)::marker" data-ym-display="list-item"><a data-ym-color="var(--opposite-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://github.com/lymnee/lymnee/blob/master/lymnee.live.min.js" title="consulter le fichier lymnee.live.min.js (S’ouvre dans une nouvelle fenêtre)" target="_blank"><span class="ym-emphasis">lymnee.live.min.js</span></a>, qui est compressé.</li>
 </ul>
+<p data-ym-display="block" data-ym-margin-top="1rem">Une version distante, accessible à l’<abbr title="Uniform Resource Locator">Url</abbr> <span class="ym-emphasis">https://cdn.jsdelivr.net/gh/lymnee/lymnee/lymnee.live.min.js</span>, est utilisable en production…</p>
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+&#x3c;script src="https://cdn.jsdelivr.net/gh/lymnee/lymnee/lymnee.live.min.js"&#x3e;&#x3c;/script&#x3e;
+</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">Doivent être définies au préalable les variables…</p>
 <dl>
     <dt data-ym-display="block" data-ym-margin-top="1rem"><mark data-ym-hyphens="none">prefixDataAttributes</mark></dt>
@@ -542,7 +546,15 @@ kbd::before {
 }
 </pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">Les caractères Unicode compris entre 0 et 255 doivent être échappés avec le préfixe <code>\x</code>. Les caractères Unicode compris entre 0 et 65&#x202f;535 doivent être échappés avec le préfixe <code>\u</code>. Sous <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="http://es6-features.org/" title="aller sur le site ECMAScript 6 (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">Ecma 6</a>, il est loisible d’écrire <code>\u{7B}\u{202F}</code>. L’article <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://riptutorial.com/javascript/example/19374/escape-sequence-types" title="lire l’article Escape sequence types (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en"><span class="ym-emphasis">Escape sequence types</span></a> constitue une précieuse documentation.</p>
-<p data-ym-display="block" data-ym-margin-top="1rem">Variables et codes peuvent être déclarés dans le script lui-même ou avant d’inclure le fichier.</p>
+<p data-ym-display="block" data-ym-margin-top="1rem">Variables et code peuvent être déclarés dans le script lui-même ou avant d’inclure le fichier, par exemple si la version distante est utilisée…</p>
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+&#x3c;script&#x3e;
+    var cssBefore = ``;
+    var cssAfter = ``;
+    var prefixDataAttributes = 'data-my-';
+&#x3c;/script&#x3e;
+&#x3c;script src="https://cdn.jsdelivr.net/gh/lymnee/lymnee/lymnee.live.min.js"&#x3e;&#x3c;/script&#x3e;
+</pre>
 <h3 data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--x) * 1rem)" data-ym-margin-top="1rem">Limitations</h3>
 <h4 data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--xs) * 1rem)" data-ym-margin-top="1rem">Attributs</h4>
 <p data-ym-display="block" data-ym-margin-top="1rem">Avec le paquet <a data-ym-color="var(--opposite-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://github.com/lymnee/lymnee/blob/master/lymnee.js" title="consulter le fichier lymnee.js (S’ouvre dans une nouvelle fenêtre)" target="_blank"><span class="ym-emphasis">lymnee.js</span></a> sous <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://nodejs.org/en/" title="aller sur le site Node.js (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">Node.js</a>, la création d’<a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" title="lire l’article Using data attributes (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">attributs de données</a> supplémentaires avec JavaScript ou <abbr title="Cascading Styles Sheets">Css</abbr> nécessite de ne pas utiliser le préfixe <span class="ym-emphasis">data-ym-</span> ou un espace de nom équivalent afin d’éviter leur localisation par <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://www.w3.org/TR/xpath-31/" title="aller sur la page XML Path Language (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">XML Path Language</a>.</p>
