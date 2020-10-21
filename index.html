@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" data-ym-color="var(--text-color)@media screen || #000@media print" data-ym-font-family="sans-serif@media screen || serif@media print" data-ym-font-size="large || medium@media screen and (min-width: 768px) || 12pt@media print" data-ym-font-weight="var(--font-weight-regular)" data-ym-line-height="var(--xs)@media screen || normal@media print" data-ym-margin="auto" data-ym-width="95%" data-ym-max-width="1024px@media screen and (min-width: 1024px)">
+<html lang="fr" data-ym-color="var(--text-color)" data-ym-font-family="sans-serif@media screen || serif@media print" data-ym-font-size="large || medium@media screen and (min-width: 768px) || 12pt@media print" data-ym-font-weight="var(--font-weight-regular)" data-ym-line-height="var(--xs)" data-ym-margin="auto" data-ym-width="95%" data-ym-max-width="1024px@media screen and (min-width: 1024px)">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,7 +32,7 @@
 <div data-ym-color="var(--opposite-color)" data-ym-display="block" data-ym-font-size="calc(var(--xx) * 1rem)@media screen || var(--xx-print)@media print" data-ym-margin-top="1rem" data-ym-page-break-after="avoid@print">&#x3c;/summary&#x3e;</div>
 <h2 data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--xx) * 1rem)@media screen || var(--xx-print)@media print" data-ym-margin-top="1rem"  data-ym-page-break-after="avoid@print">Prolégomènes</h2>
 <p data-ym-display="block" data-ym-margin-top="1rem">Écrivons trois lignes de <abbr title="Hypertext Markup Language">Html</abbr> et trois classes <abbr title="Cascading Styles Sheets">Css</abbr> correspondantes…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;h1 class="foo"&#x3e;Title&#x3c;/h1&#x3e;
 &#x3c;h2 class="else"&#x3e;Title&#x3c;/h2&#x3e;
 &#x3c;p class="bar"&#x3e;Paragraph&#x3c;/p&#x3e;
@@ -572,11 +572,11 @@ kbd::before {
 <p data-ym-display="block" data-ym-margin-top="1rem"> <span class="ym-emphasis">A contrario</span>, le script <abbr title="Hypertext Preprocessor" data-my-font-variant="small-caps">Php</abbr> et les fichiers en JavaScript ne reconnaissent pas les <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" title="lire l’article Using data attributes (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">attributs de données</a> contenus dans le code JavaScript.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">L’usage des entités au format décimal ou hexadécimal est impossible dans un attribut. Par exemple, ne fonctionne pas…</p>
 <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
-&#x3c;ul data-my-list-style-type="&#x27;\1F34E&#x27;"&#x3e;
-&#x3c;!-- &#x3c;ul data-my-list-style-type="&#x27;\1F34E&#x27;"&#x3e; --&#x3e;</pre>
+&#x3c;ul data-my-list-style-type="&#x27;\266B&#x27;"&#x3e;
+&#x3c;!-- &#x3c;ul data-my-list-style-type="&#x27;\266B&#x27;"&#x3e; --&#x3e;</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">… Contrairement à…</p>
 <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
-&#x3c;ul data-my-list-style-type="&#x27;🍎&#x27;"&#x3e;</pre>
+&#x3c;ul data-my-list-style-type="&#x27;♫&#x27;"&#x3e;</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">Noter que le symbole littéral est encadré par des guillemets simples droits, <code data-ym-hyphens="none">&#x27;</code>.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">Les espaces ne sont pas pris en compte, par exemple <code>data-ym-content="' ”'::after</code>. En pareil cas, la création d’une règle s’impose.</p>
 <h4 data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--xs) * 1rem)" data-ym-margin-top="1rem" data-ym-page-break-after="avoid@print">Pseudo-classes</h4>
@@ -596,11 +596,11 @@ document.querySelector('#bar').dataset.ymColor = '';</pre>
 <ul data-ym-display="block" data-ym-list-style-position="inside" data-ym-list-style-type="circle" data-ym-margin-top="1rem">
     <li data-ym-color="var(--primary-color)::marker" data-ym-display="list-item">Les tabulations des <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" title="lire l’article Using data attributes (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">attributs de données</a> les plus complexes sont incorrectes quand le code <abbr title="Cascading Styles Sheets">Css</abbr> n’est pas compressé.</li>
     <li data-ym-color="var(--primary-color)::marker" data-ym-display="list-item" ><span data-ym-text-decoration="line-through">Le tri est imparfait quand les sélecteurs sont identiques&#x202f;: les valeurs ne sont pas ordonnées.</span></li>
-    <li data-ym-color="var(--primary-color)::marker" data-ym-display="list-item"><span data-ym-text-decoration="line-through">Les règles de style pour imprimer la présente page ne sont pas disponibles.</span></li>
+    <li data-ym-color="var(--primary-color)::marker" data-ym-display="list-item"><span data-ym-text-decoration="line-through">Les règles de style pour imprimer la présente page ne sont pas disponibles&#x202f;:un document <abbr title="Portable Document Format">Pdf</abbr> généré avec <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://www.princexml.com/" title="accéder au site Prince - Convert HTML to PDF with CSS (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">Prince - Convert HTML to PDF with CSS</a> est idéal.</span></li>
 </ul>
 <p data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--xx) * 1rem)@media screen || var(--xx-print)@media print" data-ym-margin-top="1rem" data-ym-page-break-after="avoid@print">&#x3c;/details&#x3e;</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">Contact, &#108;&#121;&#109;&#110;&#110;&#101;&#101;&#64;&#111;&#117;&#116;&#108;&#111;&#107;&#46;&#102;&#114;.</p>
-<p data-ym-display="block" data-ym-margin-top="1rem">Document à parfaire mis à jour le 13 octobre 2020.</p>
+<p data-ym-display="block" data-ym-margin-top="1rem">Document à parfaire mis à jour le 21 octobre 2020.</p>
 <script>
 /*
     Gestion des acronymes.
@@ -804,11 +804,27 @@ cssBefore = `
     --ssssssss: calc(var(--scale) / var(--scale) / var(--scale) / var(--scale) / var(--scale) / var(--scale) / var(--scale) / var(--scale));
     --red-filter: invert(13%) sepia(92%) saturate(7286%) hue-rotate(0deg) brightness(94%) contrast(117%);
     --svg-equal: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%2300000' d='M19,10H5V8H19V10M19,16H5V14H19V16Z' /></svg>");
-    /* 2020/10/13 ~ Prince Xml doesn't support calc() on font-size. */
+    /* 2020/10/13 ~ Prince Xml doesn't support calc(). */
     --x-print: 1.41421356237rem;
     --xx-print: 2rem;
     --xxx-print: 2.82842712475rem;
     --xs-print: 1.41421356237rem;
+    --ssssssss-print: 0.3125rem
+    /* --ssssssss-print: 0.015625rem */
+}
+@media print {
+    @font-face {
+        font-family: serif;
+        font-style: normal;
+        font-weight: normal;
+        src: url("fonts/DejaVuSerif.ttf")
+    }
+@font-face {
+        font-family: serif;
+        font-style: normal;
+        font-weight: 600;
+        src: url("fonts/DejaVuSerif-Bold.ttf")
+    }
 }
 `;
 
