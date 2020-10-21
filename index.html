@@ -21,7 +21,7 @@
 <h2 data-ym-color="var(--opposite-color)" data-ym-display="block" data-ym-font-size="calc(var(--xx) * 1rem)@media screen || var(--xx-print)@media print" data-ym-margin-top="1rem" data-ym-page-break-after="avoid@print" title="En résumé…">&#x3c;summary&#x3e;</h2>
 <p data-ym-display="block" data-ym-margin-top="1rem">Les <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" title="lire l’article Using data attributes (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">attributs de données</a> constituent une alternative aux classes <abbr title="Cascading Styles Sheets">Css</abbr> pour mettre en forme une page Web.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">Les <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" title="lire l’article Using data attributes (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">attributs de données</a> sont flexibles&#x202f;: leur valeur peut contenir n’importe quel caractère&#x202f;! Aussi est-il loisible de suivre la grammaire <abbr title="Cascading Styles Sheets">Css</abbr> pour déclarer un couple <span class="ym-emphasis">sélecteur - valeur</span>. Par exemple…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;html data-ym-font-size="medium"&#x3e;</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">… où <span class="ym-emphasis">data-ym-font-size</span> représente un espace de nom suivi du sélecteur.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">Les relations <abbr title="Hypertext Markup Language">Html</abbr> - <abbr title="Cascading Styles Sheets">Css</abbr> deviennent plus faciles à concevoir et à maintenir.</p>
@@ -57,7 +57,7 @@
     <li data-ym-color="var(--primary-color)::marker" data-ym-display="list-item">Comment appliquer le principe <abbr title="Don’t Repeat Yourself">Dry</abbr>, c’est-à-dire factoriser le code afin d’obvier à la redondance&#x202f;?</li>
 </ol>
 <p data-ym-display="block" data-ym-margin-top="1rem">Avec un tri et un code factorisé (manuellement&#x202f;!), nos trois classes s’établissent ainsi…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 .bar { 
     font-size: medium
 }
@@ -73,7 +73,7 @@
     color: red
 }</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">ou…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 .bar,
 .else {
     color: blue
@@ -89,12 +89,12 @@
     font-size: large
 }</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">Avec <span data-ym-color="var(--primary-color)" data-ym-font-variant="small-caps" data-ym-font-weight="var(--font-weight-bold)">Lymnee</span>, nous écrivons…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;h1 data-ym-color="red" data-ym-font-size="large"&#x3e;Title&#x3c;/h1&#x3e;
 &#x3c;h2 data-ym-color="blue" data-ym-font-size="large"&#x3e;Title&#x3c;/h2&#x3e;
 &#x3c;p data-ym-color="blue" data-ym-font-size="medium"&#x3e;Paragraph&#x3c;/p&#x3e;</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">Nous obtenons…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 [data-ym-color="blue"] {
     color: blue
 }
@@ -125,7 +125,7 @@
 <p data-ym-display="block" data-ym-margin-top="1rem">Les préprocesseurs, comme <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://sass-lang.com/" title="aller sur le site Sass: Syntactically Awesome Style Sheets (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">Sass</a> ou <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="http://lesscss.org/" title="aller sur le site BEM — Block Element Modifier (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">Less</a>, visent notamment à rationaliser le code <abbr title="Cascading Styles Sheets">Css</abbr>. Le contenu est souvent divisé en fragments gigognes qui suivent une logique aléatoire. La recherche d’une règle impose de parcourir plusieurs fichiers. Comme la plupart des navigateurs interprète maintenant les <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" title="lire l’article Using CSS custom properties (variables) (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">variables Css</a> [<a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://caniuse.com/#search=variables" title="aller sur le site Can I use…  Support tables for HTML5, CSS3, etc (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">Can I use &#x23; CSS Variables (Custom Properties)</a>] et utilise la fonction (hélas limitée aux opérations arithmétiques traditionnelles&#x202f;!) <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc" title="lire l’article calc (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">Calc</a> [<a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://caniuse.com/#search=calc" title="aller sur le site Can I use…  Support tables for HTML5, CSS3, etc (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">Can I use calc() as CSS unit value</a>], l’intérêt des préprocesseurs est moindre.</p>
 <h3 data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--x) * 1rem)@media screen || var(--x-print)@media print" data-ym-margin-top="1rem" data-ym-page-break-after="avoid@print">D’<span lang="en">Attributes Modules for CSS</span>…</h3>
 <p data-ym-display="block" data-ym-margin-top="1rem">En 2014, Glen Maddern et Ben Schwarz commettent l’article <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://amcss.github.io/" title="lire l’article Attributes Modules for CSS (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en"><span class="ym-emphasis">Attributes Modules for CSS</span></a>. Ils y proposent une syntaxe comme…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;a am-Button="primary large"&#x3e;Large primary button&#x3c;/a&#x3e;
 &#x3c;a am-Button&#x3e;
 &#x3c;a am-Button="info small"&#x3e;
@@ -134,10 +134,10 @@
 <p data-ym-display="block" data-ym-margin-top="1rem">Il s’agit d’un usage des <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" title="lire l’article Using data attributes (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">attributs de données</a>, qui est aussi préconisé par <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="http://oocss.org/" title="aller sur le site Object-Oriented CSS (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">Object-Oriented CSS</a>.</p>
 <h3 data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--x) * 1rem)@media screen || var(--x-print)@media print" data-ym-margin-top="1rem" data-ym-page-break-after="avoid@print">… Via <span lang="en">Atomic CSS</span></h3>
 <p data-ym-display="block" data-ym-margin-top="1rem"><a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://acss.io/" title="aller sur le site Atomic CSS (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">Atomic CSS</a>, conçu par Thierry Koblentz, style directement les composants. Cette méthodologie évite de concevoir des classes difficiles à maintenir. Ainsi, le code <abbr title="Hypertext Markup Language">Html</abbr>…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;div class="D(b) Va(t) Fz(20px)"&#x3e;Hello World!&#x3c;/div&#x3e;</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">… est traduit comme suit en <abbr title="Cascading Styles Sheets">Css</abbr>…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 .D(b) {
     display: block
 }
@@ -154,10 +154,10 @@
     <li data-ym-color="var(--primary-color)::marker" data-ym-display="list-item">Les classes sont difficiles à mémoriser et à relire. Elles s’appuient sur la syntaxe <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://emmet.io" title="aller sur le site Emmet (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">Emmet</a>, dont les abréviations ne sont pas intuitives. <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://emmet.io/" title="aller sur le site Emmet (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">Emmet</a> n’est pas maintenu à jour&#x202f;: ainsi, comment recourir à <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://drafts.csswg.org/css-grid/" title="lire une présentation de Css Grid Layout (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">Css Grid Layout</a>&#x202f;?</li>
     <li data-ym-color="var(--primary-color)::marker" data-ym-display="list-item">L’échappement des caractères spéciaux est pénible&#x202f;!
         <p data-ym-display="block" data-ym-margin-top="1rem">Par exemple, en utilisant les <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries" title="lire l’article Using media queries (S’ouvre dans une nouvelle fenêtre)" target="_blank">Media queries</a>, le code <abbr title="Hypertext Markup Language">Html</abbr>…</p>
-        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;div class="bdrs@large"&#x3e;&#x3c;/div&#x3e;</pre>   
         <p data-ym-display="block" data-ym-margin-top="1rem">… est traduit comme suit en <abbr title="Cascading Styles Sheets">Css</abbr>…</p>
-        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 @media only screen and (min-width: 768px) {
     .bdrs\@large{
         border-radius:.5rem
@@ -189,10 +189,10 @@
 <p data-ym-display="block" data-ym-margin-top="1rem">En revanche, il est commode de styler directement (<span class="ym-emphasis">en dur</span>) les balises qui reçoivent des <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" title="lire la documentation à propos des pseudo-éléments (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">pseudo-éléments</a>, par exemple guillemets ou ornements textuels, si leur apparence dans la page ne varie pas.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">Plutôt que recourir à une librairie comme <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://necolas.github.io/normalize.css/"  title="aller sur le site Normalize.css (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">Normalize.css</a> pour citer la plus connue, l’usage de la propriété raccourcie <code data-ym-hyphens="none">all: unset</code> semble préférable.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">Ainsi…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, body, br, button, canvas, caption, cite, code, col, colgroup, data, datalist, dd, del, details, dfn, dialog, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, head, header, hgroup, hr, html, i, iframe, img, input, ins, kbd, label, legend, li, link, main, map, mark, math, menu, menuitem, meta, meter, nav, noscript, object, ol, optgroup, option, output, p, param, picture, pre, progress, q, rb, rp, rt, rtc, ruby, s, samp, script, section, select, slot, small, source, span, strong, style, sub, summary, sup, svg, table, tbody, td, template, textarea, tfoot, th, thead, time, title, tr, track, u, ul, var, video, wbr</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">… ou, en ne ciblant, que les élements visuels…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, body, br, button, canvas, caption, cite, code, col, colgroup, data, datalist, dd, del, details, dfn, dialog, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, html, i, iframe, img, input, ins, kbd, label, legend, li, main, map, mark, math, menu, menuitem, meter, nav, object, ol, optgroup, option, output, p, param, picture, pre, progress, q, rb, rp, rt, rtc, ruby, s, samp, section, select, slot, small, source, span, strong, sub, summary, sup, svg, table, tbody, td, template, textarea, tfoot, th, thead, time, tr, track, u, ul, var, video, wbr {
     all: unset
 }</pre>
@@ -206,13 +206,13 @@ a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, bo
 <p data-ym-display="block" data-ym-margin-top="1rem">Chaque sélecteur commence par <span class="ym-emphasis">data-ym-</span> ou un espace de nom équivalent. La valeur est encadrée par des guillemets.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">Un attribut s’écrit <code data-ym-hyphens="none">data-ym-selecteur&#x3d;&#x22;valeur&#x22;</code>. La valeur reçoit des guillemets doubles de part et d’autre… <code data-ym-hyphens="none">&#x22;valeur&#x22;</code>. Le sélecteur et la valeur doivent être <span data-ym-font-weight="var(--font-weight-bold)">conformes</span> aux <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://www.w3.org/Style/CSS/specs.en.html" title="lire les spécifications Css (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">spécifications Css</a>.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">Connaissant la syntaxe <abbr title="Cascading Styles Sheets">Css</abbr>…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 .myclass {
     background-color: yellow;
     display: flex
 }</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">… Il est facile d’en déduire par rétroaction les <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" title="lire l’article Using data attributes (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">attributs de données</a> <abbr title="Hypertext Markup Language">Html</abbr>…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;div data-ym-background-color="yellow" data-ym-display="flex"&#x3e;Div&#x3c;/div&#x3e;
 </pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">La syntaxe des <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" title="lire l’article Using data attributes (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">attributs de données</a> utilise les opérateurs booléens&#x202f;: <code data-ym-hyphens="none">&#x202f;&#x7c;&#x7c;&#x202f;</code> (or), <code data-ym-hyphens="none">&#x202f;&#x26;&#x26;&#x202f;</code> (and), <code data-ym-hyphens="none">&#x202f;&#x21;&#x21;&#x202f;</code> (yes). Les booléens, qui s’écrivent de gauche à droite, sont encadrés d’une espace et suivent cet ordre. L’arobase <code data-ym-hyphens="none">&#xff20;</code> spécifie une requête média, comme en <abbr title="Cascading Styles Sheets">Css</abbr>.</p>
@@ -220,18 +220,18 @@ a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, bo
 <dl>
     <dt data-ym-display="block" data-ym-margin-top="1rem" data-ym-font-weight="var(--font-weight-bold)">Attribut simple</dt>
     <dd>
-        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;p data-ym-color="blue"&#x3e;Paragraph&#x3c;/p&#x3e;
 
 [data-ym-color="blue"] {
     color: blue
 }</pre>
         <p data-ym-display="block" data-ym-margin-top="1rem">Une balise peut recevoir un nombre infini d’<a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" title="lire l’article Using data attributes (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">attributs de données</a>…</p>
-        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;p data-ym-color="blue" data-ym-font-size="medium"&#x3e;Paragraph&#x3c;/p&#x3e;</pre>
         <p data-ym-display="block" data-ym-margin-top="1rem">Le nom d’un attribut n’est pas duplicable&#x202f;: l’opérateur <code data-ym-hyphens="none">&#x202f;&#x7c;&#x7c;&#x202f;</code> répond à cet usage.</p>
         <p data-ym-display="block" data-ym-margin-top="1rem">Les <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" title="lire la documentation à propos des pseudo-classes (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">pseudo-classes</a> ne sont pas supportées. En revanche, les <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" title="lire la documentation à propos des pseudo-éléments (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">pseudo-éléments</a> sont licites…</p>
-        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;p data-ym-content="'•'::before"&#x3e;Paragraph&#x3c;/p&#x3e;
 
 [data-ym-content="'•'::before"]::before {
@@ -239,7 +239,7 @@ a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, bo
 }</pre>
         <p data-ym-display="block" data-ym-margin-top="1rem">Le symbole littéral <span class="ym-emphasis">&#x2022;</span> est encadré par des guillemets simples droits <span class="ym-emphasis">&#x27;</span> dans la déclaration <abbr title="Hypertext Markup Language">Html</abbr>.</p>
         <p data-ym-display="block" data-ym-margin-top="1rem">Les <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries" title="lire l’article Using media queries (S’ouvre dans une nouvelle fenêtre)" target="_blank">Media queries</a> (<span class="ym-emphasis">requêtes media</span>) sont prises en charge.</p>
-        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;div data-ym-max-width="1024px@media screen and (min-width: 1024px)"&#x3e;Div&#x3c;/div&#x3e;
 
 @media screen and (min-width: 1024px) {
@@ -248,7 +248,7 @@ a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, bo
     }
 }</pre>
         <p data-ym-display="block" data-ym-margin-top="1rem">Les <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" title="lire l’article Using CSS custom properties (variables) (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">variables Css</a> sont utilisables…</p>
-        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;p data-ym-font-weight="var(--font-weight-bold)"&#x3e;Paragraph&#x3c;/p&#x3e;
 
 :root {
@@ -259,14 +259,14 @@ a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, bo
     font-weight: var(--font-weight-bold)
 }</pre>
         <p data-ym-display="block" data-ym-margin-top="1rem">Une valeur peut comprendre n’importe quel caractère, hormis le guillemet <span class="ym-emphasis">&#x22;</span>…</p>
-        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;img data-ym-filter="invert(13%) sepia(92%) saturate(7286%) hue-rotate(0deg) brightness(94%) contrast(117%)"&#x3e;
 
 [data-ym-filter="invert(13%) sepia(92%) saturate(7286%) hue-rotate(0deg) brightness(94%) contrast(117%)"] {
     filter: invert(13%) sepia(92%) saturate(7286%) hue-rotate(0deg) brightness(94%) contrast(117%)
 }</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">Dernière illustration…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;div data-ym-animation="sweep 1.5s ease-in-out"&#x3e;&#x3c;/div&#x3e;
     
 [data-ym-animation="sweep 1.5s ease-in-out"] {
@@ -277,7 +277,7 @@ a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, bo
     <dd>
         <p data-ym-display="block" data-ym-margin-top="1rem">Avec le booléen <span class="ym-emphasis">or</span> sont appliquées plusieurs valeurs au même attribut. C’est utile notamment pour les <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries" title="lire l’article Using media queries (S’ouvre dans une nouvelle fenêtre)" target="_blank">Media queries</a> (<span class="ym-emphasis">requêtes media</span>).</p>
         <p data-ym-display="block" data-ym-margin-top="1rem">Premier exemple…</p>
-        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;p data-ym-font-family="sans-serif@media screen || monospace@media print"&#x3e;Paragraph&#x3c;/p&#x3e;
 
 @media screen {
@@ -291,7 +291,7 @@ a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, bo
     }
 }</pre>
         <p data-ym-display="block" data-ym-margin-top="1rem">Deuxième illustration…</p>
-        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;div data-ym-display="flex@media screen and (min-width: 30em) and (max-width: 50em) || inline@media screen and (min-width: 50em)"&#x3e;Div&#x3c;/div&#x3e;
 
 @media screen and (min-width: 30em) and (max-width: 50em) {
@@ -305,7 +305,7 @@ a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, bo
     }
 }</pre>
     <p data-ym-display="block" data-ym-margin-top="1rem">Le troisième exemple est plus complexe à appréhender…</p>
-    <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+    <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;div data-ym-display="inline-block::before || block"&#x3e;Div&#x3c;/div&#x3e;
 
 [data-ym-display="inline-block::before || block"]::before {
@@ -319,7 +319,7 @@ a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, bo
     <dd>
         <p data-ym-display="block" data-ym-margin-top="1rem">Le booléen <span class="ym-emphasis">and</span> permet l’usage d’un sélecteur contextuel.</p>
         <p data-ym-display="block" data-ym-margin-top="1rem">Première illustration…</p>
-        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;div class="ispage"&#x3e;
     &#x3c;div data-ym-background-color="red && ispage"&#x3e;Div&#x3c;/div&#x3e;
 &#x3c;/div&#x3e;
@@ -328,7 +328,7 @@ a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, bo
     background-color: red
 }</pre>
         <p data-ym-display="block" data-ym-margin-top="1rem">Deuxième exemple, avec deux sélecteurs contextuels différents…</p>
-        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;div class="ishome"&#x3e;
     &#x3c;div data-ym-font-weight="600@media screen and (min-width: 30em) and (max-width: 50em) && ishome || 700@media screen and (min-width: 50em) && ispage"&#x3e;Div&#x3c;/div&#x3e;
 &#x3c;/div&#x3e;
@@ -351,7 +351,7 @@ a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, bo
     <dt data-ym-display="block" data-ym-margin-top="1rem" data-ym-font-weight="var(--font-weight-bold)">Attribut avec l’opérateur <code data-ym-hyphens="none">&#x202f;&#x21;&#x21;&#x202f;</code></dt>
     <dd>
         <p data-ym-display="block" data-ym-margin-top="1rem">Le booléen <span class="ym-emphasis">yes</span> permet l’utilisation des règles <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@supports" title="lire l’article @supports (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">@supports</a>, sous la forme du nom de la propriété suivi par deux points puis par la valeur…</p>
-        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;div data-ym-display="block || grid !! display: grid"&#x3e;Div&#x3c;/div&#x3e;
 
 [data-ym-display="block || flex !! display: grid"] {
@@ -367,7 +367,7 @@ a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, bo
     <dt data-ym-display="block" data-ym-margin-top="1rem" data-ym-font-weight="var(--font-weight-bold)">Conjugaison de tous les opérateurs</dt>
     <dd>
         <p data-ym-display="block" data-ym-margin-top="1rem">À titre d’exemple&#x202f;!…</p>
-        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+        <pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;div class="ishome"&#x3e;
     &#x3c;div data-ym-font-weight="600@media screen and (min-width: 30em) and (max-width: 50em) && ishome !! display: block || 700@media screen and (min-width: 50em) && ispage !! display: flex"&#x3e;Div&#x3c;/div&#x3e;
 &#x3c;/div&#x3e;
@@ -407,24 +407,24 @@ a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, bo
 <h3 data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--x) * 1rem)" data-ym-margin-top="1rem" data-ym-page-break-after="avoid@print">À propos de XPath</h3>
 <p data-ym-display="block" data-ym-margin-top="1rem">… Surtout que le langage de requête <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://www.w3.org/TR/xpath-31/" title="aller sur la page XML Path Language (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">XML Path Language</a> localise les nœuds.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">Avec le paquet <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://www.npmjs.com/package/xpath" title="aller sur la page du paquet xpath (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">xpath</a> dans <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://nodejs.org/en/" title="aller sur le site Node.js (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">Node.js</a>, la syntaxe pour identifier ces nœuds s’écrit…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 var prefixDataAttributes = 'data-ym-';
 var nodesYm = xpath.select('//@*[starts-with(name(), "' +  prefixDataAttributes.slice(0, -1) + '")]', doc);</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">En JavaScript, la syntaxe pour identifier ces nœuds s’écrit…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 var prefixDataAttributes = 'data-ym-';
 var nodesYm = document.evaluate('//@*[starts-with(name(), "' +  prefixDataAttributes.slice(0, -1) + '")]', document, null, XPathResult.ANY_TYPE, null);</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">La méthode <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Web/API/XPathResult/iterateNext" title="lire la documentation à propos de XPathResult.iterateNext() (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">iterateNext()</a> effectue une itération sur chaque nœud.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">En <abbr title="Hypertext Preprocessor">Php</abbr>, la syntaxe pour identifier ces nœuds s’écrit…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 $prefixDataAttributes = 'data-ym-';
 $nodesYm = $xpath->query('//@*[starts-with(name(), "'.substr($prefixDataAttributes, 0, -1).'")]');</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">Les trois prédicats sont identiques, bien évidemment&#x202f;!</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">Pour identifier toutes les balises en JavaScript, la syntaxe est…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 var tags = document.evaluate('//*', document, null, XPathResult.ANY_TYPE, null);</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">Pour identifier uniquement les balises comportant l'attribut <span class="ym-emphasis">data-ym-</span>, la requête devient…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 var prefixDataAttributes = 'data-ym-';
 var tags = document.evaluate('//*[starts-with(name(@*), "' +  prefixDataAttributes.slice(0, -1) + '")]', document, null, XPathResult.ANY_TYPE, null);</pre>
 <h3 data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--x) * 1rem)" data-ym-margin-top="1rem">Paquet node.js</h3>
@@ -457,7 +457,7 @@ var tags = document.evaluate('//*[starts-with(name(@*), "' +  prefixDataAttribut
 <p data-ym-display="block" data-ym-margin-top="1rem">À l’issue du traitement, la console confirme le succès de l’opération, affiche les règles et indique si le code <abbr title="Cascading Styles Sheets">Css</abbr> est valide.</p>
 <h3 data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--x) * 1rem)" data-ym-margin-top="1rem" data-ym-page-break-after="avoid@print">Fichier Php</h3>
 <p data-ym-display="block" data-ym-margin-top="1rem">Le script s’exécute grâce à <a data-ym-color="var(--opposite-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://github.com/lymnee/lymnee/blob/master/lymnee.php" title="consulter le fichier lymnee.php (S’ouvre dans une nouvelle fenêtre)" target="_blank"><span class="ym-emphasis">lymnee.php</span></a>. Il a été développé avec la version 7.4.8. Avant utilisation, le fichier doit recevoir la permission d’écrire, par exemple avec un script sous la forme…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;?php chmod(/somedir/somefile", 0644);</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">… Ou en modifiant directement la valeur de <span class="ym-emphasis">chmod</span> avec le gestionnaire de fichiers ou en tapant la commande <span class="ym-emphasis">ad hoc</span>.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">Le fichier peut être exécuté sans paramètre.</p>
@@ -507,7 +507,7 @@ var tags = document.evaluate('//*[starts-with(name(@*), "' +  prefixDataAttribut
 <p data-ym-display="block" data-ym-margin-top="1rem">L’analyse puis la génération ne ralentissent pas significativement l’affichage du document.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">Cette option permet, à la marge, de tester une règle de style, instantanément, c’est-à-dire à la volée.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">Le fichier doit être inclus à la fin de chaque page…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;script src="lymnee.live.js"&#x3e;&#x3c;/script&#x3e;
 </pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">Deux fichiers sont disponibles&#x202f;:</p>
@@ -525,7 +525,7 @@ var tags = document.evaluate('//*[starts-with(name(@*), "' +  prefixDataAttribut
 <p data-ym-display="block" data-ym-margin-top="1rem">Du code <abbr title="Cascading Styles Sheets">Css</abbr> peut être ajouté avant et après les styles qui correspondent aux <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" title="lire l’article Using data attributes (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">attributs de données</a> qui respectent la syntaxe <span data-ym-color="var(--primary-color)" data-ym-font-variant="small-caps" data-ym-font-weight="var(--font-weight-bold)">Lymnee</span>… Les crochets <code>cssAfter</code> et <code>cssBefore</code> sont disponibles&#x202f;; leur code est encadré par les caractères <code>&#x60;</code> pour permettre l’emploi des guillemets simples et doubles.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">L’avantage d’injecter ainsi le code <abbr title="Cascading Styles Sheets">Css</abbr> est de permettre aux navigateurs dont JavaScript est désactivé de servir le contenu avec les styles par défaut&#x202f;: il reste accessible. De même, le contenu reste visible durant l’exécution du script qui met définitivement en forme la page.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">Les caractères dans le code <abbr title="Cascading Styles Sheets">Css</abbr> incorporé à JavaScript doivent être échappés. Ainsi…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 em::before {
     content: '«\202F'
 }
@@ -533,7 +533,7 @@ kbd::before {
     content: '\7B'
 }</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">… ne fonctionne pas, contrairement à…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 em::before {
     content: '«\u202F'
 }
@@ -543,7 +543,7 @@ kbd::before {
 </pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">Les caractères Unicode compris entre 0 et 255 doivent être échappés avec le préfixe <code>\x</code>. Les caractères Unicode compris entre 0 et 65&#x202f;535 doivent être échappés avec le préfixe <code>\u</code>. Sous <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="http://es6-features.org/" title="aller sur le site ECMAScript 6 (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">Ecma 6</a>, il est loisible d’écrire <code>\u{7B}\u{202F}</code>. L’article <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://riptutorial.com/javascript/example/19374/escape-sequence-types" title="lire l’article Escape sequence types (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en"><span class="ym-emphasis">Escape sequence types</span></a> constitue une précieuse documentation.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">Variables et code peuvent être déclarés dans le script lui-même ou avant d’inclure le fichier, par exemple si la version distante est utilisée…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;script&#x3e;
     var cssBefore = ``;
     var cssAfter = ``;
@@ -553,11 +553,11 @@ kbd::before {
 </pre>
 <h4 data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--xs) * 1rem)" data-ym-margin-top="1rem" data-ym-page-break-after="avoid@print">Cdn</h4>
 <p data-ym-display="block" data-ym-margin-top="1rem">Une version distante, accessible à l’<abbr title="Uniform Resource Locator">Url</abbr> <span class="ym-emphasis">https://cdn.jsdelivr.net/gh/lymnee/lymnee/lymnee.live.min.js</span>, est utilisable en production…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;script src="https://cdn.jsdelivr.net/gh/lymnee/lymnee/lymnee.live.min.js"&#x3e;&#x3c;/script&#x3e;
 </pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">Variables et code peuvent être déclarés avant d’inclure le fichier…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;script&#x3e;
     var cssBefore = ``;
     var cssAfter = ``;
@@ -571,11 +571,11 @@ kbd::before {
 <p data-ym-display="block" data-ym-margin-top="1rem">Avec le paquet <a data-ym-color="var(--opposite-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://github.com/lymnee/lymnee/blob/master/lymnee.js" title="consulter le fichier lymnee.js (S’ouvre dans une nouvelle fenêtre)" target="_blank"><span class="ym-emphasis">lymnee.js</span></a> sous <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://nodejs.org/en/" title="aller sur le site Node.js (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">Node.js</a>, la création d’<a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" title="lire l’article Using data attributes (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">attributs de données</a> supplémentaires avec JavaScript ou <abbr title="Cascading Styles Sheets">Css</abbr> nécessite de ne pas utiliser le préfixe <span class="ym-emphasis">data-ym-</span> ou un espace de nom équivalent afin d’éviter leur localisation par <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://www.w3.org/TR/xpath-31/" title="aller sur la page XML Path Language (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">XML Path Language</a>.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem"> <span class="ym-emphasis">A contrario</span>, le script <abbr title="Hypertext Preprocessor" data-my-font-variant="small-caps">Php</abbr> et les fichiers en JavaScript ne reconnaissent pas les <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes" title="lire l’article Using data attributes (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">attributs de données</a> contenus dans le code JavaScript.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">L’usage des entités au format décimal ou hexadécimal est impossible dans un attribut. Par exemple, ne fonctionne pas…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;ul data-my-list-style-type="&#x27;\266B&#x27;"&#x3e;
 &#x3c;!-- &#x3c;ul data-my-list-style-type="&#x27;\266B&#x27;"&#x3e; --&#x3e;</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">… Contrairement à…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 &#x3c;ul data-my-list-style-type="&#x27;♫&#x27;"&#x3e;</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">Noter que le symbole littéral est encadré par des guillemets simples droits, <code data-ym-hyphens="none">&#x27;</code>.</p>
 <p data-ym-display="block" data-ym-margin-top="1rem">Les espaces ne sont pas pris en compte, par exemple <code>data-ym-content="' ”'::after</code>. En pareil cas, la création d’une règle s’impose.</p>
@@ -585,11 +585,11 @@ kbd::before {
 <p data-ym-display="block" data-ym-margin-top="1rem">Les règles <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@supports" title="lire l’article @supports (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">@supports</a> ne prennent pas en charge les conditions <span class="ym-emphasis">not</span> et <span class="ym-emphasis">and</span>.</p>
 <h3 data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--x) * 1rem)" data-ym-margin-top="1rem" data-ym-page-break-after="avoid@print">Interaction avec JavaScript</h3>
 <p data-ym-display="block" data-ym-margin-top="1rem">Les méthodes <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute" title="lire l’article Element.setAttribute() (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">Element.setAttribute()</a> et <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Web/API/Element/removeAttribute" title="lire l’article Element.removeAttribute() (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">Element.removeAttribute()</a> permettent d’ajouter ou de supprimer un attribut de données…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 document.querySelector('#foo').setAttribute('data-ym-color', 'blue');
 document.querySelector('#bar').removeAttribute('data-ym-color');</pre>
 <p data-ym-display="block" data-ym-margin-top="1rem">La méthode <a data-ym-color="var(--primary-color)::after" data-ym-content="' ↗'::after" data-ym-cursor="pointer@media screen" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/dataset" title="lire l’article HTMLElement.dataset (S’ouvre dans une nouvelle fenêtre)" target="_blank" lang="en">HTMLElement.dataset</a>, qui nécessite de supprimer le tiret et de changer la casse de la première lettre suivante, ne présente pas un intérêt supplémentaire…</p>
-<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
+<pre data-ym-border-left="calc(var(--ssssssss) * 1rem) solid var(--primary-color)@media screen || var(--ssssssss-print) solid var(--primary-color)@media print" data-ym-display="block" data-ym-hyphens="none" data-ym-margin-top="1rem" data-ym-padding-left="1rem">
 document.querySelector('#foo').dataset.ymColor = 'blue';
 document.querySelector('#bar').dataset.ymColor = '';</pre>
 <h3 data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--x) * 1rem)" data-ym-margin-top="1rem" data-ym-page-break-after="avoid@print">Bogues</h3>
