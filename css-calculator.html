@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en-US" data-ym-color="var(--text-color)" data-ym-font-family="var(--font-family)@media screen || serif@media print" data-ym-font-size="xx-large" data-ym-line-height="var(--scale)" data-ym-margin="auto" data-ym-width="95%" data-ym-max-width="480px@media screen and (min-width: 480px)">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fun calculator with Css calc()</title>
+</head>
+<body 
+	data-ym-display="grid"
+	data-ym-margin="auto"
+	data-ym-padding-block-start="calc(var(--s) * 1rem)"
+	data-ym-padding-block-end="calc(var(--s) * 1rem)"
+>
+<div
+	data-ym-border="calc(var(--sssssss) * 1rem) solid var(--dark-primary-color)"
+	data-ym-display="block" 
+	data-ym-padding="calc(var(--sss) * 1rem)"
+>
+	<h1
+		data-ym-color="var(--text-color)"
+		data-ym-display="block"
+		data-ym-font-size="calc(var(--xs) * 1rem)"
+		data-ym-hyphens="auto"
+	>
+		Useless fun calculator with <a href="https://drafts.csswg.org/css-values-3/#calc-notation" title="Link to CSS Values and Units Module Level 3 Mathematical §Expressions: calc() (Open in a new window)" target="_blank" data-ym-color="var(--text-color):link || var(--text-color):visited || var(--text-color):focus || var(--text-color):hover || var(--text-color):active"><span data-ym-font-variant="small-caps">Css</span> calc()</a>
+	</h1>
+</div>
+<form data-form>
+	<input 
+		data-ym-background-color="var(--dark-primary-color)"
+		data-ym-margin-block-start="calc(var(--s) * 1rem)"
+		data-ym-color="var(--text-icons-color) || var(--text-icons-color)::placeholder"
+		data-ym-display="block"
+		data-ym-width="100%"
+		name="formula"
+		readonly
+		placeholder="Press buttons…"
+	>
+	<div 
+		data-ym-margin-block-start="calc(var(--s) * 1rem)"
+		data-ym-display="grid"
+		data-ym-grid-gap="1ch"
+		data-ym-grid-template-columns="repeat(4, 1fr)"
+		data-ym-grid-template-rows="repeat(6, 1fr)"
+	>
+		<button 
+			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
+			data-ym-color="var(--text-icons-color)" 
+			data-ym-cursor="pointer"
+			data-ym-display="block"
+			data-ym-grid-column="1"
+			data-ym-grid-row="1"
+			data-ym-text-align="center"
+			data-number
+			value="1"
+		>
+			1
+		</button>
+		<button
+			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
+			data-ym-color="var(--text-icons-color)"
+			data-ym-cursor="pointer"
+			data-ym-display="block"
+			data-ym-grid-column="2"
+			data-ym-grid-row="1"
+			data-ym-text-align="center"
+			data-number
+			value="2"
+		>
+			2
+		</button>
+		<button
+			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
+			data-ym-color="var(--text-icons-color)"
+			data-ym-cursor="pointer"
+			data-ym-display="block"
+			data-ym-grid-column="3"
+			data-ym-grid-row="1"
+			data-ym-text-align="center"
+			data-number
+			value="3"
+		>
+			3
+		</button>
+		<button
+			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
+			data-ym-color="var(--text-icons-color)"
+			data-ym-cursor="pointer"
+			data-ym-display="block"
+			data-ym-grid-column="1"
+			data-ym-grid-row="2"
+			data-ym-text-align="center"
+			data-number
+			value="4"
+		>
+		4
+		</button>
+		<button
+			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
+			data-ym-color="var(--text-icons-color)"
+			data-ym-cursor="pointer"
+			data-ym-display="block"
+			data-ym-grid-column="2"
+			data-ym-grid-row="2"
+			data-ym-text-align="center"
+			data-number
+			value="5"
+		>
+			5
+		</button>
+		<button
+			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
+			data-ym-color="var(--text-icons-color)"
+			data-ym-cursor="pointer"
+			data-ym-display="block"
+			data-ym-grid-column="3"
+			data-ym-grid-row="2"
+			data-ym-text-align="center"
+			data-number
+			value="6"
+		>
+			6
+		</button>
+		<button
+			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
+			data-ym-color="var(--text-icons-color)"
+			data-ym-cursor="pointer"
+			data-ym-display="block"
+			data-ym-grid-column="1"
+			data-ym-grid-row="3"
+			data-ym-text-align="center"
+			data-number
+			value="7"
+		>
+			7
+		</button>
+		<button 
+			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
+			data-ym-color="var(--text-icons-color)"
+			data-ym-cursor="pointer"
+			data-ym-display="block"
+			data-ym-grid-column="2"
+			data-ym-grid-row="3"
+			data-ym-text-align="center"
+			data-number
+			value="8"
+		>
+			8
+		</button>
+		<button
+			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
+			data-ym-color="var(--text-icons-color)"
+			data-ym-cursor="pointer"
+			data-ym-display="block"
+			data-ym-grid-column="3"
+			data-ym-grid-row="3"
+			data-ym-text-align="center"
+			data-number
+			value="9"
+		>
+			9
+		</button>
+		<button
+			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
+			data-ym-color="var(--text-icons-color)"
+			data-ym-cursor="pointer"
+			data-ym-display="block"
+			data-ym-grid-column="2"
+			data-ym-grid-row="4"
+			data-ym-text-align="center"
+			data-number
+			value="0"
+		>
+			0
+		</button>
+		<button
+			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
+			data-ym-color="var(--text-icons-color)"
+			data-ym-cursor="pointer"
+			data-ym-display="block"
+			data-ym-grid-column="4"
+			data-ym-grid-row="5"
+			data-ym-text-align="center"
+			data-period
+			value="."
+		>
+			.
+		</button>
+		<button
+			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
+			data-ym-color="var(--text-icons-color)"
+			data-ym-cursor="pointer"
+			data-ym-display="block"
+			data-ym-grid-column="4"
+			data-ym-grid-row="1"
+			data-ym-text-align="center"
+			data-operator
+			value="+"
+		>
+			+
+		</button>
+		<button
+			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
+			data-ym-color="var(--text-icons-color)"
+			data-ym-cursor="pointer"
+			data-ym-display="block"
+			data-ym-grid-column="4"
+			data-ym-grid-row="2"
+			data-ym-text-align="center"
+			data-operator
+			value="-"
+		>
+			−
+		</button>
+		<button
+			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
+			data-ym-color="var(--text-icons-color)"
+			data-ym-cursor="pointer"
+			data-ym-display="block"
+			data-ym-grid-column="4"
+			data-ym-grid-row="3"
+			data-ym-text-align="center"
+			data-operator
+			value="x"
+			role="button"
+		>
+			x
+		</button>
+		<button
+			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
+			data-ym-color="var(--text-icons-color)"
+			data-ym-cursor="pointer"
+			data-ym-display="block"
+			data-ym-grid-column="4"
+			data-ym-grid-row="4"
+			data-ym-text-align="center"
+			data-operator
+			value="÷"
+		>
+			÷
+		</button>
+		<button
+			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
+			data-ym-color="var(--text-icons-color)"
+			data-ym-cursor="pointer"
+			data-ym-display="block"
+			data-ym-grid-column="1"
+			data-ym-grid-row="6"
+			data-ym-text-align="center"
+			data-clear
+		>
+			c
+		</button>
+		<button
+			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
+			data-ym-color="var(--text-icons-color)"
+			data-ym-cursor="pointer"
+			data-ym-display="block"
+			data-ym-text-align="center"
+			data-ym-grid-column="3 / span 2"
+			data-ym-grid-row="6"
+			data-compute
+		>
+			=
+		</button>
+		<!--<button
+			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
+			data-ym-color="var(--text-icons-color)"
+			data-ym-cursor="pointer"
+			data-ym-display="block"
+			data-ym-text-align="center"
+			data-ym-grid-column="2"
+			data-ym-grid-row="5"
+			data-article
+			title="Link to CSS Values and Units Module Level 3 Mathematical §Expressions: calc() (Open in a new window)"
+		>
+			&#x21e7;
+		</button>-->
+</form>
+<p
+	data-ym-color="var(--accent-color)"
+	data-ym-display="block" 
+	data-ym-font-size="calc(var(--xxx) * 1rem)"
+	data-ym-margin-block-start="calc(var(--s) * 1rem)"
+	data-ym-text-align="center">
+	&#x2234;
+</p>
+<div
+	data-ym-display="none"
+	data-ym-height="0"
+	data-ym-width="0"
+	data-ym-margin-block-start="var(--dimension)"
+	data-result
+></div>
+<script>
+const calculator = document.querySelector('input');
+
+/*document.querySelector('[data-article]').addEventListener('click', event => {
+
+	window.open('https://drafts.csswg.org/css-values-3/#calc-notation', '_blank').focus();
+
+	event.preventDefault();
+
+});*/
+
+document.querySelector('[data-clear]').addEventListener('click', event => {
+
+	calculator.setAttribute('readonly', false);
+
+	calculator.value = ''
+
+	calculator.setAttribute('readonly', true);
+
+	event.preventDefault();
+
+});
+
+document.querySelector('[data-compute]').addEventListener('click', event => {
+
+	let form = document.querySelector('[data-form]');
+
+	let data = new FormData(form);
+
+	if (data.get('formula') != '') {
+
+		let operation = data.get('formula').replace(/x/g, '*').replace(/÷/g, '/');
+
+		try {
+
+			eval(operation);
+
+			document.documentElement.style.setProperty('--dimension', 'calc(calc('+ operation +') * 1px)');
+
+			let result;
+
+			try {
+
+				result = document.querySelector('[data-result]').computedStyleMap().get('margin-block-start').value;
+
+			} catch {
+
+				result = window.getComputedStyle(document.querySelector('[data-result]')).marginBlockStart.replace('px', '');
+
+			}
+
+			calculator.value = result;
+
+			console.log('%c\u2234', 'color: #455A64; font-size: 4em;');
+
+			console.log('%cJavascript returns' + ' ' + eval(operation) + '.', 'color: #212121; font-size: 1.41em');
+
+			console.log('%cCss returns' + ' ' + result + '.', 'color: #212121; font-size: 1.41em');
+
+		} catch {
+
+			calculator.value = 'Error';
+
+		}
+
+	}
+
+	event.preventDefault();
+
+});
+
+document.querySelectorAll('[data-number]').forEach(function(element) {
+
+	element.addEventListener('click', event => {
+
+		calculator.setAttribute('readonly', false);
+
+		calculator.value += element.value;
+
+		calculator.setAttribute('readonly', true);
+
+		calculator.focus();
+
+		calculator.setSelectionRange(calculator.value.length, calculator.value.length, 0);
+
+		event.preventDefault();
+
+	});
+
+});
+
+document.querySelectorAll('[data-operator]').forEach(function(element) {
+
+	element.addEventListener('click', event => {
+
+		if (calculator.value.length > 0) {
+
+			if (calculator.value.slice(-1) !== ' ') {
+
+				calculator.setAttribute('readonly', false);
+
+				calculator.value += ' ';
+
+				calculator.value += element.value;
+
+				calculator.value += ' ';
+				
+				calculator.setAttribute('readonly', true);
+
+				calculator.focus();
+
+				calculator.setSelectionRange(calculator.value.length, calculator.value.length, 0);
+
+			}
+
+		}
+
+		event.preventDefault();
+
+	});
+
+});
+
+document.querySelector('[data-period]').addEventListener('click', event => {
+
+	if (calculator.value.length > 0) {
+
+		if (calculator.value.slice(-1) !== '.') {
+
+			calculator.setAttribute('readonly', false);
+
+			calculator.value += document.querySelector('[data-period]').value;
+
+			calculator.setAttribute('readonly', true);
+
+			calculator.focus();
+
+			calculator.setSelectionRange(calculator.value.length, calculator.value.length, 0);
+
+		}
+
+	}
+
+	event.preventDefault();
+
+});
+
+var prefixDataAttributes = 'data-ym-';
+
+var reset = 'all';
+
+var uncompress = false;
+
+var cssBefore = `
+@import url('https://fonts.googleapis.com/css2?family=B612:wght@400;700&display=swap');
+:root {
+    /* https://www.materialpalette.com/blue-grey/grey */
+    --accent-color: #9e9e9e;
+    --dark-primary-color: #455a64;
+    --divider-color: #bdbdbd;
+    --primary-color: #607d8b;
+    --text-color: #212121;
+	--text-icons-color: #ffffff;
+    /*--font-family: 'B612 Mono', monospace;*/
+	--font-family: 'B612', sans-serif;
+    --font-weight-regular: 400;
+	
+    /*--scale: calc(1393 / 985);*/
+    --scale: calc(10812186007 / 7645370045);
+	
+    --x: calc(var(--scale) * var(--scale)); /* 2 */
+    --xx: calc(var(--x) * var(--scale)); /* 2.82 */
+    --xxx: calc(var(--xx) * var(--scale)); /* 4 */
+    --xxxx: calc(var(--xxx) * var(--scale)); /* 5.65 */
+    --xxxxx: calc(var(--xxxx) * var(--scale)); /* 8 */
+    --xxxxxx: calc(var(--xxxxx) * var(--scale)); /* 11,31 */
+    --xxxxxxx: calc(var(--xxxxxx) * var(--scale)); /* 16 */
+    --xxxxxxxx: calc(var(--xxxxxxx) * var(--scale)); /* 22.62 */
+
+    --xs: var(--scale);
+
+    --s: calc(var(--scale) / var(--scale)); /* 1 */
+    --ss: calc(var(--s) / var(--scale)); /* 0.7 */
+    --sss: calc(var(--ss) / var(--scale)); /* 0.5 */
+    --ssss: calc(var(--sss) / var(--scale)); /* 0.35 */
+    --sssss: calc(var(--ssss) / var(--scale)); /* 0.25 */
+    --ssssss: calc(var(--sssss) / var(--scale)); /* 0.17 */
+    --sssssss: calc(var(--ssssss) / var(--scale)); /* 0.125 */
+	
+	--dimension: 0px;
+
+}
+`;
+</script>
+<script src="https://cdn.jsdelivr.net/gh/lymnee/lymnee/lymnee.live.js"></script>
+</body>
+</html>
