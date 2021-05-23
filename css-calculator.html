@@ -33,9 +33,8 @@
 		data-ym-display="block"
 		data-ym-font-size="calc(var(--xs) * 1rem)"
 		data-ym-hyphens="auto"
-		data-js-title
 	>
-		<span data-ym-color="var(--accent-color)">Fun</span> <span data-ym-text-decoration="line-through var(--accent-color) solid && [data-js-title-active]">useless</span> calculator with <a href="https://drafts.csswg.org/css-values-3/#calc-notation" title="Link to CSS Values and Units Module Level 3 Mathematical §Expressions: calc() (Open in a new window)" target="_blank" data-ym-color="var(--text-color):link || var(--text-color):visited || var(--text-color):focus || var(--text-color):hover || var(--text-color):active"><span data-ym-font-variant="small-caps">Css</span> calc()</a>
+		<span data-ym-color="var(--accent-color)">Fun</span> <span data-ym-text-decoration="line-through var(--accent-color) solid && [data-js-title-active]" data-js-title>useless</span> calculator with <a href="https://drafts.csswg.org/css-values-3/#calc-notation" title="Link to CSS Values and Units Module Level 3 Mathematical §Expressions: calc() (Open in a new window)" target="_blank" data-ym-color="var(--text-color):link || var(--text-color):visited || var(--text-color):focus || var(--text-color):hover || var(--text-color):active"><span data-ym-font-variant="small-caps">Css</span> calc()</a>
 	</h1>
 </div>
 <form data-form>
@@ -284,26 +283,25 @@
 	data-ym-margin-block-start="var(--dimension)"
 	data-result
 ></div>
-<div data-js-tip>
-	<div 
-		data-ym-display="none || block@media screen and (min-width: 1025px) && [data-js-tip-active]"
-		data-ym-bottom="0"
-		data-ym-left="0"
-		data-ym-margin-inline-start="calc(50% + 240px + calc(calc(var(--x) * 1rem)))"
-		data-ym-right="0"
-		data-ym-position="fixed"
+<div 
+	data-ym-display="none || block@media screen and (min-width: 1025px) && [data-js-tip-active]"
+	data-ym-bottom="0 && [data-js-tip-active]"
+	data-ym-left="0 && [data-js-tip-active]"
+	data-ym-margin-inline-start="calc(50% + 240px + calc(calc(var(--x) * 1rem))) && [data-js-tip-active]"
+	data-ym-right="0 && [data-js-tip-active]"
+	data-ym-position="fixed && [data-js-tip-active]"
+	data-js-tip
+>
+	<p
+		data-ym-color="var(--text-color) && [data-js-tip-active]"
+		data-ym-display="block && [data-js-tip-active] && [data-js-tip-active]"
+		data-ym-font-size="calc(var(--ss) * 1rem) && [data-js-tip-active]"
+		data-ym-text-align="right && [data-js-tip-active]"
+		data-ym-padding-block-end="calc(var(--s) * 1rem) && [data-js-tip-active]"
+		data-ym-padding-inline-end="calc(var(--s) * 1rem) && [data-js-tip-active]"
 	>
-		<p
-			data-ym-color="var(--text-color) && [data-js-tip-active]"
-			data-ym-display="block && [data-js-tip-active]"
-			data-ym-font-size="calc(var(--ss) * 1rem) && [data-js-tip-active]"
-			data-ym-text-align="right && [data-js-tip-active]"
-			data-ym-padding-block-end="calc(var(--s) * 1rem)"
-			data-ym-padding-inline-end="calc(var(--s) * 1rem)"
-		>
-			Open JavaScript console to see more<span data-ym-color="var(--accent-color) && [data-js-tip-active]">.</span>
-		</p>
-	</div>
+		Open JavaScript console to see more<span data-ym-color="var(--accent-color) && [data-js-tip-active]">.</span>
+	</p>
 </div>
 <script>
 const calculator = document.querySelector('input');
@@ -331,6 +329,8 @@ document.querySelector('[data-compute]').addEventListener('click', event => {
 	if (!document.querySelector('[data-js-tip]').hasAttribute('data-js-tip-active')) {
 
 		document.querySelector('[data-js-tip]').setAttribute('data-js-tip-active', '');
+		
+		document.querySelector('[data-js-tip] span').setAttribute('data-js-tip-active', '');
 
 	}
 
@@ -467,37 +467,37 @@ var uncompress = false;
 var cssBefore = `
 @import url('https://fonts.googleapis.com/css2?family=B612:wght@400;700&display=swap');
 :root {
-    /* https://www.materialpalette.com/blue-grey/teal */
-    --accent-color: #009688;
-    --dark-primary-color: #455a64;
-    --divider-color: #bdbdbd;
-    --primary-color: #607d8b;
-    --text-color: #212121;
+	/* https://www.materialpalette.com/blue-grey/teal */
+	--accent-color: #009688;
+	--dark-primary-color: #455a64;
+	--divider-color: #bdbdbd;
+	--primary-color: #607d8b;
+	--text-color: #212121;
 	--text-icons-color: #ffffff;
 	--font-family: 'B612', sans-serif;
-    --font-weight-regular: 400;
+	--font-weight-regular: 400;
 
-    --scale: calc(10812186007 / 7645370045);
-	
-    --x: calc(var(--scale) * var(--scale)); /* 2 */
-    --xx: calc(var(--x) * var(--scale)); /* 2.82 */
-    --xxx: calc(var(--xx) * var(--scale)); /* 4 */
-    --xxxx: calc(var(--xxx) * var(--scale)); /* 5.65 */
-    --xxxxx: calc(var(--xxxx) * var(--scale)); /* 8 */
-    --xxxxxx: calc(var(--xxxxx) * var(--scale)); /* 11,31 */
-    --xxxxxxx: calc(var(--xxxxxx) * var(--scale)); /* 16 */
-    --xxxxxxxx: calc(var(--xxxxxxx) * var(--scale)); /* 22.62 */
+	--scale: calc(10812186007 / 7645370045);
 
-    --xs: var(--scale);
+	--x: calc(var(--scale) * var(--scale)); /* 2 */
+	--xx: calc(var(--x) * var(--scale)); /* 2.82 */
+	--xxx: calc(var(--xx) * var(--scale)); /* 4 */
+	--xxxx: calc(var(--xxx) * var(--scale)); /* 5.65 */
+	--xxxxx: calc(var(--xxxx) * var(--scale)); /* 8 */
+	--xxxxxx: calc(var(--xxxxx) * var(--scale)); /* 11,31 */
+	--xxxxxxx: calc(var(--xxxxxx) * var(--scale)); /* 16 */
+	--xxxxxxxx: calc(var(--xxxxxxx) * var(--scale)); /* 22.62 */
 
-    --s: calc(var(--scale) / var(--scale)); /* 1 */
-    --ss: calc(var(--s) / var(--scale)); /* 0.7 */
-    --sss: calc(var(--ss) / var(--scale)); /* 0.5 */
-    --ssss: calc(var(--sss) / var(--scale)); /* 0.35 */
-    --sssss: calc(var(--ssss) / var(--scale)); /* 0.25 */
-    --ssssss: calc(var(--sssss) / var(--scale)); /* 0.17 */
-    --sssssss: calc(var(--ssssss) / var(--scale)); /* 0.125 */
-	
+	--xs: var(--scale);
+
+	--s: calc(var(--scale) / var(--scale)); /* 1 */
+	--ss: calc(var(--s) / var(--scale)); /* 0.7 */
+	--sss: calc(var(--ss) / var(--scale)); /* 0.5 */
+	--ssss: calc(var(--sss) / var(--scale)); /* 0.35 */
+	--sssss: calc(var(--ssss) / var(--scale)); /* 0.25 */
+	--ssssss: calc(var(--sssss) / var(--scale)); /* 0.17 */
+	--sssssss: calc(var(--ssssss) / var(--scale)); /* 0.125 */
+
 	--dimension: 0px;
 
 }
