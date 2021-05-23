@@ -1,15 +1,27 @@
 <!doctype html>
-<html lang="en-US" data-ym-color="var(--text-color)" data-ym-font-family="var(--font-family)@media screen || serif@media print" data-ym-font-size="xx-large" data-ym-line-height="var(--scale)" data-ym-margin="auto" data-ym-width="95%" data-ym-max-width="480px@media screen and (min-width: 480px)">
+<html
+	data-ym-color="var(--text-color)"
+	data-ym-font-family="var(--font-family)@media screen"
+	data-ym-font-size="xx-large"
+	data-ym-line-height="var(--scale)"
+	data-ym-margin="auto"
+	data-ym-width="95%"
+	data-ym-max-width="480px@media screen and (min-width: 480px)"
+	lang="en"
+>
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The calculator uses the Css calc() function to solve the four basic arithmetic operations.">
+<meta name="keywords" content="CSS calc() function, JavaScript">
+<meta name="author" content="Vincent Top-Roulet">
 <title>Fun calculator with Css calc()</title>
 </head>
 <body 
 	data-ym-display="grid"
 	data-ym-margin="auto"
-	data-ym-padding-block-start="calc(var(--s) * 1rem)"
-	data-ym-padding-block-end="calc(var(--s) * 1rem)"
+	data-ym-padding-block-end="calc(var(--sss) * 1rem)"
+	data-ym-padding-block-start="calc(var(--sss) * 1rem)"
 >
 <div
 	data-ym-border="calc(var(--sssssss) * 1rem) solid var(--dark-primary-color)"
@@ -21,8 +33,9 @@
 		data-ym-display="block"
 		data-ym-font-size="calc(var(--xs) * 1rem)"
 		data-ym-hyphens="auto"
+		data-js-title
 	>
-		Useless fun calculator with <a href="https://drafts.csswg.org/css-values-3/#calc-notation" title="Link to CSS Values and Units Module Level 3 Mathematical §Expressions: calc() (Open in a new window)" target="_blank" data-ym-color="var(--text-color):link || var(--text-color):visited || var(--text-color):focus || var(--text-color):hover || var(--text-color):active"><span data-ym-font-variant="small-caps">Css</span> calc()</a>
+		<span data-ym-color="var(--accent-color)">Fun</span> <span data-ym-text-decoration="line-through var(--accent-color) solid && [data-js-title-active]">useless</span> calculator with <a href="https://drafts.csswg.org/css-values-3/#calc-notation" title="Link to CSS Values and Units Module Level 3 Mathematical §Expressions: calc() (Open in a new window)" target="_blank" data-ym-color="var(--text-color):link || var(--text-color):visited || var(--text-color):focus || var(--text-color):hover || var(--text-color):active"><span data-ym-font-variant="small-caps">Css</span> calc()</a>
 	</h1>
 </div>
 <form data-form>
@@ -34,14 +47,14 @@
 		data-ym-width="100%"
 		name="formula"
 		readonly
-		placeholder="Press buttons…"
+		placeholder="Press buttons, e.g. 1 ÷ 3…"
 	>
 	<div 
 		data-ym-margin-block-start="calc(var(--s) * 1rem)"
 		data-ym-display="grid"
 		data-ym-grid-gap="1ch"
-		data-ym-grid-template-columns="repeat(4, 1fr)"
-		data-ym-grid-template-rows="repeat(6, 1fr)"
+		data-ym-grid-template-columns="repeat(4, calc(calc(100% - 3ch) / 4))"
+		data-ym-grid-template-rows="repeat(6, calc(var(--xs) * 1rem))"
 	>
 		<button 
 			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
@@ -222,7 +235,6 @@
 			data-ym-text-align="center"
 			data-operator
 			value="x"
-			role="button"
 		>
 			x
 		</button>
@@ -252,7 +264,7 @@
 			c
 		</button>
 		<button
-			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
+			data-ym-background-color="var(--accent-color)"
 			data-ym-color="var(--text-icons-color)"
 			data-ym-cursor="pointer"
 			data-ym-display="block"
@@ -263,28 +275,8 @@
 		>
 			=
 		</button>
-		<!--<button
-			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
-			data-ym-color="var(--text-icons-color)"
-			data-ym-cursor="pointer"
-			data-ym-display="block"
-			data-ym-text-align="center"
-			data-ym-grid-column="2"
-			data-ym-grid-row="5"
-			data-article
-			title="Link to CSS Values and Units Module Level 3 Mathematical §Expressions: calc() (Open in a new window)"
-		>
-			&#x21e7;
-		</button>-->
+	</div>
 </form>
-<p
-	data-ym-color="var(--accent-color)"
-	data-ym-display="block" 
-	data-ym-font-size="calc(var(--xxx) * 1rem)"
-	data-ym-margin-block-start="calc(var(--s) * 1rem)"
-	data-ym-text-align="center">
-	&#x2234;
-</p>
 <div
 	data-ym-display="none"
 	data-ym-height="0"
@@ -292,16 +284,29 @@
 	data-ym-margin-block-start="var(--dimension)"
 	data-result
 ></div>
+<div data-js-tip>
+	<div 
+		data-ym-display="none || block@media screen and (min-width: 1025px) && [data-js-tip-active]"
+		data-ym-bottom="0"
+		data-ym-left="0"
+		data-ym-margin-inline-start="calc(50% + 240px + calc(calc(var(--x) * 1rem)))"
+		data-ym-right="0"
+		data-ym-position="fixed"
+	>
+		<p
+			data-ym-color="var(--text-color) && [data-js-tip-active]"
+			data-ym-display="block && [data-js-tip-active]"
+			data-ym-font-size="calc(var(--ss) * 1rem) && [data-js-tip-active]"
+			data-ym-text-align="right && [data-js-tip-active]"
+			data-ym-padding-block-end="calc(var(--s) * 1rem)"
+			data-ym-padding-inline-end="calc(var(--s) * 1rem)"
+		>
+			Open JavaScript console to see more<span data-ym-color="var(--accent-color) && [data-js-tip-active]">.</span>
+		</p>
+	</div>
+</div>
 <script>
 const calculator = document.querySelector('input');
-
-/*document.querySelector('[data-article]').addEventListener('click', event => {
-
-	window.open('https://drafts.csswg.org/css-values-3/#calc-notation', '_blank').focus();
-
-	event.preventDefault();
-
-});*/
 
 document.querySelector('[data-clear]').addEventListener('click', event => {
 
@@ -316,6 +321,18 @@ document.querySelector('[data-clear]').addEventListener('click', event => {
 });
 
 document.querySelector('[data-compute]').addEventListener('click', event => {
+
+	if (!document.querySelector('[data-js-title]').hasAttribute('data-js-title-active')) {
+
+		document.querySelector('[data-js-title]').setAttribute('data-js-title-active', '');
+
+	}
+
+	if (!document.querySelector('[data-js-tip]').hasAttribute('data-js-tip-active')) {
+
+		document.querySelector('[data-js-tip]').setAttribute('data-js-tip-active', '');
+
+	}
 
 	let form = document.querySelector('[data-form]');
 
@@ -346,6 +363,8 @@ document.querySelector('[data-compute]').addEventListener('click', event => {
 			calculator.value = result;
 
 			console.log('%c\u2234', 'color: #455A64; font-size: 4em;');
+			
+			console.log('%cOperation:' + ' ' + operation + '.', 'color: #455A64; font-size: 1.41em');
 
 			console.log('%cJavascript returns' + ' ' + eval(operation) + '.', 'color: #212121; font-size: 1.41em');
 
@@ -398,7 +417,7 @@ document.querySelectorAll('[data-operator]').forEach(function(element) {
 				calculator.value += element.value;
 
 				calculator.value += ' ';
-				
+
 				calculator.setAttribute('readonly', true);
 
 				calculator.focus();
@@ -448,18 +467,16 @@ var uncompress = false;
 var cssBefore = `
 @import url('https://fonts.googleapis.com/css2?family=B612:wght@400;700&display=swap');
 :root {
-    /* https://www.materialpalette.com/blue-grey/grey */
-    --accent-color: #9e9e9e;
+    /* https://www.materialpalette.com/blue-grey/teal */
+    --accent-color: #009688;
     --dark-primary-color: #455a64;
     --divider-color: #bdbdbd;
     --primary-color: #607d8b;
     --text-color: #212121;
 	--text-icons-color: #ffffff;
-    /*--font-family: 'B612 Mono', monospace;*/
 	--font-family: 'B612', sans-serif;
     --font-weight-regular: 400;
-	
-    /*--scale: calc(1393 / 985);*/
+
     --scale: calc(10812186007 / 7645370045);
 	
     --x: calc(var(--scale) * var(--scale)); /* 2 */
