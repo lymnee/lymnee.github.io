@@ -1,7 +1,7 @@
 <!doctype html>
 <html
 	data-ym-color="var(--text-color)"
-	data-ym-font-family="var(--font-family)@media screen"
+	data-ym-font-family="var(--font-family-sans-serif)@media screen"
 	data-ym-font-size="x-large@media screen and (max-width: 767px) || xx-large@media screen and (min-width: 768px)"
 	data-ym-line-height="var(--scale)"
 	data-ym-margin="auto"
@@ -466,7 +466,6 @@ var reset = 'all';
 var uncompress = false;
 
 var cssBefore = `
-@import url('https://fonts.googleapis.com/css2?family=B612&display=swap');
 :root {
 	/* https://www.materialpalette.com/blue-grey/teal */
 	--accent-color: #009688;
@@ -475,7 +474,8 @@ var cssBefore = `
 	--primary-color: #607d8b;
 	--text-color: #212121;
 	--text-icons-color: #ffffff;
-	--font-family: 'B612', sans-serif;
+	/* https://www.digitalocean.com/community/tutorials/css-system-font-stack */
+	--font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	--font-weight-regular: 400;
 
 	--scale: calc(10812186007 / 7645370045);
