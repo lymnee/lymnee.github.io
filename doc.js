@@ -1941,8 +1941,6 @@ cssAfter = `
 
 cssBefore = `
 
-/*@import url('https://fonts.googleapis.com/css2?family=Material+Icons&family=B612:wght@400;700&display=swap');*/
-
 :root {
 
     /* https://www.materialpalette.com/red/green */
@@ -1952,10 +1950,6 @@ cssBefore = `
     --primary-color: #f44336;
     --text-color: #212121;
 
-    /* https://fonts.google.com/specimen/B612?query=b612 */
-
-    /*--font-family-sans-serif: 'B612', sans-serif;*/
-    /*--font-family-sans-serif: sans-serif;*/
     --font-family-sans-serif: 'IBM Plex Sans', sans-serif;
 
     --font-weight-regular: 400;
@@ -1977,9 +1971,7 @@ cssBefore = `
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0
+    box-sizing: border-box
 }
 
 `;
