@@ -1977,7 +1977,9 @@ cssBefore = `
 }
 
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
 }
 
 `;
@@ -1988,6 +1990,6 @@ var cssBeforeLymnee = minifyMyCss(cssBefore);
 
 var printLymnee = true,
 
-entriesLymnee = new Set([`data-ym-display="none"`]);
+entriesLymnee = new Set([`data-ym-display="none"`]),
 
-unsetLymnee = new Set([`abbr`, `code`, `dd`, `dl`, `dt`, `em`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `li`, `ol`, `p`, `pre`, `q`, `strong`, `ul`]);
+unsetLymnee = true;
