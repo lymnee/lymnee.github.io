@@ -350,6 +350,24 @@ links.set(`data attributes`, link);
 
 var link = {
 
+    href: `https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll`,
+
+    titles: {
+
+        'fr': `lire la documentation à propos de Document.querySelectorAll()`,
+
+        'en': `read the documentation about Document.querySelectorAll()`
+
+    },
+
+    lang: `en`
+
+}
+
+links.set(`document.queryselectorall()`, link);
+
+var link = {
+
     href: `http://es6-features.org/`,
 
     titles: {
@@ -494,6 +512,24 @@ links.set(`how performant are data attributes as selectors`, link);
 
 var link = {
 
+    href: `https://developer.mozilla.org/en-US/docs/Web/API/XPathResult/iterateNext`,
+
+    titles: {
+
+        'fr': `lire la documentation à propos de XPathResult.iterateNext()`,
+
+        'en': `read the documentation about XPathResult.iterateNext()`
+
+    },
+
+    lang: `en`
+
+}
+
+links.set(`iteratenext()`, link);
+
+var link = {
+
     href: `http://lesscss.org/`,
 
     titles: {
@@ -584,6 +620,7 @@ var link = {
 
 links.set(`object-oriented css`, link);
 
+
 var link = {
 
     href: `https://sass-lang.com/`,
@@ -619,24 +656,6 @@ var link = {
 }
 
 links.set(`xml path language`, link);
-
-var link = {
-
-    href: `https://developer.mozilla.org/en-US/docs/Web/API/XPathResult/iterateNext`,
-
-    titles: {
-
-        'fr': `lire la documentation à propos de XPathResult.iterateNext()`,
-
-        'en': `read the documentation about XPathResult.iterateNext()`
-
-    },
-
-    lang: `en`
-
-}
-
-links.set(`iteratenext()`, link);
 
 var link = {
 
@@ -721,6 +740,24 @@ lang: `en`
 }
 
 links.set(`lymnee.reload.js`, link);
+
+var link = {
+
+    href: `https://github.com/lymnee/lymnee/blob/master/lymnee.sandbox.html`,
+    
+    titles: {
+    
+        'fr': `consulter et télécharger le fichier lymnee.sandbox.html`,
+    
+        'en': `view and download the file lymnee.sandbox.html`
+    
+    },
+    
+    lang: `en`
+    
+    }
+    
+    links.set(`lymnee.sandbox.html`, link);
 
 var link = {
 
@@ -1086,110 +1123,12 @@ function manageAbbreviations(selector) {
 
 }
 
-function manageLinksV0() {
-
-    try {
-
-        document.querySelectorAll(`[data-js-link]`).forEach(function(element) {
-
-            if (links.has(element.textContent.toLowerCase())) {
-
-                /*
-                    *
-                        var str = "Crème Brulée et œuf";
-                        str.normalize('NFD').replace(/\p{Diacritic}/gu, '');
-                    *
-                */
-
-                let hyperlink = `<a data-ym-color="var(--accent-color)::after || currentColor" data-ym-content="' ↗'::after" data-ym-cursor="pointer" data-ym-font-weight="var(--font-weight-bold)::after" href="`;
-
-                if (links.get(element.textContent.toLowerCase()).href) {
-
-                    hyperlink += links.get(element.textContent.toLowerCase()).href;
-
-                }
-
-                hyperlink += `"`;
-
-                hyperlink += ` `;
-
-                hyperlink += `title="`;
-
-                if (links.get(element.textContent.toLowerCase()).title) {
-
-                    hyperlink += links.get(element.textContent.toLowerCase()).title;
-
-                } else {
-
-                    if (links.get(element.textContent.toLowerCase()).titles[document.documentElement.lang]) {
-
-                        hyperlink += links.get(element.textContent.toLowerCase()).titles[document.documentElement.lang];
-
-                    }
-
-                }
-
-                hyperlink += ` `;
-
-                if (document.documentElement.lang === 'fr') { 
-                    
-                    hyperlink += `(S’ouvre dans une nouvelle fenêtre)`;  
-
-                } else {
-
-                    hyperlink += `(Opens in a new window)`;
-                            
-                }
-
-                hyperlink += `"`;
-
-                hyperlink += ` `;
-                
-                hyperlink += `target="_blank"`;
-
-                if (links.get(element.textContent.toLowerCase()).lang) {
-
-                    if (document.documentElement.lang !== links.get(element.textContent.toLowerCase()).lang) {
-
-                        hyperlink += `lang=`;
-
-                        hyperlink += `"`;
-
-                        hyperlink += links.get(element.textContent.toLowerCase()).lang;
-
-                        hyperlink += `"`;
-
-                    }
-
-                }
-
-                hyperlink += `>`;
-                
-                hyperlink += element.textContent;
-                
-                hyperlink += `</a>`;
-
-                element.innerHTML = element.textContent.replace(element.textContent, hyperlink);
-
-            }
-
-        });
-
-    } catch (error) {
-
-        console.log(error.name);
-
-        console.log(error.message); 
-
-    }
-
-}
 
 function manageLinks() {
 
     try {
 
-        document.querySelectorAll(`[data-js-link]`).forEach(function(element) {
+        document.querySelectorAll(`[data-js-link]`).forEach(element => {
 
             if (links.has(element.textContent.toLowerCase())) {
 
@@ -1200,9 +1139,19 @@ function manageLinks() {
                     *
                 */
 
-                let hyperlink = `<a data-ym-color="var(--accent-color)::after || currentColor" data-ym-content="' ↗'::after@media screen" data-ym-cursor="pointer" data-ym-font-weight="var(--font-weight-bold)::after" href="`;
+                let hyperlink = `<a`;
 
-                /*let hyperlink = `<a data-ym-color="var(--accent-color)::after || currentColor" data-ym-content="' ['attr(href)']'::after" data-ym-cursor="pointer" data-ym-font-weight="var(--font-weight-bold)::after" href="`;*/
+                hyperlink += ` `;
+
+                if (!element.closest(`h2, h3, h4, h5, h6`)) {
+
+                    hyperlink += `data-ym-color="var(--accent-color)::after || currentColor"`;
+
+                    hyperlink += ` `;
+
+                }
+
+                hyperlink += `data-ym-content="' ↗'::after@media screen" data-ym-cursor="pointer" data-ym-font-weight="var(--font-weight-bold)::after" href="`;
 
                 if (links.get(element.textContent.toLowerCase()).href) {
 
@@ -1543,10 +1492,6 @@ function shapeContent() {
         if (main.querySelectorAll(`dd`).length) {
     
             main.querySelectorAll(`dd`).forEach((entry) => {
-
-                /*entry.setAttribute(`data-ym-color`, `var(--accent-color)::before`);
-
-                entry.setAttribute(`data-ym-content`, `'•'::before`);*/
 
                 entry.setAttribute(`data-ym-display`, `block`);
 
@@ -1984,4 +1929,4 @@ var printLymnee = true,
 
 entriesLymnee = new Set([`data-ym-display="none"`]),
 
-unsetLymnee = true;
+unsetLymnee = new Set([`abbr`]);
