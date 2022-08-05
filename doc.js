@@ -1483,7 +1483,7 @@ function shapeContent() {
 
                 entry.setAttribute(`data-ym-content`, `'<code>'::before || '</code>'::after`);
 
-                entry.setAttribute(`data-ym-hyphens`, `none`);
+                entry.setAttribute(`data-ym-overflow-wrap`, `anywhere`);
 
             });
 
