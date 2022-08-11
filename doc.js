@@ -952,6 +952,31 @@ var abbreviation = {
 
 abbreviations.set(`url`, abbreviation);
 
+function backToTop() {
+
+    try {
+
+        if (document.querySelector('[data-js-back]')) {
+
+            document.querySelector('[data-js-back]').addEventListener('click', () => {
+
+                document.documentElement.scrollIntoView({behavior: 'smooth'});
+
+
+            });
+
+        }
+
+    } catch (error) {
+    
+        console.log(error.name);
+    
+        console.log(error.message); 
+    
+    }
+
+}
+
 function getDimensions() {
 
     try {
@@ -1021,97 +1046,101 @@ function manageAbbreviations(selector) {
 
     try {
 
-        titlesAbbreviations = new Set();
+        if (document.querySelectorAll(selector + ` ` + `[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"] [data-js-abbreviation]`).length) {
 
-        document.querySelectorAll(selector + ` ` + `[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"] [data-js-abbreviation]`).forEach(element => {
+            titlesAbbreviations = new Set();
 
-            if (abbreviations.has(element.textContent.toLowerCase())) {
+            document.querySelectorAll(selector + ` ` + `[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"] [data-js-abbreviation]`).forEach(element => {
 
-                let abbr = ``;
+                if (abbreviations.has(element.textContent.toLowerCase())) {
 
-                if (!titlesAbbreviations.has(element.textContent.toLowerCase())) {
+                    let abbr = ``;
 
-                    titlesAbbreviations.add(element.textContent.toLowerCase());
+                    if (!titlesAbbreviations.has(element.textContent.toLowerCase())) {
 
-                    if (abbreviations.get(element.textContent.toLowerCase()).title) {
+                        titlesAbbreviations.add(element.textContent.toLowerCase());
 
-                        abbr += `<abbr title="`;
-
-                        abbr += abbreviations.get(element.textContent.toLowerCase()).title;
-
-                        abbr += `">`;
-
-                        abbr += abbreviations.get(element.textContent.toLowerCase()).title;
-
-                        abbr += `</abbr>`;
-
-                    } else {
-
-                        /*
-                            *
-                                The title of an abbreviation may be different in English or in French. This case is rare! However, if the text of an abbreviation is different, two entries exist in the dictionary. 
-
-                            *
-                        */
-
-                        if (abbreviations.get(element.textContent.toLowerCase()).titles[document.documentElement.lang]) {
+                        if (abbreviations.get(element.textContent.toLowerCase()).title) {
 
                             abbr += `<abbr title="`;
 
-                            abbr += abbreviations.get(element.textContent.toLowerCase()).titles[document.documentElement.lang];
+                            abbr += abbreviations.get(element.textContent.toLowerCase()).title;
 
                             abbr += `">`;
 
-                            abbr += abbreviations.get(element.textContent.toLowerCase()).titles[document.documentElement.lang];
+                            abbr += abbreviations.get(element.textContent.toLowerCase()).title;
 
-                            abbr += `</abbr>`;                       
+                            abbr += `</abbr>`;
+
+                        } else {
+
+                            /*
+                                *
+                                    The title of an abbreviation may be different in English or in French. This case is rare! However, if the text of an abbreviation is different, two entries exist in the dictionary. 
+
+                                *
+                            */
+
+                            if (abbreviations.get(element.textContent.toLowerCase()).titles[document.documentElement.lang]) {
+
+                                abbr += `<abbr title="`;
+
+                                abbr += abbreviations.get(element.textContent.toLowerCase()).titles[document.documentElement.lang];
+
+                                abbr += `">`;
+
+                                abbr += abbreviations.get(element.textContent.toLowerCase()).titles[document.documentElement.lang];
+
+                                abbr += `</abbr>`;                       
+
+                            }
+                        }
+
+                        abbr += ` `;
+
+                        abbr += `(`;
+
+                        abbr += `<span data-ym-font-variant="small-caps">`;
+
+                        if (document.documentElement.lang === `fr`) {
+
+                            abbr += abbreviations.get(element.textContent.toLowerCase()).text.charAt(0).toUpperCase() + abbreviations.get(element.textContent.toLowerCase()).text.slice(1);
+
+                        } else {
+
+                            abbr += abbreviations.get(element.textContent.toLowerCase()).text.toUpperCase();
 
                         }
-                    }
 
-                    abbr += ` `;
+                        abbr += `</span>`;
 
-                    abbr += `(`;
-
-                    abbr += `<span data-ym-font-variant="small-caps">`;
-
-                    if (document.documentElement.lang === `fr`) {
-
-                        abbr += abbreviations.get(element.textContent.toLowerCase()).text.charAt(0).toUpperCase() + abbreviations.get(element.textContent.toLowerCase()).text.slice(1);
+                        abbr += `)`;
 
                     } else {
 
-                        abbr += abbreviations.get(element.textContent.toLowerCase()).text.toUpperCase();
+                        abbr += `<span data-ym-font-variant="small-caps">`;
+
+                        if (document.documentElement.lang === `fr`) {
+
+                            abbr += abbreviations.get(element.textContent.toLowerCase()).text.charAt(0).toUpperCase() + abbreviations.get(element.textContent.toLowerCase()).text.slice(1);
+
+                        } else {
+
+                            abbr += abbreviations.get(element.textContent.toLowerCase()).text.toUpperCase();
+                        
+                        }
+
+                        abbr += `</span>`;
 
                     }
 
-                    abbr += `</span>`;
-
-                    abbr += `)`;
-
-                } else {
-
-                    abbr += `<span data-ym-font-variant="small-caps">`;
-
-                    if (document.documentElement.lang === `fr`) {
-
-                        abbr += abbreviations.get(element.textContent.toLowerCase()).text.charAt(0).toUpperCase() + abbreviations.get(element.textContent.toLowerCase()).text.slice(1);
-
-                    } else {
-
-                        abbr += abbreviations.get(element.textContent.toLowerCase()).text.toUpperCase();
-                    
-                    }
-
-                    abbr += `</span>`;
+                    element.innerHTML = element.textContent.replace(element.textContent, abbr);
 
                 }
 
-                element.innerHTML = element.textContent.replace(element.textContent, abbr);
+            });
 
-            }
-
-        });
+        }
 
     } catch (error) {
 
@@ -1128,102 +1157,106 @@ function manageLinks() {
 
     try {
 
-        document.querySelectorAll(`[data-js-link]`).forEach(element => {
+        if (document.querySelectorAll(`[data-js-link]`).length) {
 
-            if (links.has(element.textContent.toLowerCase())) {
+            document.querySelectorAll(`[data-js-link]`).forEach(element => {
 
-                /*
-                    *
-                        var str = "Crème Brulée et œuf";
-                        str.normalize('NFD').replace(/\p{Diacritic}/gu, '');
-                    *
-                */
+                if (links.has(element.textContent.toLowerCase())) {
 
-                let hyperlink = `<a`;
+                    /*
+                        *
+                            var str = "Crème Brulée et œuf";
+                            str.normalize('NFD').replace(/\p{Diacritic}/gu, '');
+                        *
+                    */
 
-                hyperlink += ` `;
-
-                if (!element.closest(`h2, h3, h4, h5, h6`)) {
-
-                    hyperlink += `data-ym-color="var(--accent-color)::after || currentColor"`;
+                    let hyperlink = `<a`;
 
                     hyperlink += ` `;
 
-                }
+                    if (!element.closest(`h2, h3, h4, h5, h6`)) {
 
-                hyperlink += `data-ym-content="' ↗'::after@media screen" data-ym-cursor="pointer" data-ym-font-weight="var(--font-weight-bold)::after" href="`;
+                        hyperlink += `data-ym-color="var(--accent-color)::after || currentColor"`;
 
-                if (links.get(element.textContent.toLowerCase()).href) {
-
-                    hyperlink += links.get(element.textContent.toLowerCase()).href;
-
-                }
-
-                hyperlink += `"`;
-
-                hyperlink += ` `;
-
-                hyperlink += `title="`;
-
-                if (links.get(element.textContent.toLowerCase()).title) {
-
-                    hyperlink += links.get(element.textContent.toLowerCase()).title;
-
-                } else {
-
-                    if (links.get(element.textContent.toLowerCase()).titles[document.documentElement.lang]) {
-
-                        hyperlink += links.get(element.textContent.toLowerCase()).titles[document.documentElement.lang];
+                        hyperlink += ` `;
 
                     }
 
-                }
+                    hyperlink += `data-ym-content="' ↗'::after@media screen" data-ym-cursor="pointer" data-ym-font-weight="var(--font-weight-bold)::after" data-ym-line-break="anywhere" href="`;
 
-                hyperlink += ` `;
+                    if (links.get(element.textContent.toLowerCase()).href) {
 
-                if (document.documentElement.lang === 'fr') { 
+                        hyperlink += links.get(element.textContent.toLowerCase()).href;
+
+                    }
+
+                    hyperlink += `"`;
+
+                    hyperlink += ` `;
+
+                    hyperlink += `title="`;
+
+                    if (links.get(element.textContent.toLowerCase()).title) {
+
+                        hyperlink += links.get(element.textContent.toLowerCase()).title;
+
+                    } else {
+
+                        if (links.get(element.textContent.toLowerCase()).titles[document.documentElement.lang]) {
+
+                            hyperlink += links.get(element.textContent.toLowerCase()).titles[document.documentElement.lang];
+
+                        }
+
+                    }
+
+                    hyperlink += ` `;
+
+                    if (document.documentElement.lang === 'fr') { 
+                        
+                        hyperlink += `(S’ouvre dans une nouvelle fenêtre)`;  
+
+                    } else {
+
+                        hyperlink += `(Opens in a new window)`;
+                                
+                    }
+
+                    hyperlink += `"`;
+
+                    hyperlink += ` `;
                     
-                    hyperlink += `(S’ouvre dans une nouvelle fenêtre)`;  
+                    hyperlink += `target="_blank"`;
 
-                } else {
+                    if (links.get(element.textContent.toLowerCase()).lang) {
 
-                    hyperlink += `(Opens in a new window)`;
-                            
-                }
+                        if (document.documentElement.lang !== links.get(element.textContent.toLowerCase()).lang) {
 
-                hyperlink += `"`;
+                            hyperlink += `lang=`;
 
-                hyperlink += ` `;
-                
-                hyperlink += `target="_blank"`;
+                            hyperlink += `"`;
 
-                if (links.get(element.textContent.toLowerCase()).lang) {
+                            hyperlink += links.get(element.textContent.toLowerCase()).lang;
 
-                    if (document.documentElement.lang !== links.get(element.textContent.toLowerCase()).lang) {
+                            hyperlink += `"`;
 
-                        hyperlink += `lang=`;
-
-                        hyperlink += `"`;
-
-                        hyperlink += links.get(element.textContent.toLowerCase()).lang;
-
-                        hyperlink += `"`;
+                        }
 
                     }
 
+                    hyperlink += `>`;
+                    
+                    hyperlink += element.textContent;
+                    
+                    hyperlink += `</a>`;
+
+                    element.innerHTML = element.textContent.replace(element.textContent, hyperlink);
+
                 }
 
-                hyperlink += `>`;
-                
-                hyperlink += element.textContent;
-                
-                hyperlink += `</a>`;
+            });
 
-                element.innerHTML = element.textContent.replace(element.textContent, hyperlink);
-
-            }
-
-        });
+        }
 
     } catch (error) {
 
@@ -1239,141 +1272,145 @@ function manageToc() {
 
     try {
 
-        let main = document.querySelector(`[data-js-original]`);
+        if (document.querySelector(`[data-js-original]`)) {
 
-        let entries = main.querySelectorAll(`h2[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"], h2[data-ym-display="block"], h3[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"], h3[data-ym-display="block"], h4[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"], h4[data-ym-display="block"], h5[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"], h5[data-ym-display="block"], h6[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"], h6[data-ym-display="block"]`);
-    
-        let toc = `<p data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--x) * 1rem)">`;
-    
-        if (document.documentElement.lang === `fr`) {
-    
-            toc += `Sommaire`;
-    
-        } else {
-    
-            toc += `Contents`;
-    
-        } 
+            let main = document.querySelector(`[data-js-original]`);
+
+            let entries = main.querySelectorAll(`h2[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"], h2[data-ym-display="block"], h3[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"], h3[data-ym-display="block"], h4[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"], h4[data-ym-display="block"], h5[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"], h5[data-ym-display="block"], h6[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"], h6[data-ym-display="block"]`);
         
-        toc += `</p>`;
+            let toc = `<p data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--x) * 1rem)">`;
+        
+            if (document.documentElement.lang === `fr`) {
+        
+                toc += `Sommaire`;
+        
+            } else {
+        
+                toc += `Contents`;
+        
+            } 
+            
+            toc += `</p>`;
 
-        toc += `<ul`;
-
-        toc += ` `;
-
-        if (document.documentElement.lang === 'fr') {
-
-            toc += `data-ym-display="block:lang(fr) || none:lang(en)"`;
-    
-        } else {
-    
-            toc += `data-ym-display="block:lang(en) || none:lang(fr)"`;
-    
-        }
-
-        toc += ` `;
-
-        toc += `data-ym-margin-block-start="var(--margin-block-start-regular)">`;
-
-        var i = 0;
-
-        entries.forEach((entry) => {
-
-            i++;
-
-            entry.setAttribute('data-js-in', `in-` + i);
-
-            toc += `<li data-ym-display="block"`;
+            toc += `<ul`;
 
             toc += ` `;
 
-            switch (entry.tagName.toLowerCase()) {
+            if (document.documentElement.lang === 'fr') {
 
-                case `h3`:
-
-                    toc += `data-ym-margin-inline-start="1ch || 2ch@media screen and (min-width: 1024px)"`;
-
-                break;
-
-                case `h4`:
-
-                    toc += `data-ym-margin-inline-start="2ch || 3ch@media screen and (min-width: 1024px)"`;
-
-                break;
-
-                case `h5`:
-
-                    toc += `data-ym-margin-inline-start="3ch || 4ch@media screen and (min-width: 1024px)"`;
-
-                break;
-
-                case `h6`:
-
-                    toc += `data-ym-margin-inline-start="4ch || 5ch@media screen and (min-width: 1024px)"`;
-
-                break;
-
+                toc += `data-ym-display="block:lang(fr) || none:lang(en)"`;
+        
+            } else {
+        
+                toc += `data-ym-display="block:lang(en) || none:lang(fr)"`;
+        
             }
 
-            toc += `<span data-ym-color="var(--accent-color)::after" data-ym-content="'&#x2009;→ '::after" data-ym-cursor="pointer" data-ym-font-weight="var(--font-weight-bold)::after"`;
+            toc += ` `;
 
-            toc += `data-js-to=to-` + i;
-    
-            toc += `>`;
-    
-            toc += entry.innerHTML;
-    
-            toc += '</span>'
-    
-            toc += `</li>`;
+            toc += `data-ym-margin-block-start="var(--margin-block-start-regular)">`;
 
-        });
+            var i = 0;
 
-        toc += `</ul>`;
+            entries.forEach((entry) => {
 
-        document.querySelector(`[data-js-toc]`).innerHTML = toc;
+                i++;
 
-        document.querySelectorAll(`[data-js-to]`).forEach((element) => {
+                entry.setAttribute('data-js-in', `in-` + i);
 
-            element.addEventListener(`click`, () => {
-        
-                let scrollIn = element.getAttribute(`data-js-to`).replace(`to`, `in`);
-        
-                document.querySelector(`[data-js-in="` + scrollIn + `"]`).scrollIntoView();
-        
-                /*
-                    *
-                        The element exist if the user has already clicked on an hyperlink.
-                    *
-                */
-        
-                if (document.querySelector(`[data-js-to-toc]`)) {
-        
-                    document.querySelector(`[data-js-to-toc]`).remove();
-        
+                toc += `<li data-ym-display="block"`;
+
+                toc += ` `;
+
+                switch (entry.tagName.toLowerCase()) {
+
+                    case `h3`:
+
+                        toc += `data-ym-margin-inline-start="1ch || 2ch@media screen and (min-width: 1024px)"`;
+
+                    break;
+
+                    case `h4`:
+
+                        toc += `data-ym-margin-inline-start="2ch || 3ch@media screen and (min-width: 1024px)"`;
+
+                    break;
+
+                    case `h5`:
+
+                        toc += `data-ym-margin-inline-start="3ch || 4ch@media screen and (min-width: 1024px)"`;
+
+                    break;
+
+                    case `h6`:
+
+                        toc += `data-ym-margin-inline-start="4ch || 5ch@media screen and (min-width: 1024px)"`;
+
+                    break;
+
                 }
-        
-                if (document.documentElement.lang === `fr`) {
 
-                    document.querySelector(`[data-js-in="` + scrollIn + `"]`).innerHTML += `<span data-ym-color="var(--accent-color)" data-ym-cursor="pointer" data-ym-font-weight="var(--font-weight-bold)::after" data-js-to-toc title="retour au sommaire">&#x2009;↑</span>`;
+                toc += `<span data-ym-color="var(--accent-color)::after" data-ym-content="'&#x2009;→ '::after" data-ym-cursor="pointer" data-ym-font-weight="var(--font-weight-bold)::after"`;
+
+                toc += `data-js-to=to-` + i;
         
-                } else {
+                toc += `>`;
         
-                    document.querySelector(`[data-js-in="` + scrollIn + `"]`).innerHTML += `<span data-ym-color="var(--accent-color)" data-ym-cursor="pointer" data-ym-font-weight="var(--font-weight-bold)::after" data-js-to-toc title="back to contents">&#x2009;↑</span>`;
+                toc += sanitizeHtml(entry.innerHTML);
+
+                toc += '</span>'
         
-                }
-        
-                document.querySelector(`[data-js-to-toc]`).addEventListener('click', () => {
-        
-                    document.querySelector(`[data-js-toc]`).scrollIntoView();
-        
-                    document.querySelector(`[data-js-to-toc]`).remove();
-        
-                });
-        
+                toc += `</li>`;
+
             });
-        
-        });
+
+            toc += `</ul>`;
+
+            document.querySelector(`[data-js-toc]`).innerHTML = toc;
+
+            document.querySelectorAll(`[data-js-to]`).forEach((element) => {
+
+                element.addEventListener(`click`, () => {
+            
+                    let scrollIn = element.getAttribute(`data-js-to`).replace(`to`, `in`);
+            
+                    document.querySelector(`[data-js-in="` + scrollIn + `"]`).scrollIntoView();
+            
+                    /*
+                        *
+                            The element exist if the user has already clicked on an hyperlink.
+                        *
+                    */
+            
+                    if (document.querySelector(`[data-js-to-toc]`)) {
+            
+                        document.querySelector(`[data-js-to-toc]`).remove();
+            
+                    }
+            
+                    if (document.documentElement.lang === `fr`) {
+
+                        document.querySelector(`[data-js-in="` + scrollIn + `"]`).innerHTML += `<span data-ym-color="var(--accent-color)" data-ym-cursor="pointer" data-ym-font-weight="var(--font-weight-bold)::after" data-js-to-toc title="retour au sommaire">&#x2009;↑</span>`;
+            
+                    } else {
+            
+                        document.querySelector(`[data-js-in="` + scrollIn + `"]`).innerHTML += `<span data-ym-color="var(--accent-color)" data-ym-cursor="pointer" data-ym-font-weight="var(--font-weight-bold)::after" data-js-to-toc title="back to contents">&#x2009;↑</span>`;
+            
+                    }
+            
+                    document.querySelector(`[data-js-to-toc]`).addEventListener('click', () => {
+            
+                        document.querySelector(`[data-js-toc]`).scrollIntoView();
+            
+                        document.querySelector(`[data-js-to-toc]`).remove();
+            
+                    });
+            
+                });
+            
+            });
+
+        }
 
     } catch (error) {
 
@@ -1404,6 +1441,36 @@ function minifyMyCss(css) {
         console.log(error.name);
 
         console.log(error.message); 
+
+    }
+
+}
+
+function sanitizeHtml(html) {
+
+    try {
+
+        let div = document.createElement(`div`);
+
+        document.querySelector(`body`).appendChild(div);
+
+        let fragment = document.createRange().createContextualFragment(html);
+
+        div.appendChild(fragment);
+
+        var text = div.textContent || div.innerText || ``;
+
+        document.querySelector(`body`).removeChild(div);
+
+    } catch (error) {
+
+        console.log(error.name);
+    
+        console.log(error.message); 
+    
+    } finally {
+
+        return text;
 
     }
 
@@ -1473,200 +1540,217 @@ function shapeContent() {
 
     try {
 
-        let main = document.querySelector(`[data-js-original]`);
+        if (document.querySelector(`[data-js-original]`)) {
 
-        if (main.querySelectorAll(`code`).length) {
-    
-            main.querySelectorAll(`code`).forEach((entry) => {
+            let main = document.querySelector(`[data-js-original]`);
 
-                entry.setAttribute(`data-ym-color`, `var(--accent-color)::before || var(--accent-color)::after`);
+            if (main.querySelectorAll(`code`).length) {
+        
+                main.querySelectorAll(`code`).forEach((entry) => {
 
-                entry.setAttribute(`data-ym-content`, `'<code>'::before || '</code>'::after`);
+                    if (!entry.closest(`pre`)) {
 
-                entry.setAttribute(`data-ym-overflow-wrap`, `anywhere`);
+                        entry.setAttribute(`data-ym-color`, `var(--accent-color)::before || var(--accent-color)::after`);
 
-            });
+                        entry.setAttribute(`data-ym-content`, `'<code>'::before || '</code>'::after`);
 
-        }
+                        entry.setAttribute(`data-ym-line-break`, `anywhere`);
 
-        if (main.querySelectorAll(`dd`).length) {
-    
-            main.querySelectorAll(`dd`).forEach((entry) => {
-
-                entry.setAttribute(`data-ym-display`, `block`);
-
-            });
-
-        }
-    
-        if (main.querySelectorAll(`dt, h2, h3, h4, h5, h6, p, ol, ul`).length) {
-    
-            main.querySelectorAll(`dt, dt, h2, h3, h4, h5, h6, p, ol, ul`).forEach((entry) => {
-                
-                if (entry.hasAttribute(`data-lang`)) {
-
-                    switch (entry.getAttribute(`data-lang`))  {
-
-                        case `fr`:
-
-                            entry.setAttribute(`data-ym-display`, `block:lang(fr) || none:lang(en)`);
-
-                        break;
-
-                        default:
-
-                            entry.setAttribute(`data-ym-display`, `block:lang(en) || none:lang(fr)`);
                     }
-    
-                }
 
-                if (!entry.hasAttribute(`data-lang`)) {
+                });
+
+            }
+
+            if (main.querySelectorAll(`dd`).length) {
+        
+                main.querySelectorAll(`dd`).forEach((entry) => {
 
                     entry.setAttribute(`data-ym-display`, `block`);
 
+                });
 
-                }
-    
-                entry.setAttribute(`data-ym-margin-block-start`, `var(--margin-block-start-regular)`);
+            }
+        
+            if (main.querySelectorAll(`dt, h2, h3, h4, h5, h6, p, ol, ul`).length) {
+        
+                main.querySelectorAll(`dt, dt, h2, h3, h4, h5, h6, p, ol, ul`).forEach((entry) => {
+                    
+                    if (entry.hasAttribute(`data-lang`)) {
+
+                        switch (entry.getAttribute(`data-lang`))  {
+
+                            case `fr`:
+
+                                entry.setAttribute(`data-ym-display`, `block:lang(fr) || none:lang(en)`);
+
+                            break;
+
+                            default:
+
+                                entry.setAttribute(`data-ym-display`, `block:lang(en) || none:lang(fr)`);
+                        }
+        
+                    }
+
+                    if (!entry.hasAttribute(`data-lang`)) {
+
+                        entry.setAttribute(`data-ym-display`, `block`);
+
+
+                    }
+        
+                    entry.setAttribute(`data-ym-margin-block-start`, `var(--margin-block-start-regular)`);
+                
+                });
+        
+            }
+
+            if (main.querySelectorAll(`dt`).length) {
+        
+                main.querySelectorAll(`dt`).forEach((entry) => {
+
+                    entry.setAttribute(`data-ym-color`, `var(--accent-color)::first-letter`);
+
+                    entry.setAttribute(`data-ym-font-variant`, `small-caps::first-letter`);
+
+                    entry.setAttribute(`data-ym-font-weight`, `var(--font-weight-bold)::first-letter`);
+
+                });
+
+            }
+
+            if (main.querySelectorAll(`h2, h3, h4, h5, h6`).length) {
+        
+                main.querySelectorAll(`h2, h3, h4, h5, h6`).forEach((entry) => {
+
+                    if (!entry.hasAttribute(`data-ym-color`)) {
+
+                        entry.setAttribute(`data-ym-color`, `var(--primary-color)`);
+
+                    }
+
+                });
+
+            }
+
+            if (main.querySelectorAll(`li`).length) {
+        
+                main.querySelectorAll(`li`).forEach((entry) => {
+
+                    if (!entry.hasAttribute(`data-ym-color`)) {
+
+                        entry.setAttribute(`data-ym-color`, `var(--primary-color)::marker`);
+
+                    }
+
+                    if (!entry.hasAttribute(`data-ym-display`)) {
+
+                        entry.setAttribute(`data-ym-display`, `list-item`);
+
+                    }
+
+                });
+
+            }
+
+            if (main.querySelectorAll(`ol, ul`).length) {
+        
+                main.querySelectorAll(`ol, ul`).forEach((entry) => {
+
+                    if (!entry.hasAttribute(`data-ym-list-style-position`)) {
+
+                        entry.setAttribute(`data-ym-list-style-position`, `inside`);
+
+                    }
+
+                });
+
+            }
+
+            if (main.querySelectorAll(`ol`).length) {
+        
+                main.querySelectorAll(`ol`).forEach((entry) => {
+
+                    if (!entry.hasAttribute(`data-ym-list-style-type`)) {
+
+                        entry.setAttribute(`data-ym-list-style-type`, `decimal`);
+
+                    }
+
+                });
+
+            }
+
+            if (main.querySelectorAll(`pre`).length) {
+        
+                main.querySelectorAll(`pre`).forEach((entry) => {
+
+                    entry.setAttribute(`data-ym-border-inline-start`, `calc(var(--sssssssss) * 1rem) solid var(--accent-color)`);
+
+                    entry.setAttribute(`data-ym-display`, `block`);
+
+                    entry.setAttribute(`data-ym-line-break`, `anywhere`);
+
+                    entry.setAttribute(`data-ym-margin-block-start`, `var(--margin-block-start-regular)`);
+
+                    entry.setAttribute(`data-ym-padding-inline-start`, `calc(var(--s) * 1rem)`);
+
+                    entry.setAttribute(`data-ym-white-space`, `pre-wrap`);
+
+        
+                });
+        
+            }
+
+            if (main.querySelectorAll(`ul`).length) {
+        
+                main.querySelectorAll(`ul`).forEach((entry) => {
+
+                    if (!entry.hasAttribute(`data-ym-list-style-type`)) {
+
+                        entry.setAttribute(`data-ym-list-style-type`, `disc`);
+
+                    }
+
+                });
+
+            }
+
+            if (main.querySelectorAll(`[data-css-lymnee]`).length) {
+
+                document.querySelectorAll(`[data-css-lymnee]`).forEach((entry) => {
+
+                    entry
+                    .setAttribute(`data-ym-color`, `var(--primary-color)`);
+                    entry
+                    .setAttribute(`data-ym-font-variant`, `small-caps::first-letter`);
+                    entry
+                    .setAttribute(`data-ym-font-weight`, `var(--font-weight-bold)`);
             
-            });
-    
-        }
+                });
 
-        if (main.querySelectorAll(`dt`).length) {
-    
-            main.querySelectorAll(`dt`).forEach((entry) => {
+            }
 
-                entry.setAttribute(`data-ym-color`, `var(--accent-color)::first-letter`);
+            if (main.querySelectorAll(`[data-css-quote]`).length) {
 
-                entry.setAttribute(`data-ym-font-variant`, `small-caps::first-letter`);
+                document.querySelectorAll(`[data-css-quote]`).forEach((entry) => {
 
-                entry.setAttribute(`data-ym-font-weight`, `var(--font-weight-bold)::first-letter`);
+                    entry.setAttribute(`data-ym-content`, `open-quote::before || close-quote::after`);
+            
+                });
 
-            });
+            }
 
-        }
+            if (main.querySelectorAll(`[data-css-line-break]`).length) {
 
-        if (main.querySelectorAll(`h2, h3, h4, h5, h6`).length) {
-    
-            main.querySelectorAll(`h2, h3, h4, h5, h6`).forEach((entry) => {
+                document.querySelectorAll(`[data-css-line-break]`).forEach((entry) => {
 
-                if (!entry.hasAttribute(`data-ym-color`)) {
+                    entry.setAttribute(`data-ym-line-break`, `anywhere`); 
+            
+                });
 
-                    entry.setAttribute(`data-ym-color`, `var(--primary-color)`);
-
-                }
-
-            });
-
-        }
-
-        if (main.querySelectorAll(`li`).length) {
-    
-            main.querySelectorAll(`li`).forEach((entry) => {
-
-                if (!entry.hasAttribute(`data-ym-color`)) {
-
-                    entry.setAttribute(`data-ym-color`, `var(--primary-color)::marker`);
-
-                }
-
-                if (!entry.hasAttribute(`data-ym-display`)) {
-
-                    entry.setAttribute(`data-ym-display`, `list-item`);
-
-                }
-
-            });
-
-        }
-
-        if (main.querySelectorAll(`ol, ul`).length) {
-    
-            main.querySelectorAll(`ol, ul`).forEach((entry) => {
-
-                if (!entry.hasAttribute(`data-ym-list-style-position`)) {
-
-                    entry.setAttribute(`data-ym-list-style-position`, `inside`);
-
-                }
-
-            });
-
-        }
-
-        if (main.querySelectorAll(`ol`).length) {
-    
-            main.querySelectorAll(`ol`).forEach((entry) => {
-
-                if (!entry.hasAttribute(`data-ym-list-style-type`)) {
-
-                    entry.setAttribute(`data-ym-list-style-type`, `decimal`);
-
-                }
-
-            });
-
-        }
-
-        if (main.querySelectorAll(`pre`).length) {
-    
-            main.querySelectorAll(`pre`).forEach((entry) => {
-
-                entry.setAttribute(`data-ym-border-inline-start`, `calc(var(--sssssssss) * 1rem) solid var(--accent-color)`);
-
-                entry.setAttribute(`data-ym-display`, `block`);
-
-                entry.setAttribute(`data-ym-hyphens`, `none`);
-
-                entry.setAttribute(`data-ym-margin-block-start`, `var(--margin-block-start-regular)`);
-
-                entry.setAttribute(`data-ym-padding-inline-start`, `calc(var(--s) * 1rem)`);
-
-                entry.setAttribute(`data-ym-white-space`, `pre-wrap`);
-
-                entry.setAttribute(`data-ym-white-space`, `break-spaces`);
-    
-            });
-    
-        }
-
-        if (main.querySelectorAll(`ul`).length) {
-    
-            main.querySelectorAll(`ul`).forEach((entry) => {
-
-                if (!entry.hasAttribute(`data-ym-list-style-type`)) {
-
-                    entry.setAttribute(`data-ym-list-style-type`, `disc`);
-
-                }
-
-            });
-
-        }
-
-        if (main.querySelectorAll(`[data-css-lymnee]`).length) {
-
-            document.querySelectorAll(`[data-css-lymnee]`).forEach((entry) => {
-
-                entry
-                .setAttribute(`data-ym-color`, `var(--primary-color)`);
-                entry
-                .setAttribute(`data-ym-font-variant`, `small-caps::first-letter`);
-                entry
-                .setAttribute(`data-ym-font-weight`, `var(--font-weight-bold)`);
-        
-            });
-
-        }
-
-        if (main.querySelectorAll(`[data-css-quote]`).length) {
-
-            document.querySelectorAll(`[data-css-quote]`).forEach((entry) => {
-
-                entry.setAttribute(`data-ym-content`, `open-quote::before || close-quote::after`);
-        
-            });
+            }
 
         }
     
@@ -1844,7 +1928,9 @@ try {
 
         new Promise(resolve => resolve(summarizeContent())),
 
-        new Promise(resolve => resolve(manageToc()))
+        new Promise(resolve => resolve(manageToc())),
+
+        new Promise(resolve => resolve(backToTop()))
 
     ];
 
@@ -1929,4 +2015,4 @@ var printLymnee = true,
 
 entriesLymnee = new Set([`data-ym-display="none"`]),
 
-unsetLymnee = new Set([`abbr`]);
+unsetLymnee = new Set([`abbr`, `em`, `strong`]);
