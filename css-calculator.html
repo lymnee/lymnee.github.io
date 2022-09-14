@@ -1,510 +1,770 @@
 <!doctype html>
-<html
-	data-ym-color="var(--text-color)"
-	data-ym-font-family="var(--font-family-sans-serif)@media screen"
-	data-ym-font-size="x-large@media screen and (max-width: 767px) || xx-large@media screen and (min-width: 768px)"
-	data-ym-font-weight="var(--regular)"
-	data-ym-line-height="var(--scale)"
-	data-ym-margin="auto"
-	data-ym-max-width="480px@media screen and (min-width: 480px)"
-	data-ym-width="95%"
-	lang="en"
->
+<html data-eenmyl data-ym-color="var(--primary-text-color)" data-ym-display="block" data-ym-font-family="var(--font-family)" data-ym-font-size="2.25vw@media screen and (max-width: 1023px) || large@media screen and (min-width: 1024px)" data-ym-font-weight="var(--font-weight-regular)" data-ym-line-height="var(--line-height)" data-ym-margin="auto" data-ym-max-width="1024px@media screen and (min-width: 1024px)" data-ym-width="calc(100vw - calc(var(--xs) * 1rem))@media screen and (max-width: 1023px)" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="The calculator uses the Css calc() function to solve the four basic arithmetic operations.">
 <meta name="keywords" content="CSS calc(), Css, JavaScript">
 <meta name="author" content="Vincent Top-Roulet">
-<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0cHgiIGZpbGw9IiNGNDQzMzYiPjxwYXRoIGQ9Ik0xOSwxMEg1VjhIMTlWMTBNMTksMTZINVYxNEgxOVYxNloiIC8+PC9zdmc+">
+<link rel="icon" href="%20" data-emoji="🤯" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <title>Fun calculator with Css calc()</title>
 </head>
-<body 
-	data-ym-display="grid"
-	data-ym-margin="auto"
-	data-ym-padding-block-end="calc(var(--sss) * 1rem)"
-	data-ym-padding-block-start="calc(var(--sss) * 1rem)"
->
-<div
-	data-ym-border="calc(var(--sssssss) * 1rem) solid var(--dark-primary-color)"
-	data-ym-display="block" 
-	data-ym-padding="calc(var(--sss) * 1rem)"
->
-	<h1
-		data-ym-color="var(--text-color)"
-		data-ym-display="block"
-		data-ym-font-size="calc(var(--xs) * 1rem)"
-		data-ym-hyphens="auto"
-	>
-		<span data-ym-color="var(--accent-color)">Fun</span> <span data-ym-text-decoration="line-through var(--accent-color) solid && [data-js-title-active]" data-js-title>useless</span> calculator with <a href="https://drafts.csswg.org/css-values-3/#calc-notation" title="Link to CSS Values and Units Module Level 3 Mathematical §Expressions: calc() (Open in a new window)" target="_blank" data-ym-color="var(--text-color):link || var(--text-color):visited || var(--text-color):focus || var(--text-color):hover || var(--text-color):active"><span data-ym-font-variant="small-caps">Css</span> calc()</a>
-	</h1>
-</div>
-<form data-form>
-	<input 
-		data-ym-background-color="var(--dark-primary-color)"
-		data-ym-margin-block-start="calc(var(--s) * 1rem)"
-		data-ym-color="var(--text-icons-color) || var(--text-icons-color)::placeholder"
-		data-ym-display="block"
-		data-ym-width="100%"
-		name="formula"
-		readonly
-		placeholder="Press buttons, e.g. 1 ÷ 3…"
-	>
-	<div 
-		data-ym-margin-block-start="calc(var(--s) * 1rem)"
-		data-ym-display="grid"
-		data-ym-grid-gap="1ch"
-		data-ym-grid-template-columns="repeat(4, calc(calc(100% - 3ch) / 4))"
-		data-ym-grid-template-rows="repeat(6, calc(var(--xs) * 1rem))"
-	>
-		<button 
-			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
-			data-ym-color="var(--text-icons-color)" 
-			data-ym-cursor="pointer"
-			data-ym-display="block"
-			data-ym-grid-column="1"
-			data-ym-grid-row="1"
-			data-ym-text-align="center"
-			data-number
-			value="1"
-		>
-			1
-		</button>
-		<button
-			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
-			data-ym-color="var(--text-icons-color)"
-			data-ym-cursor="pointer"
-			data-ym-display="block"
-			data-ym-grid-column="2"
-			data-ym-grid-row="1"
-			data-ym-text-align="center"
-			data-number
-			value="2"
-		>
-			2
-		</button>
-		<button
-			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
-			data-ym-color="var(--text-icons-color)"
-			data-ym-cursor="pointer"
-			data-ym-display="block"
-			data-ym-grid-column="3"
-			data-ym-grid-row="1"
-			data-ym-text-align="center"
-			data-number
-			value="3"
-		>
-			3
-		</button>
-		<button
-			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
-			data-ym-color="var(--text-icons-color)"
-			data-ym-cursor="pointer"
-			data-ym-display="block"
-			data-ym-grid-column="1"
-			data-ym-grid-row="2"
-			data-ym-text-align="center"
-			data-number
-			value="4"
-		>
-		4
-		</button>
-		<button
-			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
-			data-ym-color="var(--text-icons-color)"
-			data-ym-cursor="pointer"
-			data-ym-display="block"
-			data-ym-grid-column="2"
-			data-ym-grid-row="2"
-			data-ym-text-align="center"
-			data-number
-			value="5"
-		>
-			5
-		</button>
-		<button
-			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
-			data-ym-color="var(--text-icons-color)"
-			data-ym-cursor="pointer"
-			data-ym-display="block"
-			data-ym-grid-column="3"
-			data-ym-grid-row="2"
-			data-ym-text-align="center"
-			data-number
-			value="6"
-		>
-			6
-		</button>
-		<button
-			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
-			data-ym-color="var(--text-icons-color)"
-			data-ym-cursor="pointer"
-			data-ym-display="block"
-			data-ym-grid-column="1"
-			data-ym-grid-row="3"
-			data-ym-text-align="center"
-			data-number
-			value="7"
-		>
-			7
-		</button>
-		<button 
-			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
-			data-ym-color="var(--text-icons-color)"
-			data-ym-cursor="pointer"
-			data-ym-display="block"
-			data-ym-grid-column="2"
-			data-ym-grid-row="3"
-			data-ym-text-align="center"
-			data-number
-			value="8"
-		>
-			8
-		</button>
-		<button
-			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
-			data-ym-color="var(--text-icons-color)"
-			data-ym-cursor="pointer"
-			data-ym-display="block"
-			data-ym-grid-column="3"
-			data-ym-grid-row="3"
-			data-ym-text-align="center"
-			data-number
-			value="9"
-		>
-			9
-		</button>
-		<button
-			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
-			data-ym-color="var(--text-icons-color)"
-			data-ym-cursor="pointer"
-			data-ym-display="block"
-			data-ym-grid-column="2"
-			data-ym-grid-row="4"
-			data-ym-text-align="center"
-			data-number
-			value="0"
-		>
-			0
-		</button>
-		<button
-			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
-			data-ym-color="var(--text-icons-color)"
-			data-ym-cursor="pointer"
-			data-ym-display="block"
-			data-ym-grid-column="4"
-			data-ym-grid-row="5"
-			data-ym-text-align="center"
-			data-period
-			value="."
-		>
-			.
-		</button>
-		<button
-			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
-			data-ym-color="var(--text-icons-color)"
-			data-ym-cursor="pointer"
-			data-ym-display="block"
-			data-ym-grid-column="4"
-			data-ym-grid-row="1"
-			data-ym-text-align="center"
-			data-operator
-			value="+"
-		>
-			+
-		</button>
-		<button
-			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
-			data-ym-color="var(--text-icons-color)"
-			data-ym-cursor="pointer"
-			data-ym-display="block"
-			data-ym-grid-column="4"
-			data-ym-grid-row="2"
-			data-ym-text-align="center"
-			data-operator
-			value="-"
-		>
-			−
-		</button>
-		<button
-			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
-			data-ym-color="var(--text-icons-color)"
-			data-ym-cursor="pointer"
-			data-ym-display="block"
-			data-ym-grid-column="4"
-			data-ym-grid-row="3"
-			data-ym-text-align="center"
-			data-operator
-			value="x"
-		>
-			x
-		</button>
-		<button
-			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
-			data-ym-color="var(--text-icons-color)"
-			data-ym-cursor="pointer"
-			data-ym-display="block"
-			data-ym-grid-column="4"
-			data-ym-grid-row="4"
-			data-ym-text-align="center"
-			data-operator
-			value="÷"
-		>
-			÷
-		</button>
-		<button
-			data-ym-background-color="var(--primary-color) || var(--dark-primary-color):hover || var(--dark-primary-color):active"
-			data-ym-color="var(--text-icons-color)"
-			data-ym-cursor="pointer"
-			data-ym-display="block"
-			data-ym-grid-column="1"
-			data-ym-grid-row="6"
-			data-ym-text-align="center"
-			data-clear
-		>
-			c
-		</button>
-		<button
-			data-ym-background-color="var(--accent-color)"
-			data-ym-color="var(--text-icons-color)"
-			data-ym-cursor="pointer"
-			data-ym-display="block"
-			data-ym-text-align="center"
-			data-ym-grid-column="3 / span 2"
-			data-ym-grid-row="6"
-			data-compute
-		>
-			=
-		</button>
-	</div>
-</form>
-<div
-	data-ym-display="none"
-	data-ym-height="0"
-	data-ym-width="0"
-	data-ym-margin-block-start="var(--dimension)"
-	data-result
-></div>
-<div 
-	data-ym-display="none || block@media screen and (min-width: 1025px) && [data-js-tip-active]"
-	data-ym-bottom="0 && [data-js-tip-active]"
-	data-ym-left="0 && [data-js-tip-active]"
-	data-ym-margin-inline-start="calc(50% + 240px + calc(calc(var(--x) * 1rem))) && [data-js-tip-active]"
-	data-ym-right="0 && [data-js-tip-active]"
-	data-ym-position="fixed && [data-js-tip-active]"
-	data-js-tip
->
-	<p
-		data-ym-color="var(--text-color) && [data-js-tip-active]"
-		data-ym-display="block && [data-js-tip-active] && [data-js-tip-active]"
-		data-ym-font-size="calc(var(--ss) * 1rem) && [data-js-tip-active]"
-		data-ym-text-align="right && [data-js-tip-active]"
-		data-ym-padding-block-end="calc(var(--s) * 1rem) && [data-js-tip-active]"
-		data-ym-padding-inline-end="calc(var(--s) * 1rem) && [data-js-tip-active]"
-	>
-		Open JavaScript console to see more<span data-ym-color="var(--accent-color) && [data-js-tip-active]">.</span>
-	</p>
-</div>
+<body data-ym-display="grid" data-ym-grid-template-columns="1fr || 1fr auto@media screen and (min-width: 1024px)" data-ym-gap="calc(var(--ss) * 1rem)" data-ym-grid-template-rows="repeat(4, auto) || auto 1fr@media screen and (min-width: 1024px)" data-ym-justify-items="center@media screen and (max-width: 1023px)">
+
+        <h1 data-ym-color="var(--primary-text-color)"
+        data-ym-font-size="calc(var(--xs) * 1rem)" data-ym-grid-column="1@media screen and (min-width: 1024px)" data-ym-grid-row="1@media screen and (min-width: 1024px)" data-ym-hyphens="auto">
+        <span data-ym-color="var(--accent-color)">Fun</span> <span data-js-title>useless</span> calculator with <a href="https://drafts.csswg.org/css-values-3/#calc-notation" title="Link to CSS Values and Units Module Level 3 Mathematical §Expressions: calc() (Open in a new window)" target="_blank" data-ym-color="var(--primary-text-color):link || var(--primary-text-color):visited || var(--primary-text-color):focus || var(--primary-text-color):hover || var(--primary-text-color):active"><span data-ym-font-variant="small-caps">Css</span> calc()</a>
+        </h1>
+
+        <div data-js-result data-ym-display="none" data-ym-grid-column="1@media screen and (min-width: 1024px)" data-ym-grid-row="4@media screen and (max-width: 1023px) || 2@media screen and (min-width: 1024px)" data-ym-justify-self="start@media screen and (max-width: 1023px)" data-ym-row-gap="calc(var(--sss) * 1rem)">
+            <div data-ym-display="grid" data-ym-row-gap="1ch">
+                <span data-ym-display="flex" data-ym-justify-content="center@media screen and (min-width: 1024px)" data-ym-order="2@media screen and (max-width: 1023px)">
+                    <span data-item data-ym-background-color="var(--accent-color)">
+                        <span data-ym-font-size="calc(var(--xx) * 1rem)" class="material-symbols-outlined">engineering</span>
+                    </span>
+                </span>               
+                <span data-ym-font-size="calc(var(--xs) * 1rem)">Full <span data-ym-color="var(--accent-color)">results</span> of<span data-ym-color="var(--accent-color)" data-ym-order="1@media screen and (max-width: 1023px)">…</span></span>
+                <span data-js-operation data-ym-color="var(--accent-color)" data-ym-font-size="calc(var(--xx) * 1rem)"  data-ym-line-break="anywhere" data-ym-order="3@media screen and (max-width: 1023px)"></span>
+            </div>
+            <div data-ym-display="grid" data-ym-column-gap="1ch" data-ym-grid-template-columns="calc(var(--xxx) * 1rem) 1fr">
+                <span data-ym-color="var(--accent-color)" data-ym-font-size="calc(var(--xx) * 1rem)" data-ym-font-variant="small-caps" data-ym-text-orientation="sideways" data-ym-writing-mode="vertical-rl">Css</span>
+                <span data-js-result-css data-ym-font-size="calc(var(--xs) * 1rem)" data-ym-line-break="anywhere"></span>
+            </div>
+            <div data-ym-display="grid" data-ym-column-gap="1ch" data-ym-grid-template-columns="calc(var(--xxx) * 1rem) 1fr" title="
+            JavaScript to the rescue!">
+                <span data-ym-color="var(--accent-color)" data-ym-font-size="calc(var(--xx) * 1rem)" data-ym-font-variant="small-caps" data-ym-text-orientation="sideways" data-ym-writing-mode="vertical-rl">Js</span>
+                <span data-js-result-js data-ym-font-size="calc(var(--xs) * 1rem)" data-ym-line-break="anywhere"></span>
+            </div>
+        </div>
+
+        <div data-js-screen 
+        data-ym-display="grid" data-ym-gap="calc(var(--ss) * 1rem)" data-ym-grid-row="2@media screen and (max-width: 1023px) || 1@media screen and (min-width: 1024px)" data-ym-grid-column="2@media screen and (min-width: 1024px)" data-ym-grid-template-columns="repeat(5, calc(var(--xxx) * 1rem))" data-ym-grid-template-rows="repeat(3, calc(var(--xxx) * 1rem))">
+        </div>
+
+        <div data-js-keypad data-js-placeholder="Press items, e.g. 1 ÷ 3…" data-ym-align-content="start@media screen and (min-width: 1024px)" data-ym-display="grid" data-ym-gap="calc(var(--ss) * 1rem)" data-ym-grid-row="3@media screen and (max-width: 1023px) || 2@media screen and (min-width: 1024px)" data-ym-grid-column="2@media screen and (min-width: 1024px)" data-ym-grid-columns="repeat(4, calc(var(--xxx) * 1rem))">
+            <span data-ym-grid-column="1" data-ym-grid-row="1">
+                <span>1</span>
+            </span>
+            <span data-ym-grid-column="2" data-ym-grid-row="1">
+                <span>2</span>
+            </span>
+            <span data-ym-grid-column="3" data-ym-grid-row="1">
+                <span>3</span>
+            </span>
+            <span data-ym-grid-column="4" data-ym-grid-row="1">
+                <span>4</span>
+            </span>
+            <span data-ym-grid-column="5" data-ym-grid-row="1">
+                <span>+</span>
+            </span>
+            <span data-ym-grid-column="1" data-ym-grid-row="2">
+                <span>5</span>
+            </span>
+            <span data-ym-grid-column="2" data-ym-grid-row="2">
+                <span>6</span>
+            </span>
+            <span data-ym-grid-column="3" data-ym-grid-row="2">
+                <span>7</span>
+            </span>
+            <span data-ym-grid-column="4" data-ym-grid-row="2">
+                <span>8</span>
+            </span>
+            <span data-ym-grid-column="5" data-ym-grid-row="2">
+                <span>−</span>
+            </span>
+            <span data-ym-grid-column="1" data-ym-grid-row="3">
+                <span>9</span>
+            </span>
+            <span data-ym-grid-column="2" data-ym-grid-row="3">
+                <span>0</span>
+            </span>
+            <span data-ym-grid-column="4" data-ym-grid-row="3">
+                <span>.</span>
+            </span>
+            <span data-ym-grid-column="5" data-ym-grid-row="3">
+                <span>×</span>
+            </span>
+            <span data-ym-grid-column="1" data-ym-grid-row="4">
+                <span>⟮</span>
+            </span>
+            <span data-ym-grid-column="2" data-ym-grid-row="4">
+                <span>⟯</span>
+            </span>
+            <span data-ym-grid-column="3" data-ym-grid-row="4" data-ym-pointer-events="none">
+                <span class="material-symbols-outlined" title="restore (and delete) last result">restore</span>
+            </span>
+            <span data-ym-grid-column="4" data-ym-grid-row="4" title="delete last entry">
+                <span class="material-symbols-outlined">backspace</span>
+            </span>
+            <span data-ym-grid-column="5" data-ym-grid-row="4">
+                <span>÷</span>
+            </span>
+            <span data-ym-grid-column="1" data-ym-grid-row="5" data-ym-pointer-events="none" title="save result">
+                <span class="material-symbols-outlined">save</span>
+            </span>
+            <span data-ym-grid-column="3" data-ym-grid-row="5">
+                <span>=</span>
+            </span>
+            <span data-ym-grid-column="5" data-ym-grid-row="5" data-ym-pointer-events="none" title="reset">
+                <span class="material-symbols-outlined">delete</span>
+            </span>
+        </div>
+
 <script>
-const calculator = document.querySelector('input');
 
-document.querySelector('[data-clear]').addEventListener('click', event => {
+function displayResult(result, clear) {
 
-	calculator.setAttribute('readonly', false);
+    try {
 
-	calculator.value = ''
+        if (clear) {
 
-	calculator.setAttribute('readonly', true);
+            document.querySelector(`[data-js-screen]`).replaceChildren();
 
-	event.preventDefault();
+        }
 
-});
+        for (let i = 0; i < result.length; i++) {
 
-document.querySelector('[data-compute]').addEventListener('click', event => {
+            let digit = `<span data-item data-ym-background-color="var(--primary-color)"><span data-ym-font-size="calc(var(--xx) * 1rem)">${result[i].replace(`-`, `−`)}</span></span>`;
 
-	if (!document.querySelector('[data-js-title]').hasAttribute('data-js-title-active')) {
+            document.querySelector(`[data-js-screen]`).innerHTML += digit;
 
-		document.querySelector('[data-js-title]').setAttribute('data-js-title-active', '');
+        }
 
-	}
+    } catch {
 
-	if (!document.querySelector('[data-js-tip]').hasAttribute('data-js-tip-active')) {
-
-		document.querySelector('[data-js-tip]').setAttribute('data-js-tip-active', '');
-		
-		document.querySelector('[data-js-tip] span').setAttribute('data-js-tip-active', '');
-
-	}
-
-	let form = document.querySelector('[data-form]');
-
-	let data = new FormData(form);
-
-	if (data.get('formula') != '') {
-
-		let operation = data.get('formula').replace(/x/g, '*').replace(/÷/g, '/');
-
-		try {
-
-			eval(operation);
-
-			document.documentElement.style.setProperty('--dimension', 'calc(calc('+ operation +') * 1px)');
-
-			let result;
-
-			try {
-
-				result = document.querySelector('[data-result]').computedStyleMap().get('margin-block-start').value;
-
-			} catch {
-
-				result = window.getComputedStyle(document.querySelector('[data-result]')).marginBlockStart.replace('px', '');
-
-			}
-
-			calculator.value = result;
-
-			console.log('%c\u2234', 'color: #455A64; font-size: 4em;');
-			
-			console.log('%cOperation:' + ' ' + operation + '.', 'color: #455A64; font-size: 1.41em');
-
-			console.log('%cJavascript returns' + ' ' + eval(operation) + '.', 'color: #212121; font-size: 1.41em');
-
-			console.log('%cCss returns' + ' ' + result + '.', 'color: #212121; font-size: 1.41em');
-
-		} catch {
-
-			calculator.value = 'Error';
-
-		}
-
-	}
-
-	event.preventDefault();
-
-});
-
-document.querySelectorAll('[data-number]').forEach(function(element) {
-
-	element.addEventListener('click', event => {
-
-		calculator.setAttribute('readonly', false);
-
-		calculator.value += element.value;
-
-		calculator.setAttribute('readonly', true);
-
-		calculator.focus();
-
-		calculator.setSelectionRange(calculator.value.length, calculator.value.length, 0);
-
-		event.preventDefault();
-
-	});
-
-});
-
-document.querySelectorAll('[data-operator]').forEach(function(element) {
-
-	element.addEventListener('click', event => {
-
-		if (calculator.value.length > 0) {
-
-			if (calculator.value.slice(-1) !== ' ') {
-
-				calculator.setAttribute('readonly', false);
-
-				calculator.value += ' ';
-
-				calculator.value += element.value;
-
-				calculator.value += ' ';
-
-				calculator.setAttribute('readonly', true);
-
-				calculator.focus();
-
-				calculator.setSelectionRange(calculator.value.length, calculator.value.length, 0);
-
-			}
-
-		}
-
-		event.preventDefault();
-
-	});
-
-});
-
-document.querySelector('[data-period]').addEventListener('click', event => {
-
-	if (calculator.value.length > 0) {
-
-		if (calculator.value.slice(-1) !== '.') {
-
-			calculator.setAttribute('readonly', false);
-
-			calculator.value += document.querySelector('[data-period]').value;
-
-			calculator.setAttribute('readonly', true);
-
-			calculator.focus();
-
-			calculator.setSelectionRange(calculator.value.length, calculator.value.length, 0);
-
-		}
-
-	}
-
-	event.preventDefault();
-
-});
-
-var prefixDataAttributes = 'data-ym-';
-
-var reset = 'all';
-
-var uncompress = false;
-
-var cssBefore = `
-:root {
-	/* https://www.materialpalette.com/blue-grey/teal */
-	--accent-color: #009688;
-	--dark-primary-color: #455a64;
-	--divider-color: #bdbdbd;
-	--primary-color: #607d8b;
-	--text-color: #212121;
-	--text-icons-color: #ffffff;
-	/* https://www.digitalocean.com/community/tutorials/css-system-font-stack */
-	--font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	--font-weight-regular: 400;
-
-	--scale: calc(10812186007 / 7645370045);
-
-	--x: calc(var(--scale) * var(--scale)); /* 2 */
-	--xx: calc(var(--x) * var(--scale)); /* 2.82 */
-	--xxx: calc(var(--xx) * var(--scale)); /* 4 */
-	--xxxx: calc(var(--xxx) * var(--scale)); /* 5.65 */
-	--xxxxx: calc(var(--xxxx) * var(--scale)); /* 8 */
-	--xxxxxx: calc(var(--xxxxx) * var(--scale)); /* 11,31 */
-	--xxxxxxx: calc(var(--xxxxxx) * var(--scale)); /* 16 */
-	--xxxxxxxx: calc(var(--xxxxxxx) * var(--scale)); /* 22.62 */
-
-	--xs: var(--scale);
-
-	--s: calc(var(--scale) / var(--scale)); /* 1 */
-	--ss: calc(var(--s) / var(--scale)); /* 0.7 */
-	--sss: calc(var(--ss) / var(--scale)); /* 0.5 */
-	--ssss: calc(var(--sss) / var(--scale)); /* 0.35 */
-	--sssss: calc(var(--ssss) / var(--scale)); /* 0.25 */
-	--ssssss: calc(var(--sssss) / var(--scale)); /* 0.17 */
-	--sssssss: calc(var(--ssssss) / var(--scale)); /* 0.125 */
-
-	--dimension: 0px;
+        return false;
+    }
 
 }
+
+function drawFavicon() {
+
+    try {
+
+        var favicon = document.querySelector(`link[rel=icon]`);
+
+        if (favicon) {
+        
+            var emoji = favicon.getAttribute(`data-emoji`);
+
+            if (emoji) {
+
+                var canvas = document.createElement(`canvas`);
+
+                canvas.height = 64;
+
+                canvas.width = 64;
+
+                let ctx = canvas.getContext(`2d`);
+
+                ctx.font = `900 56px serif`;
+
+                ctx.textAlign = 'center';
+
+                ctx.textBaseline = 'middle';
+                
+                ctx.fillText(emoji, canvas.height/2, canvas.width/2);
+
+                favicon.href = canvas.toDataURL();
+                
+            }
+        
+        }
+
+    } catch {
+
+        return false;
+
+    }
+
+}
+
+
+function getDimensions() {
+
+    try {
+
+        let widthScreen = window.screen.width * window.devicePixelRatio;
+
+        let heightScreen = window.screen.height * window.devicePixelRatio;
+
+        let scale = ``;
+
+        if (heightScreen > widthScreen) {
+
+            scale = heightScreen / widthScreen;
+
+        } else {
+
+            scale = widthScreen / heightScreen;
+
+        }
+
+        document.documentElement.style.setProperty(`--scaleScreen`, scale);
+
+        document.documentElement.style.setProperty(`--xxxx`, Math.pow(scale, 3));
+
+        document.documentElement.style.setProperty(`--xxx`, Math.pow(scale, 2.5));
+
+        document.documentElement.style.setProperty(`--xx`, Math.pow(scale, 2));
+
+        document.documentElement.style.setProperty(`--x`, Math.pow(scale, 1.5));
+
+        document.documentElement.style.setProperty(`--xs`, Math.pow(scale, 1));
+
+        document.documentElement.style.setProperty(`--s`, Math.pow(scale, 0.5));
+
+        document.documentElement.style.setProperty(`--ss`, Math.pow(scale, 0));
+
+        document.documentElement.style.setProperty(`--sss`, Math.pow(scale, -0.5));
+
+        document.documentElement.style.setProperty(`--ssss`, Math.pow(scale, -1));
+
+        document.documentElement.style.setProperty(`--sssss`, Math.pow(scale, -1.5));
+
+        document.documentElement.style.setProperty(`--ssssss`, Math.pow(scale, -2));
+
+        document.documentElement.style.setProperty(`--sssssss`, Math.pow(scale, -2.5));
+
+        document.documentElement.style.setProperty(`--ssssssss`, Math.pow(scale, -3));
+
+        document.documentElement.style.setProperty(`--sssssssss`, Math.pow(scale, -3.5));
+
+        document.documentElement.style.setProperty(`--line-height`, Math.pow(scale, 1));
+
+    } catch {  
+
+        return false; 
+
+    }
+
+}
+
+function listenOrientationChange() {
+
+    window.addEventListener(`orientationchange`, () => {
+
+        location.reload();
+
+    });
+
+}
+
+function performCalculation() {
+
+    if (document.querySelectorAll(`[data-js-keypad] [data-item]`).length) {
+
+        document.querySelectorAll(`[data-js-keypad] [data-item]`).forEach((item) => {
+
+            item.addEventListener(`click`, event => {
+
+                switch (item.getAttribute(`data-item`)) {
+
+                    case `=` :
+
+                        try {
+
+                            var displayQuery = document.querySelector(`[data-js-screen]`).textContent;
+
+                            var solveQuery = document.querySelector(`[data-js-screen]`).textContent
+
+                                .replaceAll(/\s/g,``)
+                                .replaceAll(`+`, ` + `)
+                                .replaceAll(`−`, ` - `)
+                                .replaceAll(`×`, `*`)
+                                .replaceAll(`÷`, ` / `)
+                                .replaceAll(`⟮`, `(`)
+                                .replaceAll(`⟯`, `)`);
+
+                            document.documentElement.style.setProperty(`--dimension`, `calc(${solveQuery})`)
+
+                            let div = document.createElement(`div`);
+
+                            div.setAttribute(`style`, `margin-block-start: calc(var(--dimension) * 1px)`);
+
+                            document.body.insertAdjacentElement(`afterbegin`, div);
+
+                            try {
+
+                                var resultCss = div.computedStyleMap().get(`margin-block-start`).value;
+
+                            } catch {
+
+                                var resultCss = window.getComputedStyle(div).marginBlockStart.replace(`px`, ``);
+
+                            }
+
+                            document.body.removeChild(div);
+
+                            let computeJs = eval(solveQuery);
+
+                            let computeCss = resultCss.toString();
+
+                            document.querySelector(`title`).textContent = resultCss.toString().substring(0, 15);
+
+                            if (document.querySelector(`[data-js-title]`)) {
+
+                                document.querySelector(`[data-js-title]`).setAttribute(`data-ym-text-decoration`, `line-through var(--accent-color) solid`);
+
+                            }
+
+                            if (document.querySelector(`[data-js-screen]`)) {
+
+                                displayResult(resultCss.toString().substring(0, 15), true);
+
+                                document.querySelector(`[data-js-result-css]`).innerHTML = `<p data-ym-color="var(--primary-color) data-ym-display="block"  data-ym-line-break="anywhere">${computeCss}</p>`;
+
+                                if (!document.querySelector(`[data-js-screen]`).hasAttribute(`data-ym-background-color`)) {
+
+                                    document.querySelector(`[data-js-screen]`).setAttribute(`data-ym-background-color`, `var(--light-primary-color)`);
+
+                                }
+
+                            }
+
+                            if (document.querySelector(`[data-js-result-css]`)) {
+
+                                document.querySelector(`[data-js-result-css]`).innerHTML = `<p data-ym-color="var(--primary-color) data-ym-display="block"  data-ym-line-break="anywhere">${computeCss}</p>`;
+
+                            }
+
+                            if (document.querySelector(`[data-js-result-js]`)) {
+
+                                document.querySelector(`[data-js-result-js]`).innerHTML = `<p data-ym-color="var(--primary-color) data-ym-display="block"  data-ym-line-break="anywhere">${computeJs}</p>`;
+
+                            }
+
+                            if (document.querySelector(`[data-js-result]`) && document.querySelector(`[data-js-result]`).hasAttribute(`data-ym-display`) && document.querySelector(`[data-js-result]`).getAttribute(`data-ym-display`) === `none`) {
+
+                                document.querySelector(`[data-js-result]`).setAttribute(`data-ym-display`, `grid`);
+
+                            }
+
+                            if (document.querySelector(`[data-js-operation]`)) {
+
+                                document.querySelector(`[data-js-operation]`).innerHTML = displayQuery;
+
+                            }
+
+                            toggleItems(true);
+
+
+                        } catch {
+
+                            if (document.querySelector(`[data-js-screen]`)) {
+
+                                document.querySelector(`[data-js-screen]`).innerHTML = `<span data-ym-align-items="center" data-ym-display="inline-flex" data-ym-justify-content="center" data-ym-grid-column="1 / span 5" data-ym-grid-row="2@media screen and (min-width: 1024px)">${document.querySelector(`[data-js-keypad]`).getAttribute(`data-js-placeholder`)}</span>`;
+
+                            }
+
+                            return false;
+
+                        }
+                         
+                    break;
+
+                    case `backspace` :
+
+                        try {
+
+                            if (document.querySelector(`[data-js-screen]`)) {
+
+                                if (document.querySelector(`[data-js-screen]`).hasChildNodes()) {
+
+                                    document.querySelector(`[data-js-screen]`).removeChild(document.querySelector(`[data-js-screen]`).lastElementChild);
+
+                                }
+
+                            }
+
+                        } catch {
+
+                            return false;
+
+                        }
+
+                    break;
+
+                    case `delete` :
+
+                        try {
+
+                            document.querySelector(`title`).textContent = document.querySelector(`title`).getAttribute(`data-js-title-document`);
+
+                            if (document.querySelector(`[data-js-screen]`)) {
+
+                                if (document.querySelector(`[data-js-screen]`).hasAttribute(`data-ym-background-color`)) {
+
+                                    document.querySelector(`[data-js-screen]`).removeAttribute(`data-ym-background-color`);
+
+                                }
+
+                                if (document.querySelector(`[data-js-screen]`).hasChildNodes()) {
+
+                                    document.querySelector(`[data-js-screen]`).replaceChildren();
+
+                                    document.querySelector(`[data-js-screen]`).innerHTML = `<span data-ym-align-items="center" data-ym-display="inline-flex" data-ym-justify-content="center" data-ym-grid-column="1 / span 5" data-ym-grid-row="2@media screen and (min-width: 1024px)">${document.querySelector(`[data-js-keypad]`).getAttribute(`data-js-placeholder`)}</span>`;
+
+                                }
+
+                            }
+
+                            if (document.querySelector(`[data-js-title]`)) {
+
+                                if (document.querySelector(`[data-js-title]`).hasAttribute(`data-ym-text-decoration`)) {
+
+                                    document.querySelector(`[data-js-title]`).removeAttribute(`data-ym-text-decoration`);
+
+                                }
+
+                            }
+
+                            if (document.querySelector(`[data-js-result]`)) {
+
+                                document.querySelector(`[data-js-result]`).setAttribute(`data-ym-display`, `none`);
+
+                            }
+
+                            if (document.querySelector(`[data-js-operation]`)) {
+
+                                document.querySelector(`[data-js-operation]`).replaceChildren();
+
+                            }
+
+                            if (document.querySelector(`[data-js-result-css]`)) {
+
+                                document.querySelector(`[data-js-result-css]`).replaceChildren();
+
+                            }
+
+                            if (document.querySelector(`[data-js-result-js]`)) {
+
+                                document.querySelector(`[data-js-result-js]`).replaceChildren();
+
+                            }
+
+                            toggleItems(true);
+
+
+                        } catch {
+
+                            return false;
+
+                        }
+
+                    break;
+
+                    case `restore` :
+
+                        try {
+
+                            if (localStorage.getItem(`data-store`)) {
+
+                                displayResult(localStorage.getItem(`data-store`));
+
+                                localStorage.removeItem(`data-store`);
+
+                            }
+
+                            toggleRestore();
+
+                        } catch {
+
+                            return false;
+
+                        }
+
+                    break;
+
+                    case `save` :
+
+                        try {
+
+                            localStorage.setItem(`data-store`, document.querySelector(`[data-js-screen]`).textContent);
+
+                            if (document.querySelector(`[data-js-screen]`)) {
+
+                                document.querySelector(`[data-js-screen]`).innerHTML = `<span data-ym-align-items="center" data-ym-display="inline-flex" data-ym-justify-content="center" data-ym-grid-column="1 / span 5" data-ym-grid-row="2@media screen and (min-width: 1024px)">${document.querySelector(`[data-js-screen]`).textContent} is copied!</span>`;
+
+                            }
+
+                        } catch {
+
+                            return false;
+
+                        }
+
+                    break;
+
+                    default :
+
+                    try {
+
+                        if (document.querySelector(`[data-js-screen]`)) {
+
+                            if (document.querySelector(`[data-js-screen]`).textContent === document.querySelector(`[data-js-keypad]`).getAttribute(`data-js-placeholder`)) {
+
+                                document.querySelector(`[data-js-screen]`).innerHTML = `<span data-item data-ym-background-color="var(--primary-color)"><span data-ym-font-size="calc(var(--xx) * 1rem)">${item.getAttribute(`data-item`)}</span></span>`;
+
+                            } else {
+
+                                if (document.querySelector(`[data-js-screen]`).querySelectorAll(`[data-item]`).length <= 14) {
+
+                                    document.querySelector(`[data-js-screen]`).innerHTML += `<span data-item data-ym-background-color="var(--primary-color)"><span data-ym-font-size="calc(var(--xx) * 1rem)">${item.getAttribute(`data-item`)}</span></span>`;
+
+                                }
+
+                            }
+
+                        }
+
+                    } catch {
+
+                        return false;
+
+                    }
+
+                }
+
+            });
+
+        });
+
+    }
+
+}
+
+function shapeContent() {
+
+    try {
+
+        document.querySelector(`title`).setAttribute(`data-js-title-document`, document.querySelector(`title`).textContent);
+
+        if (document.querySelectorAll(`[data-js-keypad] > span`).length) {
+
+            document.querySelectorAll(`[data-js-keypad] > span`).forEach((span) => {
+
+                span.firstElementChild.setAttribute(`data-ym-font-size`, `calc(var(--xx) * 1rem)`);
+
+                span.setAttribute(`data-item`, span.firstElementChild.textContent);
+
+            });
+
+        }
+
+        toggleItems();
+
+        if (document.querySelector(`[data-js-keypad]`)) {
+
+            if (window.matchMedia(`screen and (max-width: 1023px) and (orientation: landscape`).matches) {
+
+                document.querySelector(`[data-js-screen]`).innerHTML = `<span data-ym-align-items="center" data-ym-display="inline-flex" data-ym-justify-content="center" data-ym-grid-column="1 / span 5" data-ym-grid-row="1">Please rotate your device!</span>`;
+
+
+                document.querySelector(`[data-js-screen]`).innerHTML += `<span data-ym-align-items="center" data-ym-display="inline-flex" data-ym-justify-content="center" data-ym-grid-column="1 / span 5" data-ym-grid-row="3">${document.querySelector(`[data-js-keypad]`).getAttribute(`data-js-placeholder`)}</span>`;
+            
+            } else {
+
+                document.querySelector(`[data-js-screen]`).innerHTML = `<span data-ym-align-items="center" data-ym-display="inline-flex" data-ym-justify-content="center" data-ym-grid-column="1 / span 5" data-ym-grid-row="2@media screen and (min-width: 1024px)">${document.querySelector(`[data-js-keypad]`).getAttribute(`data-js-placeholder`)}</span>`;
+            
+            }
+
+        }
+
+    } catch {
+
+        return false; 
+
+    }
+
+}
+
+function toggleItems(reverse) {
+
+   try {
+
+        if (document.querySelectorAll(`[data-js-keypad] [data-item]`).length) {
+
+            document.querySelectorAll(`[data-js-keypad] [data-item]`).forEach((item) => {
+
+                if (!reverse) {
+
+                    if (!item.hasAttribute(`data-ym-pointer-events`)) {
+
+                        item.setAttribute(`data-ym-cursor`, `pointer`);
+
+                        item.setAttribute(`data-ym-background-color`, `var(--primary-color)`);
+
+                        item.setAttribute(`data-ym-pointer-events`, `auto`);
+
+                        item.firstElementChild.setAttribute(`data-ym-color`, `var(--primary-text-color)`);
+
+                    } else {
+
+                        item.setAttribute(`data-ym-background-color`, `var(--light-primary-color)`);
+
+                        item.setAttribute(`data-ym-cursor`, `none`);
+
+                        item.firstElementChild.setAttribute(`data-ym-color`, `var(--secondary-text-color)`);
+
+                    }
+
+                } else {
+
+                    if (item.hasAttribute(`data-ym-pointer-events`) && item.getAttribute(`data-ym-pointer-events`) === `auto`) {
+
+                        item.setAttribute(`data-ym-background-color`, `var(--light-primary-color)`);
+
+                        item.setAttribute(`data-ym-cursor`, `none`);
+
+                        item.setAttribute(`data-ym-pointer-events`, `none`);
+
+                        item.firstElementChild.setAttribute(`data-ym-color`, `var(--secondary-text-color)`);
+
+                    } else {
+
+                        item.setAttribute(`data-ym-background-color`, `var(--primary-color)`);
+
+                        item.setAttribute(`data-ym-cursor`, `pointer`);
+
+                        item.firstElementChild.setAttribute(`data-ym-color`, `var(--primary-text-color)`);
+
+                        item.setAttribute(`data-ym-pointer-events`, `auto`);
+
+                    }
+
+                }
+
+                if (item.getAttribute(`data-item`) === `restore`) {
+
+                    toggleRestore(item) ;
+
+                }
+
+            });
+
+        }
+
+    } catch {
+
+        return false;
+
+    }
+
+}
+
+function toggleRestore(item) {
+
+    try {
+
+        if (localStorage.getItem(`data-store`)) {
+
+            item.setAttribute(`data-ym-cursor`, `pointer`);
+
+            item.setAttribute(`data-ym-background-color`, `var(--primary-color)`);
+
+            item.setAttribute(`data-ym-pointer-events`, `auto`);
+
+            item.firstElementChild.setAttribute(`data-ym-color`, `var(--primary-text-color)`);
+
+        } else {
+
+            item.setAttribute(`data-ym-background-color`, `var(--light-primary-color)`);
+
+            item.setAttribute(`data-ym-cursor`, `none`);
+
+            item.firstElementChild.setAttribute(`data-ym-color`, `var(--secondary-text-color)`);
+
+        }
+
+    } catch {
+
+        return false;
+
+    }
+
+}
+
+try {
+
+    const listPromises = [
+
+        new Promise(resolve => resolve(shapeContent())),
+
+        new Promise(resolve => resolve(drawFavicon())),
+
+        new Promise(resolve => resolve(getDimensions())),
+
+        new Promise(resolve => resolve(performCalculation())),
+
+        new Promise(resolve => resolve(listenOrientationChange()))
+
+    ];
+
+    const allPromises = Promise.all(listPromises);
+
+} catch (error) {
+
+    console.log(error.name);
+
+    console.log(error.message); 
+
+}
+
+var cssAfterLymnee = `
+[data-item] {
+    align-items: center;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    height: calc(var(--xxx) * 1rem);
+    width: calc(var(--xxx) * 1rem)
+}
+
+/* https://css-tricks.com/snippets/css/orientation-lock/ */
 `;
+
+var cssBeforeLymnee = `
+
+:root {
+
+    /* https://www.materialpalette.com/amber/lime */
+    --accent-color: #cddc39;
+    --dark-primary-color: #ffa000;
+    --light-primary-color: #ffecb3;
+    --divider-color: #bdbdbd;
+    --primary-color: #ffc107;
+    --primary-text-color: #212121;
+    --secondary-text-color: #757575;
+
+    --font-family: 'Space Mono', monospace;
+
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    --margin-block-start-regular: calc(var(--ss) * 1rem);
+
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+* {
+    box-sizing: border-box
+}`;
+
+var entriesLymnee = new Set([`data-ym-background-color="var(--light-primary-color)"`, `data-ym-text-decoration="line-through var(--accent-color) solid"`]),
+
+unsetLymnee = true;
 </script>
-<script src="https://cdn.jsdelivr.net/gh/lymnee/lymnee/lymnee.live.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/lymnee/lymnee/lymnee.reload.js"></script>
 </body>
 </html>
