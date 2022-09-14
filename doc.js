@@ -967,11 +967,9 @@ function backToTop() {
 
         }
 
-    } catch (error) {
+    } catch {
     
-        console.log(error.name);
-    
-        console.log(error.message); 
+        return false;
     
     }
 
@@ -997,45 +995,43 @@ function getDimensions() {
 
         }
 
-        document.querySelector(`:root`).style.setProperty(`--scaleScreen`, scale);
+        document.documentElement.style.setProperty(`--scaleScreen`, scale);
 
-        document.querySelector(`:root`).style.setProperty(`--xxxx`, Math.pow(scale, 3));
-
-        document.querySelector(`:root`).style.setProperty(`--xxx`, Math.pow(scale, 2.5));
-
-        document.querySelector(`:root`).style.setProperty(`--xx`, Math.pow(scale, 2));
-
-        document.querySelector(`:root`).style.setProperty(`--x`, Math.pow(scale, 1.5));
-
-        document.querySelector(`:root`).style.setProperty(`--xs`, Math.pow(scale, 1));
-
-        document.querySelector(`:root`).style.setProperty(`--s`, Math.pow(scale, 0.5));
-
-        document.querySelector(`:root`).style.setProperty(`--ss`, Math.pow(scale, 0));
-
-        document.querySelector(`:root`).style.setProperty(`--sss`, Math.pow(scale, -0.5));
-
-        document.querySelector(`:root`).style.setProperty(`--ssss`, Math.pow(scale, -1));
-
-        document.querySelector(`:root`).style.setProperty(`--sssss`, Math.pow(scale, -1.5));
-
-        document.querySelector(`:root`).style.setProperty(`--ssssss`, Math.pow(scale, -2));
-
-        document.querySelector(`:root`).style.setProperty(`--sssssss`, Math.pow(scale, -2.5));
-
-        document.querySelector(`:root`).style.setProperty(`--ssssssss`, Math.pow(scale, -3));
-
-        document.querySelector(`:root`).style.setProperty(`--sssssssss`, Math.pow(scale, -3.5));
-
-        /*document.querySelector(`:root`).style.setProperty(`--line-height`, Math.pow(scale, 0.5));*/
-
-        document.querySelector(`:root`).style.setProperty(`--line-height`, Math.pow(scale, 1));
+        document.documentElement.style.setProperty(`--xxxx`, Math.pow(scale, 3));
+        
+        document.documentElement.style.setProperty(`--xxx`, Math.pow(scale, 2.5));
+        
+        document.documentElement.style.setProperty(`--xx`, Math.pow(scale, 2));
+        
+        document.documentElement.style.setProperty(`--x`, Math.pow(scale, 1.5));
+        
+        document.documentElement.style.setProperty(`--xs`, Math.pow(scale, 1));
+        
+        document.documentElement.style.setProperty(`--s`, Math.pow(scale, 0.5));
+        
+        document.documentElement.style.setProperty(`--ss`, Math.pow(scale, 0));
+        
+        document.documentElement.style.setProperty(`--sss`, Math.pow(scale, -0.5));
+        
+        document.documentElement.style.setProperty(`--ssss`, Math.pow(scale, -1));
+        
+        document.documentElement.style.setProperty(`--sssss`, Math.pow(scale, -1.5));
+        
+        document.documentElement.style.setProperty(`--ssssss`, Math.pow(scale, -2));
+        
+        document.documentElement.style.setProperty(`--sssssss`, Math.pow(scale, -2.5));
+        
+        document.documentElement.style.setProperty(`--ssssssss`, Math.pow(scale, -3));
+        
+        document.documentElement.style.setProperty(`--sssssssss`, Math.pow(scale, -3.5));
+        
+        /*document.documentElement.style.setProperty(`--line-height`, Math.pow(scale, 0.5));*/
+        
+        document.documentElement.style.setProperty(`--line-height`, Math.pow(scale, 1));        
     
-    } catch (error) {
+    } catch {
     
-        console.log(error.name);
-    
-        console.log(error.message); 
+        return false;
     
     }
 
@@ -1142,11 +1138,9 @@ function manageAbbreviations(selector) {
 
         }
 
-    } catch (error) {
+    } catch {
 
-        console.log(error.name);
-
-        console.log(error.message); 
+        return false;
 
     }
 
@@ -1258,11 +1252,9 @@ function manageLinks() {
 
         }
 
-    } catch (error) {
+    } catch {
 
-        console.log(error.name);
-
-        console.log(error.message); 
+        return false;
 
     }
 
@@ -1412,11 +1404,9 @@ function manageToc() {
 
         }
 
-    } catch (error) {
+    } catch {
 
-        console.log(error.name);
-
-        console.log(error.message); 
+        return false;
 
     }       
 
@@ -1436,11 +1426,9 @@ function minifyMyCss(css) {
 
             .replace(/\/\*.*?\*\//g, ``);
 
-    } catch (error) {
+    } catch {
 
-        console.log(error.name);
-
-        console.log(error.message); 
+        return false;
 
     }
 
@@ -1462,16 +1450,11 @@ function sanitizeHtml(html) {
 
         document.querySelector(`body`).removeChild(div);
 
-    } catch (error) {
-
-        console.log(error.name);
-    
-        console.log(error.message); 
-    
-    } finally {
-
         return text;
 
+    } catch {
+
+        return false;
     }
 
 }
@@ -1526,11 +1509,9 @@ function setLanguage() {
 
         }
 
-    } catch (error) {
+    } catch {
 
-        console.log(error.name);
-
-        console.log(error.message); 
+        return false;
 
     }
 
@@ -1754,11 +1735,9 @@ function shapeContent() {
 
         }
     
-    } catch (error) {
+    } catch {
     
-        console.log(error.name);
-    
-        console.log(error.message); 
+        return false;
     
     }
 
@@ -1790,11 +1769,9 @@ function showTimestamp() {
 
         }
 
-    } catch (error) {
+    } catch {
     
-        console.log(error.name);
-    
-        console.log(error.message); 
+        return false;
     
     }
 
@@ -1818,11 +1795,9 @@ function summarizeContent() {
 
         }
 
-    } catch (error) {
+    } catch {
     
-        console.log(error.name);
-    
-        console.log(error.message); 
+        return false;
     
     }
 
@@ -1860,11 +1835,9 @@ function toggleContent() {
 
         });
 
-    } catch (error) {
+    } catch {
     
-        console.log(error.name);
-    
-        console.log(error.message); 
+        return false;
     
     }
 
@@ -1898,11 +1871,9 @@ function translateTags() {
 
         }
 
-    } catch (error) {
+    } catch {
     
-        console.log(error.name);
-    
-        console.log(error.message); 
+        return false; 
     
     }
 
