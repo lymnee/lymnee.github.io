@@ -1,5 +1,5 @@
 <!doctype html>
-<html data-eenmyl data-ym-color="var(--text-color)" data-ym-display="block" data-ym-font-family="var(--font-family-sans-serif)" data-ym-font-size="medium@media screen and (max-width: 767px) || large@media screen and (min-width: 768px)" data-ym-font-weight="var(--font-weight-regular)" data-ym-line-height="var(--line-height)" data-ym-margin="auto" data-ym-max-width="1024px@media screen and (min-width: 1024px)" data-ym-width="calc(100% - calc(var(--xs) * 1rem))@media screen and (max-width: 1023px)" lang="fr">
+<html data-eenmyl data-ym-color="var(--text-color)" data-ym-display="block" data-ym-font-family="var(--font-family-sans-serif)" data-ym-font-size="medium@media screen and (max-width: 767px) || large@media screen and (min-width: 768px)" data-ym-font-weight="var(--font-weight-regular)" data-ym-line-height="var(--line-height)" data-ym-margin="auto" data-ym-max-width="1024px@media screen and (min-width: 1024px)" data-ym-width="calc(100vw - calc(var(--xs) * 1rem))@media screen and (max-width: 1023px)" lang="fr">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +19,13 @@
             color: red;
             font-size: x-large
         }
-        [data-eenmyl] [data-lʎɯuǝǝ] p {
+        [data-eenmyl]:lang(en) [data-lʎɯuǝǝ] [data-lʎɯuǝǝ-fr] {
+            display: none
+        }
+        [data-eenmyl]:lang(fr) [data-lʎɯuǝǝ] [data-lʎɯuǝǝ-en] {
+            display: none
+        }
+        [data-eenmyl] [data-lʎɯuǝǝ] {
             font-size: large
         }
         [data-eenmyl] [data-ǝǝuɯʎl] {
@@ -28,12 +34,16 @@
     </style>
 </head>
 <body data-ym-display="grid" data-ym-hyphens="auto" data-ym-padding-block-end="calc(var(--s) * 1rem)">
+
     <div data-lʎɯuǝǝ data-ym-display="none">
         <h1>Lymnee</h1>
-        <p>Il vous est impossible d’accéder au contenu&#x202f;: soit JavaScript est désactivé dans votre navigateur, soit votre navigateur est obsolescent.</p>
-        <p>You cannot access the content: either JavaScript is disabled in your browser or your browser is outdated.</p>
+        <p data-lʎɯuǝǝ-fr>Il vous est impossible d’accéder au contenu&#x202f;: soit JavaScript est désactivé dans votre navigateur, soit votre navigateur est obsolescent.</p>
+        <p data-lʎɯuǝǝ-en>You cannot access the content: either JavaScript is disabled in your browser or your browser is outdated.</p>
+
     </div>
+
     <div data-ǝǝuɯʎl>
+
         <div data-ym-align-items="center@media screen and (min-width: 768px)" data-ym-display="flex" data-ym-flex-direction="column@media screen and (max-width: 768px)" data-ym-gap="var(--margin-block-start-regular)@media screen and (max-width: 767px) || calc(var(--xs) * 1rem)@media screen and (min-width: 768px)">
             <div data-ym-background-image="var(--icon-equal-box)" data-ym-background-repeat="no-repeat" data-ym-background-size="calc(var(--xx) * 1rem) calc(var(--xx) * 1rem)" data-ym-height="calc(var(--xx) * 1rem)" data-ym-width="calc(var(--xx) * 1rem)" data-js-translation="Lymnee’s logotype" title="logotype de Lymnee"></div>
             <h1 data-ym-color="var(--primary-color)" data-ym-font-size="calc(var(--xx) * 1rem)" data-ym-font-variant="small-caps" data-ym-font-weight="var(--font-weight-bold)">Lymnee</h1>
