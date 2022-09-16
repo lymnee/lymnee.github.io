@@ -464,9 +464,9 @@ data-ym-font-size="medium"
                     <p data-lang="en">With a class and a paragraph, this functional notation is used as follows…</p>
 <pre data-js-summary>
 &#x3c;div data-ym-color="red :not(.😂, p)"&#x3e;
-&#x3c;h1&#x3e;Title&#x3c;/h1&#x3e;
-&#x3c;h2 class="😂"&#x3e;Title&#x3c;/h2&#x3e;
-&#x3c;p&#x3e;Paragraph&#x3c;/p&#x3e;
+    &#x3c;h1&#x3e;Title&#x3c;/h1&#x3e;
+    &#x3c;h2 class="😂"&#x3e;Title&#x3c;/h2&#x3e;
+    &#x3c;p&#x3e;Paragraph&#x3c;/p&#x3e;
 &#x3c;/div&#x3e;
 </pre>
 <pre data-js-summary>
@@ -480,8 +480,8 @@ data-ym-font-size="medium"
                     <p data-lang="en">A data attribute also works…</p>
 <pre data-js-summary>
 <code>&#x3c;div data-ym-color="red :not([data-foo])"&#x3e;
-&#x3c;h1&#x3e;Title&#x3c;/h1&#x3e;
-&#x3c;p data-foo&#x3e;Paragraph&#x3c;/p&#x3e;
+    &#x3c;h1&#x3e;Title&#x3c;/h1&#x3e;
+    &#x3c;p data-foo&#x3e;Paragraph&#x3c;/p&#x3e;
 &#x3c;/div&#x3e;</code>
 </pre>
 <pre data-js-summary>
@@ -507,8 +507,8 @@ data-ym-font-size="medium"
                     <p data-js-summarize data-lang="en">The <span data-js-link>@supports</span> rules work…</p>
 <pre data-js-summarize>
 <code>&#x3c;div data-ym-display="flex@supports (display: grid)"&#x3e;
-&#x3c;p&#x3e;A&#x3c;/p&#x3e;
-&#x3c;p&#x3e;B&#x3c;/p&#x3e;
+    &#x3c;p&#x3e;A&#x3c;/p&#x3e;
+    &#x3c;p&#x3e;B&#x3c;/p&#x3e;
 &#x3c;/div&#x3e;</code>
 </pre>
 <pre data-js-summarize>
@@ -642,7 +642,7 @@ data-ym-font-size="medium"
                     <p data-lang="en">First exemple…</p>
 <pre data-js-summarize>
 <code>&#x3c;div class="ispage"&#x3e;
-&#x3c;div data-ym-background-color="red && .ispage"&#x3e;Div&#x3c;/div&#x3e;
+    &#x3c;div data-ym-background-color="red && .ispage"&#x3e;Div&#x3c;/div&#x3e;
 &#x3c;/div&#x3e;</code>
 </pre>
 <pre data-js-summarize>
@@ -654,11 +654,11 @@ data-ym-font-size="medium"
                     <p data-lang="en">Second illustration, with two different contextual selectors…</p>
 <pre data-js-summarize>
 <code>&#x3c;div class="ishome"&#x3e;
-&#x3c;div data-ym-font-weight="600@media screen and (min-width: 30em) and (max-width: 49em) && .ishome || 700@media screen and (min-width: 50em) && .ishome"&#x3e;Div&#x3c;/div&#x3e;
+    &#x3c;div data-ym-font-weight="600@media screen and (min-width: 30em) and (max-width: 49em) && .ishome || 700@media screen and (min-width: 50em) && .ishome"&#x3e;Div&#x3c;/div&#x3e;
 &#x3c;/div&#x3e;
 
 &#x3c;div class="ispage"&#x3e;
-&#x3c;div data-ym-font-weight="600@media screen and (min-width: 30em) and (max-width: 49em) && .ispage || 700@media screen and (min-width: 50em) && .ispage"&#x3e;Div&#x3c;/div&#x3e;
+    &#x3c;div data-ym-font-weight="600@media screen and (min-width: 30em) and (max-width: 49em) && .ispage || 700@media screen and (min-width: 50em) && .ispage"&#x3e;Div&#x3c;/div&#x3e;
 &#x3c;/div&#x3e;</code>
 </pre>
 <pre data-js-summarize>
@@ -690,7 +690,7 @@ data-ym-font-size="medium"
                     <p data-lang="en">Finals examples…</p>
 <pre data-js-summarize>
 <code>&#x3c;div data-js-summary="open"&#x3e;
-&#x3c;p data-ym-color="blue && [data-js-summary=close] || red && [data-js-summary=open]"&#x3e;Summary&#x3c;/p&#x3e;
+    &#x3c;p data-ym-color="blue && [data-js-summary=close] || red && [data-js-summary=open]"&#x3e;Summary&#x3c;/p&#x3e;
 &#x3c;/div&#x3e;</code>
 </pre>
 <pre data-js-summarize>
@@ -704,8 +704,8 @@ data-ym-font-size="medium"
 </pre>
 <pre data-js-summarize>
 <code>&#x3c;details open&#x3e;
-&#x3c;summary&#x3e;Summary&#x3c;/summary&#x3e;
-&#x3c;p data-ym-color="blue && details[open]"&#x3e;Details&#x3c;/p&#x3e;
+    &#x3c;summary&#x3e;Summary&#x3c;/summary&#x3e;
+    &#x3c;p data-ym-color="blue && details[open]"&#x3e;Details&#x3c;/p&#x3e;
 &#x3c;/details&#x3e;</code>
 </pre>
 <pre data-js-summarize>
