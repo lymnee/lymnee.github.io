@@ -978,12 +978,12 @@ function backToTop() {
 function getDimensions() {
 
     try {
-    
+
         let widthScreen = window.screen.width * window.devicePixelRatio;
 
         let heightScreen = window.screen.height * window.devicePixelRatio;
 
-        let scale = ``;
+        var scale = ``;
 
         if (heightScreen > widthScreen) {
 
@@ -997,44 +997,45 @@ function getDimensions() {
 
         document.documentElement.style.setProperty(`--scaleScreen`, scale);
 
-        document.documentElement.style.setProperty(`--xxxx`, Math.pow(scale, 3));
-        
-        document.documentElement.style.setProperty(`--xxx`, Math.pow(scale, 2.5));
-        
-        document.documentElement.style.setProperty(`--xx`, Math.pow(scale, 2));
-        
-        document.documentElement.style.setProperty(`--x`, Math.pow(scale, 1.5));
-        
         document.documentElement.style.setProperty(`--xs`, Math.pow(scale, 1));
-        
-        document.documentElement.style.setProperty(`--s`, Math.pow(scale, 0.5));
-        
-        document.documentElement.style.setProperty(`--ss`, Math.pow(scale, 0));
-        
-        document.documentElement.style.setProperty(`--sss`, Math.pow(scale, -0.5));
-        
-        document.documentElement.style.setProperty(`--ssss`, Math.pow(scale, -1));
-        
-        document.documentElement.style.setProperty(`--sssss`, Math.pow(scale, -1.5));
-        
-        document.documentElement.style.setProperty(`--ssssss`, Math.pow(scale, -2));
-        
-        document.documentElement.style.setProperty(`--sssssss`, Math.pow(scale, -2.5));
-        
-        document.documentElement.style.setProperty(`--ssssssss`, Math.pow(scale, -3));
-        
-        document.documentElement.style.setProperty(`--sssssssss`, Math.pow(scale, -3.5));
-        
-        /*document.documentElement.style.setProperty(`--line-height`, Math.pow(scale, 0.5));*/
-        
-        document.documentElement.style.setProperty(`--line-height`, Math.pow(scale, 1));        
-    
-    } catch {
-    
-        return false;
-    
-    }
 
+        var [backwardEnd, backwardPower, backwardStart, forwardEnd, forwardPower, forwardStart, step] = [-3.5, 0, 0.5, 3, 0, 1, 0.5];
+        
+        while (true) {
+
+            forwardStart = forwardStart + step;
+
+            document.documentElement.style.setProperty(`--` + `x`.repeat(++forwardPower), Math.pow(scale, forwardPower));
+
+            if (forwardStart > forwardEnd) {
+
+                break;
+
+            }
+
+        }
+        
+        while (true) {
+
+            backwardStart = backwardStart - step;
+
+            document.documentElement.style.setProperty(`--` + `s`.repeat(++backwardPower), Math.pow(scale, -backwardPower));
+
+            if (backwardStart < backwardEnd) {
+
+                break;
+
+            }
+
+        }
+
+        document.documentElement.style.setProperty(`--line-height`, Math.pow(scale, 1));
+
+    } catch {  
+
+        return false; 
+
+    }
 
 }
 
