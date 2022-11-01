@@ -997,7 +997,7 @@ function getDimensions() {
 
         document.documentElement.style.setProperty(`--scaleScreen`, scale);
 
-        document.documentElement.style.setProperty(`--xs`, Math.pow(scale, 1));
+        document.documentElement.style.setProperty(`--xs`, Math.pow(scale, 0));
 
         var [backwardEnd, backwardPower, backwardStart, forwardEnd, forwardPower, forwardStart, step] = [-3.5, 0, 0.5, 3, 0, 1, 0.5];
         
@@ -1027,7 +1027,7 @@ function getDimensions() {
 
             }
 
-        }
+        }   
 
         document.documentElement.style.setProperty(`--line-height`, Math.pow(scale, 1));
 
@@ -1972,18 +1972,15 @@ cssBefore = `
   'GRAD' 0,
   'opsz' 48
 }
-
-* {
-    box-sizing: border-box
-}
-
 `;
 
 var cssAfterLymnee = minifyMyCss(cssAfter);
 
 var cssBeforeLymnee = minifyMyCss(cssBefore);
 
-var printLymnee = true,
+var boxSizingLymnee = true,
+
+printLymnee = true,
 
 entriesLymnee = new Set([`data-ym-display="none"`]),
 
