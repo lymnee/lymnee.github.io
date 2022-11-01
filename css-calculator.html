@@ -165,6 +165,12 @@ function displayResult(result, clear) {
 }
 
 function drawFavicon() {
+    
+    /*
+        *
+            https://koddsson.com/2018-03-18/emoji-as-favicons
+        *
+    */
 
     try {
 
@@ -206,6 +212,7 @@ function drawFavicon() {
 
 }
 
+
 function getDimensions() {
 
     try {
@@ -228,7 +235,7 @@ function getDimensions() {
 
         document.documentElement.style.setProperty(`--scaleScreen`, scale);
 
-        document.documentElement.style.setProperty(`--xs`, Math.pow(scale, 1));
+        document.documentElement.style.setProperty(`--xs`, Math.pow(scale, 0));
 
         var [backwardEnd, backwardPower, backwardStart, forwardEnd, forwardPower, forwardStart, step] = [-3.5, 0, 0.5, 3, 0, 1, 0.5];
         
@@ -350,7 +357,7 @@ function performCalculation() {
 
                                 displayResult(resultCss.toString().substring(0, 15), true);
 
-                                document.querySelector(`[data-js-result-css]`).innerHTML = `<p data-ym-color="var(--primary-color) data-ym-display="block"  data-ym-line-break="anywhere">${computeCss}</p>`;
+                                document.querySelector(`[data-js-result-css]`).innerHTML = `<p data-ym-color="var(--primary-color) data-ym-display="block" data-ym-line-break="anywhere">${computeCss}</p>`;
 
                                 if (!document.querySelector(`[data-js-screen]`).hasAttribute(`data-ym-background-color`)) {
 
@@ -362,7 +369,7 @@ function performCalculation() {
 
                             if (document.querySelector(`[data-js-result-css]`)) {
 
-                                document.querySelector(`[data-js-result-css]`).innerHTML = `<p data-ym-color="var(--primary-color) data-ym-display="block"  data-ym-line-break="anywhere">${computeCss}</p>`;
+                                document.querySelector(`[data-js-result-css]`).innerHTML = `<p data-ym-color="var(--primary-color) data-ym-display="block" data-ym-line-break="anywhere">${computeCss}</p>`;
 
                             }
 
