@@ -1612,6 +1612,8 @@ function shapeContent() {
 
                     }
 
+                    entry.setAttribute(`data-ym-line-break`, `anywhere`);
+
                 });
 
             }
@@ -1679,7 +1681,6 @@ function shapeContent() {
                     entry.setAttribute(`data-ym-padding-inline-start`, `calc(var(--s) * 1rem)`);
 
                     entry.setAttribute(`data-ym-white-space`, `pre-wrap`);
-
         
                 });
         
@@ -1748,13 +1749,23 @@ function showTimestamp() {
 
     try {
 
-        let humanDate = new Date(document.lastModified);
+        let today = new Date(document.lastModified);
 
-        let options = {day: `numeric`, month: `long`, year: `numeric`};
+        if (today.getDate() < `4`) {
 
-        let frenchDate = new Intl.DateTimeFormat(`fr-FR`, options).format(humanDate);
-
-        let englishDate = new Intl.DateTimeFormat(`en-US`, options).format(humanDate);
+            var frenchDate = new Intl.DateTimeFormat(`fr-FR`).format(today);
+        
+            var englishDate = new Intl.DateTimeFormat(`en-US`).format(today);
+                
+        } else {
+        
+            let options = {day: `numeric`, month: `long`, year: `numeric`};
+        
+            var frenchDate = new Intl.DateTimeFormat(`fr-FR`, options).format(today);
+        
+            var englishDate = new Intl.DateTimeFormat(`en-US`, options).format(today);
+        
+        }
 
         if (document.querySelector(`[data-js-update]`)) {
 
@@ -1848,11 +1859,11 @@ function translateTags() {
 
     try {
 
-        const tags = ['alt', 'content', 'title'];
+        const tags = [`alt`, `content`, `title`];
 
-        if (document.documentElement.lang !== 'fr') {
+        if (document.documentElement.lang !== `fr`) {
 
-            document.querySelectorAll('[data-js-translation]').forEach((element) => {
+            document.querySelectorAll(`[data-js-translation]`).forEach((element) => {
 
                 tags.forEach((tag) => {
 
@@ -1860,9 +1871,9 @@ function translateTags() {
 
                         let text = element[tag];
 
-                        element[tag] = element.getAttribute('data-js-translation');
+                        element[tag] = element.getAttribute(`data-js-translation`);
 
-                        element.setAttribute('data-js-translation', text);
+                        element.setAttribute(`data-js-translation`, text);
 
                     }
 
