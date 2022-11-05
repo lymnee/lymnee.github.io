@@ -1,5 +1,6 @@
 <!doctype html>
-<html data-eenmyl data-ym-color="var(--primary-text-color)" data-ym-display="block" data-ym-font-family="var(--font-family)" data-ym-font-size="2.25vw@media screen and (max-width: 1023px) || large@media screen and (min-width: 1024px)" data-ym-font-weight="var(--font-weight-regular)" data-ym-line-height="var(--line-height)" data-ym-margin="auto" data-ym-max-width="1024px@media screen and (min-width: 1024px)" data-ym-width="calc(100vw - calc(var(--xs) * 1rem))@media screen and (max-width: 1023px)" lang="en">
+<!--<html data-eenmyl data-ym-color="var(--primary-text-color)" data-ym-display="block" data-ym-font-family="var(--font-family)" data-ym-font-size="2.25vw@media screen and (max-width: 1023px) || large@media screen and (min-width: 1024px)" data-ym-font-weight="var(--font-weight-regular)" data-ym-line-height="var(--line-height)" data-ym-margin="auto" data-ym-max-width="1024px@media screen and (min-width: 1024px)" data-ym-width="calc(100vw - calc(var(--xs) * 1rem))@media screen and (max-width: 1023px)" lang="en">-->
+<html data-eenmyl data-ym-color="var(--primary-text-color)" data-ym-display="block" data-ym-font-family="var(--font-family)" data-ym-font-size="small@media screen and (max-width: 1023px) || large@media screen and (min-width: 1024px)" data-ym-font-weight="var(--font-weight-regular)" data-ym-line-height="var(--line-height)" data-ym-margin="auto" data-ym-max-width="1024px@media screen and (min-width: 1024px)" data-ym-width="calc(100vw - calc(var(--xs) * 1rem))@media screen and (max-width: 1023px)" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -589,7 +590,7 @@ function shapeContent() {
 
             document.querySelectorAll(`[data-js-keypad] > span`).forEach((span) => {
 
-                span.firstElementChild.setAttribute(`data-ym-font-size`, `calc(var(--xx) * 1rem)`);
+                span.firstElementChild.setAttribute(`data-ym-font-size`, `calc(var(--x) * 1rem)@media screen and (max-width: 1023px) || calc(var(--xx) * 1rem)@media screen and (min-width: 1024px)`);
 
                 span.setAttribute(`data-item`, span.firstElementChild.textContent);
 
@@ -607,12 +608,22 @@ function shapeContent() {
 
 
                 document.querySelector(`[data-js-screen]`).innerHTML += `<span data-ym-align-items="center" data-ym-display="inline-flex" data-ym-justify-content="center" data-ym-grid-column="1 / span 5" data-ym-grid-row="3">${document.querySelector(`[data-js-keypad]`).getAttribute(`data-js-placeholder`)}</span>`;
-            
+
             } else {
 
                 document.querySelector(`[data-js-screen]`).innerHTML = `<span data-ym-align-items="center" data-ym-display="inline-flex" data-ym-justify-content="center" data-ym-grid-column="1 / span 5" data-ym-grid-row="2@media screen and (min-width: 1024px)">${document.querySelector(`[data-js-keypad]`).getAttribute(`data-js-placeholder`)}</span>`;
-            
+
             }
+
+            window.addEventListener(`DOMContentLoaded`, () => {
+
+                if (document.documentElement.offsetWidth < document.querySelector(`[data-js-keypad]`).getBoundingClientRect().width) {
+
+                    document.querySelector(`[data-js-screen]`).innerHTML = `<span data-ym-align-items="center" data-ym-display="inline-flex" data-ym-justify-content="center" data-ym-grid-column="1 / span 5" data-ym-grid-row="1">Your device is too small!</span>`;
+
+                }
+
+            });
 
         }
 
@@ -748,6 +759,8 @@ try {
 
     const allPromises = Promise.all(listPromises);
 
+
+
 } catch (error) {
 
     console.log(error.name);
@@ -762,8 +775,20 @@ var cssAfterLymnee = `
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
-    height: calc(var(--xxx) * 1rem);
-    width: calc(var(--xxx) * 1rem)
+}
+@media screen and (max-width: 1023px) {
+    [data-item] {
+        /*height: calc(calc(100vw - calc(calc(var(--ss) * 1rem) * 4)) / 5);
+        width: calc(calc(100vw - calc(calc(var(--ss) * 1rem) * 4)) / 5)*/
+        height: calc(var(--xx) * 1rem);
+        width: calc(var(--xx) * 1rem)
+    }
+}
+@media screen and (min-width: 1024px) {
+    [data-item] {
+        height: calc(var(--xxx) * 1rem);
+        width: calc(var(--xxx) * 1rem)
+    }
 }
 
 /* https://css-tricks.com/snippets/css/orientation-lock/ */
@@ -799,6 +824,8 @@ var cssBeforeLymnee = `
   'opsz' 48
 }
 `;
+
+
 
 var entriesLymnee = new Set([`data-ym-background-color="var(--light-primary-color)"`, `data-ym-text-decoration="line-through var(--accent-color) solid"`]),
 
