@@ -1532,7 +1532,7 @@ function shapeContent() {
 
                     case `h1` :
 
-                        entry.setAttribute(`data-ym-font-size`, `calc(var(--xxx) * 1rem)@media screen and (min-width: 469px)`);
+                        entry.setAttribute(`data-ym-font-size`, `calc(var(--x) * 1rem)@media screen and (max-width: 467px) || calc(var(--xxx) * 1rem)@media screen and (min-width: 468px)`);
 
                         entry.setAttribute(`data-ym-font-variant`, `small-caps`);
 
