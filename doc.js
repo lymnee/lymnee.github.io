@@ -1271,7 +1271,7 @@ function manageToc() {
 
             let entries = main.querySelectorAll(`h2[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"], h2[data-ym-display="block"], h3[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"], h3[data-ym-display="block"], h4[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"], h4[data-ym-display="block"], h5[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"], h5[data-ym-display="block"], h6[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"], h6[data-ym-display="block"]`);
         
-            let toc = `<p data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-font-size="calc(var(--x) * 1rem)">`;
+            let toc = `<p data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-content="'xOx00A0'::before@media screen and (max-width: 467px)" data-ym-font-size="calc(var(--x) * 1rem)@media screen and (min-width: 468px)" data-ym-font-weight="bold@media screen and (max-width: 467px)">`;
         
             if (document.documentElement.lang === `fr`) {
         
@@ -1522,6 +1522,64 @@ function shapeContent() {
 
     try {
 
+        if (document.querySelector(`[data-ǝǝuɯʎl]`)) {
+
+            let main = document.querySelector(`[data-ǝǝuɯʎl]`);
+
+            main.querySelectorAll(`h1, h2, h3, h4, h5, h6`).forEach((entry) => {
+
+                switch (entry.tagName.toLowerCase()) {
+
+                    case `h1` :
+
+                        entry.setAttribute(`data-ym-font-size`, `calc(var(--xxx) * 1rem)@media screen and (min-width: 469px)`);
+
+                        entry.setAttribute(`data-ym-font-variant`, `small-caps`);
+
+                        entry.setAttribute(`data-ym-font-weight`, `bold`);
+
+                    break;
+
+                    case `h2` :
+
+                        entry.setAttribute(`data-ym-content`, `'xOx00A0'::before@media screen and (max-width: 467px)`);
+
+                        entry.setAttribute(`data-ym-font-size`, `calc(var(--xx) * 1rem)@media screen and (min-width: 468px)`);
+
+                        entry.setAttribute(`data-ym-font-weight`, `bold@media screen and (max-width: 467px)`);
+
+                    break;
+
+                    case `h3` :
+
+                        entry.setAttribute(`data-ym-content`, `'xxOx00A0'::before@media screen and (max-width: 467px)`);
+
+                        entry.setAttribute(`data-ym-font-size`, `calc(var(--x) * 1rem)@media screen and (min-width: 468px)`);
+
+                        entry.setAttribute(`data-ym-font-weight`, `bold@media screen and (max-width: 467px)`)
+
+                    break;
+
+                    default :
+
+                        entry.setAttribute(`data-ym-content`, `'xxxOx00A0'::before@media screen and (max-width: 468px)`);
+
+                        entry.setAttribute(`data-ym-font-size`, `calc(var(--xs) * 1rem)@media screen and (min-width: 469px)`);
+
+                        entry.setAttribute(`data-ym-font-weight`, `bold@media screen and (max-width: 468px)`)
+
+                }
+
+                if (!entry.hasAttribute(`data-ym-color`)) {
+
+                    entry.setAttribute(`data-ym-color`, `var(--primary-color)`);
+
+                }
+
+            });
+
+        }
+
         if (document.querySelector(`[data-js-original]`)) {
 
             let main = document.querySelector(`[data-js-original]`);
@@ -1597,20 +1655,6 @@ function shapeContent() {
                     entry.setAttribute(`data-ym-font-variant`, `small-caps::first-letter`);
 
                     entry.setAttribute(`data-ym-font-weight`, `var(--font-weight-bold)::first-letter`);
-
-                });
-
-            }
-
-            if (main.querySelectorAll(`h2, h3, h4, h5, h6`).length) {
-        
-                main.querySelectorAll(`h2, h3, h4, h5, h6`).forEach((entry) => {
-
-                    if (!entry.hasAttribute(`data-ym-color`)) {
-
-                        entry.setAttribute(`data-ym-color`, `var(--primary-color)`);
-
-                    } 
 
                 });
 
