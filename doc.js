@@ -1744,8 +1744,7 @@ function shapeContent() {
                     .setAttribute(`data-ym-color`, `var(--primary-color)`);
                     entry
                     .setAttribute(`data-ym-font-variant`, `small-caps::first-letter`);
-                    entry
-                    .setAttribute(`data-ym-font-weight`, `var(--font-weight-bold)`);
+                    entry.setAttribute(`data-ym-font-weight`, `var(--font-weight-bold)::first-letter`);
             
                 });
 
