@@ -1271,7 +1271,7 @@ function manageToc() {
 
             let entries = main.querySelectorAll(`h2[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"], h2[data-ym-display="block"], h3[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"], h3[data-ym-display="block"], h4[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"], h4[data-ym-display="block"], h5[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"], h5[data-ym-display="block"], h6[data-ym-display^="block:lang(`+ document.documentElement.lang +`)"], h6[data-ym-display="block"]`);
         
-            let toc = `<p data-ym-color="var(--primary-color)" data-ym-display="block" data-ym-content="'xOx00A0'::before@media screen and (max-width: 467px)" data-ym-font-size="calc(var(--x) * 1rem)@media screen and (min-width: 468px)" data-ym-font-weight="bold@media screen and (max-width: 467px)">`;
+            let toc = `<p data-ym-color="var(--text-color)::before@media screen and (max-width: 468px) || var(--primary-color)" data-ym-display="block" data-ym-content="'=Ox00A0'::before@media screen and (max-width: 467px)" data-ym-font-size="calc(var(--x) * 1rem)@media screen and (min-width: 468px)">`;
         
             if (document.documentElement.lang === `fr`) {
         
@@ -1532,47 +1532,41 @@ function shapeContent() {
 
                     case `h1` :
 
+                        entry.setAttribute(`data-ym-color`, `var(--primary-color)`);
+
                         entry.setAttribute(`data-ym-font-size`, `calc(var(--x) * 1rem)@media screen and (max-width: 467px) || calc(var(--xxx) * 1rem)@media screen and (min-width: 468px)`);
 
-                        entry.setAttribute(`data-ym-font-variant`, `small-caps`);
-
-                        entry.setAttribute(`data-ym-font-weight`, `bold`);
+                        entry.setAttribute(`data-ym-font-variant`, `small-caps`)
 
                     break;
 
                     case `h2` :
 
-                        entry.setAttribute(`data-ym-content`, `'xOx00A0'::before@media screen and (max-width: 467px)`);
+                        entry.setAttribute(`data-ym-color`, `var(--text-color)::before@media screen and (max-width: 467px) || var(--primary-color)`);
+
+                        entry.setAttribute(`data-ym-content`, `'=Ox00A0'::before@media screen and (max-width: 467px)`);
 
                         entry.setAttribute(`data-ym-font-size`, `calc(var(--xx) * 1rem)@media screen and (min-width: 468px)`);
-
-                        entry.setAttribute(`data-ym-font-weight`, `bold@media screen and (max-width: 467px)`);
 
                     break;
 
                     case `h3` :
 
-                        entry.setAttribute(`data-ym-content`, `'xxOx00A0'::before@media screen and (max-width: 467px)`);
+                        entry.setAttribute(`data-ym-color`, `var(--text-color)::before@media screen and (max-width: 467px) || var(--primary-color)`);
+
+                        entry.setAttribute(`data-ym-content`, `'==Ox00A0'::before@media screen and (max-width: 467px)`);
 
                         entry.setAttribute(`data-ym-font-size`, `calc(var(--x) * 1rem)@media screen and (min-width: 468px)`);
-
-                        entry.setAttribute(`data-ym-font-weight`, `bold@media screen and (max-width: 467px)`)
 
                     break;
 
                     default :
 
-                        entry.setAttribute(`data-ym-content`, `'xxxOx00A0'::before@media screen and (max-width: 468px)`);
+                        entry.setAttribute(`data-ym-color`, `var(--text-color)::before@media screen and (max-width: 467px) || var(--primary-color)`);
 
-                        entry.setAttribute(`data-ym-font-size`, `calc(var(--xs) * 1rem)@media screen and (min-width: 469px)`);
+                        entry.setAttribute(`data-ym-content`, `'===Ox00A0'::before@media screen and (max-width: 467px)`);
 
-                        entry.setAttribute(`data-ym-font-weight`, `bold@media screen and (max-width: 468px)`)
-
-                }
-
-                if (!entry.hasAttribute(`data-ym-color`)) {
-
-                    entry.setAttribute(`data-ym-color`, `var(--primary-color)`);
+                        entry.setAttribute(`data-ym-font-size`, `calc(var(--xs) * 1rem)@media screen and (min-width: 468px)`);
 
                 }
 
