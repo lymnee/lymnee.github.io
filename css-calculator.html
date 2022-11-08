@@ -505,7 +505,7 @@ function performCalculation() {
 
                             if (localStorage.getItem(`data-store`)) {
 
-                                displayResult(localStorage.getItem(`data-store`));
+                                displayResult(localStorage.getItem(`data-store`), true);
 
                                 localStorage.removeItem(`data-store`);
 
@@ -618,7 +618,7 @@ function shapeContent() {
 
                 if (document.documentElement.offsetWidth < document.querySelector(`[data-js-keypad]`).getBoundingClientRect().width) {
 
-                    document.querySelector(`[data-js-screen]`).innerHTML = `<span data-ym-align-items="center" data-ym-display="inline-flex" data-ym-justify-content="center" data-ym-grid-column="1 / span 5" data-ym-grid-row="1">Your device is too small!</span>`;
+                    document.querySelector(`[data-js-screen]`).innerHTML = `<span data-ym-align-items="center" data-ym-display="inline-flex" data-ym-justify-content="center" data-ym-grid-column="1 / span 5" data-ym-grid-row="1">Your device is small!</span>`;
 
                 }
 
