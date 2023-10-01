@@ -1,1 +1,997 @@
+<!DOCTYPE html>
+<html data-eenmyl data-ym-display="block" data-ym-font-size="small@media screen and (max-width: 467px) || medium@media screen and (max-width: 767px) || large@media screen and (min-width: 768px)" data-ym-font-weight="var(--font-weight-regular)" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" data-js-translation="Lymnee uses data attributes to style Web content." content="Lymnee recourt aux attributs de données pour styler un contenu Web.">
+<meta name="keywords" content="Html, Css, JavaScript">
+<meta name="author" content="Vincent Top-Roulet">
+<link rel="icon" href="%20" data-icon="䷡" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+<title>Lymnee</title>
+    <style>
+        [data-eenmyl] [data-lʎɯuǝǝ] {
+            font-family: monospace
+        }
+        [data-eenmyl] [data-lʎɯuǝǝ] h1 {
+            color: red;
+            font-size: x-large
+        }
+        [data-eenmyl]:lang(en) [data-lʎɯuǝǝ] [data-lʎɯuǝǝ-fr] {
+            display: none
+        }
+        [data-eenmyl]:lang(fr) [data-lʎɯuǝǝ] [data-lʎɯuǝǝ-en] {
+            display: none
+        }
+        [data-eenmyl] [data-lʎɯuǝǝ] {
+            font-size: large
+        }
+        [data-eenmyl] [data-ǝǝuɯʎl] {
+            display: none
+        }
+    </style>
+</head>
+<body data-ym-color="var(--text-color)" data-ym-display="grid" data-ym-font-family="var(--font-family-sans-serif)" data-ym-font-weight="var(--font-weight-regular)" data-ym-hyphens="auto" data-ym-line-height="var(--line-height)"  data-ym-margin="auto" data-ym-max-width="1024px@media screen and (min-width: 1024px)" data-ym-padding-block-end="calc(var(--s) * 1rem)" data-ym-width="calc(100vw - calc(var(--xs) * 1rem))@media screen and (max-width: 1023px)">
 
+    <div data-lʎɯuǝǝ data-ym-display="none">
+        <h1>Lym&#xad;nee</h1>
+        <p data-lʎɯuǝǝ-fr>Il vous est impossible d’accéder au contenu&#x202f;: soit JavaScript est désactivé dans votre navigateur, soit votre navigateur est obsolescent.</p>
+        <p data-lʎɯuǝǝ-en>You cannot access the content: either JavaScript is disabled in your browser or your browser is outdated.</p>
+
+    </div>
+
+    <div data-ǝǝuɯʎl>
+
+        <div data-ym-align-items="center@media screen and (min-width: 768px)" data-ym-display="flex" data-ym-flex-direction="column@media screen and (max-width: 768px)" data-ym-gap="var(--margin-block)@media screen and (max-width: 767px) || calc(var(--xs) * 1rem)@media screen and (min-width: 768px)">
+            <img src="data:," data-ym-height="calc(var(--xx) * 1rem)@media screen and (max-width: 467px) || calc(var(--xxx) * 1rem)@media screen and (min-width: 468px)" data-ym-width="calc(var(--xx) * 1rem)@media screen and (max-width: 467px) || calc(var(--xxx) * 1rem)@media screen and (min-width: 468px)" data-js-translation="Lymnee’s logotype" title="logotype de Lymnee" data-js-logotype>
+            <h1>Lym&#xad;nee</h1>
+        </div>
+
+        <p data-ym-display="block:lang(fr) || none:lang(en)" data-ym-font-size="calc(var(--x) * 1rem)@media screen and (min-width: 468px)" data-ym-margin-block-start="var(--margin-block)"><span data-css-quote data-ym-color="var(--accent-color)::before || var(--accent-color)::after">Attributs de données avec<span data-ym-color="var(--primary-color)">…</span> style.</span></p>
+        <p data-ym-display="block:lang(en) || none:lang(fr)" data-ym-font-size="calc(var(--x) * 1rem)@media screen and (min-width: 468px)" data-ym-margin-block-start="var(--margin-block)"><span data-css-quote data-ym-color="var(--accent-color)::before || var(--accent-color)::after">Classies<span data-ym-color="var(--primary-color)">…</span> data-attributes.</span></p>
+
+        <div data-ym-justify-content="space-between" data-ym-cursor="pointer" data-ym-display="flex" data-ym-flex-direction="column@media screen and (max-width: 767px)" data-ym-margin-block-start="var(--margin-block)">
+            <div data-js-summary="close" data-ym-align-items="flex-start@media screen and (max-width: 767px) || center@media screen and (min-width: 768px)" data-ym-display="flex" data-ym-flex-direction="column@media screen and (max-width: 768px)" data-ym-gap="calc(var(--ss) * 1rem)">
+                <div data-ym-color="var(--accent-color) && [data-js-summary=close] || var(--primary-color) && [data-js-summary=open]" data-ym-font-size="calc(var(--x) * 1rem)@media screen and (min-width: 468px)" class="material-symbols-outlined">view_compact_alt</div>
+                <p data-ym-display="block:lang(fr) || none:lang(en)" data-ym-font-size="calc(var(--x) * 1rem)@media screen and (min-width: 468px)">
+                    <span data-ym-display="block && [data-js-summary=close] || none && [data-js-summary=open]">lire le résumé</span>
+                    <span data-ym-display="none && [data-js-summary=close] || block && [data-js-summary=open]">lire l’original</span>
+                </p>
+                <p data-ym-display="block:lang(en) || none:lang(fr)" data-ym-font-size="calc(var(--x) * 1rem)@media screen and (min-width: 468px)">
+                    <span data-ym-display="block && [data-js-summary=close] || none && [data-js-summary=open]">read the summary text</span>
+                    <span data-ym-display="none && [data-js-summary=close] || block && [data-js-summary=open]">read the full text</span>
+                </p>
+            </div>
+            <div data-js-lang data-ym-align-items="flex-end@media screen and (max-width: 767px) || center@media screen and (min-width: 768px)" data-ym-cursor="pointer" data-ym-display="flex" data-ym-flex-direction="column@media screen and (max-width: 768px)" data-ym-gap="calc(var(--ss) * 1rem)">
+                <p data-ym-display="block:lang(fr) || none:lang(en)" data-ym-font-size="calc(var(--x) * 1rem)@media screen and (min-width: 468px)">view content in English</p>
+                <p data-ym-display="block:lang(en) || none:lang(fr)" data-ym-font-size="calc(var(--x) * 1rem)@media screen and (min-width: 468px)">voir le contenu en Français</p>
+                <div data-ym-color="var(--accent-color)" data-ym-font-size="calc(var(--xx) * 1rem)@media screen and (min-width: 468px)" class="material-symbols-outlined">translate</div>
+            </div>
+        </div>
+
+        <div data-js-abstract data-ym-display="none" data-ym-margin-block-start="var(--margin-block)">
+            <h2 data-ym-color="var(--accent-color)" data-ym-display="block:lang(fr) || none:lang(en)" data-ym-margin-block-start="1rem" title="En résumé…">En ré&#xad;su&#xad;mé…</h2>
+            <h2 data-ym-color="var(--accent-color)" data-ym-display="block:lang(en) || none:lang(fr)" data-ym-margin-block-start="1rem" title="In summary…">In sum&#xad;mary…</h2>
+        </div>
+        <div data-js-original data-ym-display="block">
+            <nav data-js-toc data-ym-display="block || flex@media screen and (min-width: 1024px)" data-ym-align-items="flex-end@media screen and (min-width: 1024px)" data-ym-flex-direction="column@media screen and (min-width: 1024px)" data-ym-margin-block="var(--margin-block)"></nav>
+            <div data-ym-color="var(--primary-color)" data-ym-display="none@media screen and (max-width: 767px) || block@media screen and (min-width: 768px)" data-ym-font-size="calc(var(--xx) * 1rem)" data-ym-margin-block-start="var(--margin-block)"><span data-css-line-break>&#x3c;de&#xad;tails&#x3e;</span></div>
+            <div data-ym-color="var(--accent-color)" data-ym-display="none@media screen and (max-width: 767px) || block@media screen and (min-width: 768px)" data-ym-font-size="calc(var(--xx) * 1rem)" data-ym-margin-block-start="var(--margin-block)" data-js-translation="In summary…" title="En résumé…"><span data-css-line-break>&#x3c;sum&#xad;mary&#x3e;</span></div>
+            <p data-js-summarize data-lang="en"><span data-ym-font-weight="var(--font-weight-bold)">Author’s note.</span> As I am a French speaker, the translation can be improved!</p>
+            <p data-js-summarize data-lang="fr">Les <span data-js-link>attributs de données</span> constituent une alternative aux classes <span data-js-abbreviation>Css</span> pour mettre en forme une page Web.</p>    
+            <p data-js-summarize data-lang="en"><span data-js-link>Data attributes</span> are an alternative to <span data-js-abbreviation>Css</span> classes for formatting a web page.</p>
+            <p data-js-summarize data-lang="fr">Les <span data-js-link>attributs de données</span> sont flexibles&#x202f;: leur valeur peut contenir n’importe quel caractère&#x202f;! Aussi est-il loisible de suivre la grammaire <span data-js-abbreviation>Css</span> pour déclarer un couple <span data-css-quote>sélecteur - valeur</span>. Par exemple…</p>
+            <p data-js-summarize data-lang="en"><span data-js-link>Data attributes</span> are flexible: their value can contain any character! So it is possible to follow the <span data-js-abbreviation>Css</span> grammar to declare a couple selector - value. For example…</p>
+<pre data-js-summarize>
+<code>&#x3c;html data-ym-font-size="medium"&#x3e;&#x3c;/html&#x3e;</code>
+</pre>
+    <p data-lang="fr">… ou…</p>
+    <p data-lang="en">… or…</p>
+<pre>
+<code>&#x3c;html 
+data-ym-font-size="medium"
+&#x3e;&#x3c;/html&#x3e;</code>
+</pre>
+            <p data-js-summarize data-lang="fr">… où <span data-css-quote>data-ym-font-size</span> représente un espace de nom suivi du sélecteur.</p>
+            <p data-js-summarize data-lang="en">… where <span data-css-quote>data-ym-font-size</span> represents a namespace followed by the selector.</p>
+            <p data-lang="fr">Les relations <span data-js-abbreviation>Html</span> - <span data-js-abbreviation>Css</span> deviennent plus faciles à concevoir et à maintenir.</p>
+            <p data-lang="en"><span data-js-abbreviation>Html</span> - <span data-js-abbreviation>Css</span> relationships become easier to design and maintain.</p>
+            <p data-lang="fr">Certes, l’outil de validation <span data-js-link>Css Lint</span> émet des avertissements libellés avec le titre <q lang="en" data-ym-content="open-quote::before || close-quote::after">Disallow unqualified attribute selectors</q> et la description <q lang="en" data-ym-content="open-quote::before || close-quote::after">Unqualified attribute selectors are known to be slow</q> quand lui sont soumis des <span data-js-link>attributs de données</span>.</p>
+            <p data-lang="en">Certainly, validation tool <span data-js-link>Css Lint</span> issues warnings when <span data-js-link>data attributes</span> are submitted to it&#x202f;: <q data-ym-content="open-quote::before || close-quote::after">Disallow unqualified attribute selectors</q> and <q data-ym-content="open-quote::before || close-quote::after">Unqualified attribute selectors are known to be slow</q>.</p>
+            <p data-lang="fr">Cependant, en dépit d’une légende tenace, les <span data-js-link>attributs de données</span> ne sont pas plus lents à interpréter que les classes <span data-js-abbreviation>Css</span>… L’article <span data-css-quote data-js-link>How performant are data attributes as selectors</span> propose un test, disponible dans le fichier <span data-css-quote data-js-link>lymnee.benchmark.html</span>, afin de comparer les performances des deux sélecteurs grâce à 10&#x202f;000 itérations.</p>
+            <p data-lang="en">However, despite a persistent legend, <span data-js-link>data attributes</span> are not slower to interpret than <span data-js-abbreviation>Css</span>… The article <span data-css-quote data-js-link>How performant are data attributes as selectors</span> proposes a test, which is available in <span data-css-quote data-js-link>lymnee.benchmark.html</span>: it compares the performances of the two selectors thanks to 10 000 iterations.</p>
+            <p data-lang="fr">Cette proposition de syntaxe, baptisée <span data-css-quote>Lymnee</span>, est simple, mais pas simpliste&#x202f;: <span data-js-link>pseudo-classes</span>, <span data-js-link>pseudo-elements</span>, <span data-css-quote data-js-link>Media queries</span>, règles <span data-js-link>@supports</span> et sélecteurs contextuels sont pris en charge.</p>
+            <p data-lang="en">This syntax proposal, called <span data-css-quote>Lymnee</span>, is simple, but not simplistic: <span data-js-link>pseudo-classes</span>, <span data-js-link>pseudo-elements</span>, <span data-js-link>Media queries</span>, <span data-js-link>@supports</span> rules and contextual selectors are supported.</p>
+            <p data-lang="fr"><span data-ym-text-decoration="line-through"><span data-css-lymnee>Lymnee</span> s’accompagne de deux outils pour générer le code <span data-js-abbreviation>Css</span>&#x202f;: un paquet <span data-js-link>Node.js</span>, un script <span data-js-abbreviation>Php</span>. Deux autres outils sont disponibles en JavaScript&#x202f;: un fichier de visualisation, d’une part, et, d’autre part, un fichier de production, servie également par un <span data-js-abbreviation>Cdn</span>&#x202f;; est écrite à la volée la feuille de style.</span></p>
+            <p data-lang="fr"><span data-css-lymnee>Lymnee</span> dispose d’une librairie écrite en JavaScript qui génère la feuille de style à la volée&#x202f;: le fichier peut être servi par un <span data-js-abbreviation>Cdn</span>.</p>
+            <p data-lang="en"><span data-ym-text-decoration="line-through"><span data-css-lymnee>Lymnee</span> includes two tools to generate the code <span data-js-abbreviation>Css</span>&#x202f;: a <span data-js-link>Node.js</span> package, a <span data-js-abbreviation>Php</span> script. Two other tools are available in JavaScript: a visualization file, on the one hand, and, on the other hand, a production file, also served by a <span data-js-abbreviation>Cdn</span>; the stylesheet is written on the fly.</span></p>
+            <p data-lang="en"><span data-css-lymnee>Lymnee</span> has a library written in JavaScript which generates the style sheet on the fly : the file can be served by a <span data-js-abbreviation>Cdn</span>.</p>
+            <div data-ym-color="var(--accent-color)" data-ym-display="none@media screen and (max-width: 767px) || block@media screen and (min-width: 768px)" data-ym-font-size="calc(var(--xx) * 1rem)" data-ym-margin-block-start="var(--margin-block)"><span data-css-line-break>&#x3c;/sum&#xad;mary&#x3e;</span></div>
+            <h2 data-js-summarize data-lang="fr">Pro&#xad;lé&#xad;go&#xad;mè&#xad;nes</h2>
+            <h2 data-js-summarize data-lang="en">Back&#xad;ground</h2>
+            <p data-js-summarize data-lang="fr">Écrivons trois lignes de <span data-js-abbreviation>Html</span> et trois classes <span data-js-abbreviation>Css</span>…</p>
+            <p data-js-summarize data-lang="en">Let’s write three lines of <span data-js-abbreviation>Html</span> et three classes <span data-js-abbreviation>Css</span>…</p>
+<pre data-js-summarize>
+<code>&#x3c;h1 class="foo"&#x3e;Title&#x3c;/h1&#x3e;
+&#x3c;h2 class="else"&#x3e;Title&#x3c;/h2&#x3e;
+&#x3c;p class="bar"&#x3e;Paragraph&#x3c;/p&#x3e;</code>
+</pre>
+<pre data-js-summarize>
+<code>.foo {
+    color: red;
+    font-size: large
+}
+.else {
+    color: blue;
+    font-size: large
+}
+.bar {
+    color: blue;
+    font-size: medium
+}</code>
+</pre>
+            <p data-lang="fr">Émergent trois difficultés…</p>
+            <p data-lang="en">Three difficulties emerge…</p>
+            <ol data-lang="fr">
+                <li>Comment nommer les classes&#x202f;? En utilisant la sémantique grâce à un incommensurable effort d’imagination (songer aux esprits curieux qui, en ligne, ausculteront notre savoir-faire&#x202f;!)&#x202f;? En recourant à un nom générique et réutilisable&#x202f;?</li>
+                <li>Comment ordonner les classes&#x202f;? En les triant par ordre alphabétique au prix d’un travail fastidieux&#x202f;? À défaut de tri, comment retrouver l’information dans plusieurs centaines, voire milliers de classes&#x202f;? [Selon <span data-js-link>CSS Stats</span>, <span data-js-link>Facebook</span> utilise 1025 règles, le 19 septembre 2023.]</li>
+                <li>Comment appliquer le principe <span data-css-quote data-js-abbreviation>Dry</span>, c’est-à-dire factoriser le code afin d’obvier à la redondance&#x202f;?</li>
+            </ol>
+            <ol data-lang="en">
+                <li>How to name the classes? By using semantics thanks to an immeasurable effort of imagination (think of the inquisitive minds that, online, will examine our know-how!)? By using a generic and reusable name?</li>
+                <li>How to order the classes? By sorting them in alphabetical order at the cost of a tedious job? Without sorting, how can you find information in several hundred or even thousands of classes? [According to <span data-js-link>CSS Stats</span>, <span data-js-link>Facebook</span> uses 1025 rules on September 19, 2023.]</li>
+                <li>How to apply the <span data-css-quote data-js-abbreviation>Dry</span>, i.e. factoring the code to avoid redundancy?</li>
+            </ol>
+            <p data-js-summarize data-lang="fr">Avec un tri et un code factorisé (manuellement&#x202f;!), nos trois classes s’établissent ainsi…</p>
+            <p data-js-summarize data-lang="en">With a sorting and a factorized code (manually!), our three classes are established as follows…</p>
+<pre data-js-summarize>
+<code>.bar { 
+    font-size: medium
+}
+.bar,
+.else {
+    color: blue
+}
+.else,
+.foo {
+    font-size: large
+}
+.foo {
+    color: red
+}</code>
+</pre>
+            <p data-js-summarize data-lang="fr">ou…</p>
+            <p data-js-summarize data-lang="en">or…</p>
+<pre data-js-summarize>
+<code>.bar,
+.else {
+    color: blue
+}
+.foo {
+    color: red
+}
+.bar { 
+    font-size: medium
+}
+.else,
+.foo {
+    font-size: large
+}</code>
+</pre>
+            <p data-js-summarize data-lang="fr">Avec <span data-css-lymnee>Lymnee</span>, nous écrivons…</p>
+            <p data-js-summarize data-lang="en">With <span data-css-lymnee>Lymnee</span>, we write…</p>
+<pre data-js-summarize>
+<code>&#x3c;h1 data-ym-color="red" data-ym-font-size="large"&#x3e;Title&#x3c;/h1&#x3e;
+&#x3c;h2 data-ym-color="blue" data-ym-font-size="large"&#x3e;Title&#x3c;/h2&#x3e;
+&#x3c;p data-ym-color="blue" data-ym-font-size="medium"&#x3e;Paragraph&#x3c;/p&#x3e;</code>
+</pre>
+            <p data-js-summarize data-lang="fr">Nous obtenons…</p>
+            <p data-js-summarize data-lang="en">We get…</p>
+<pre data-js-summarize>
+<code>[data-ym-color="red"] {
+    color: red
+}
+[data-ym-font-size="large"] {
+    font-size: large
+}
+[data-ym-color="blue"] {
+    color: blue
+}
+[data-ym-font-size="medium"] {
+    font-size: medium
+}</code>
+</pre>
+            <p data-js-summarize data-lang="fr">Un codage classique nécessite six sélecteurs et quatre règles. <span data-css-lymnee>Lymnee</span> utilise quatre sélecteurs et quatre règles.</p>
+            <p data-js-summarize data-lang="en">A classic coding requires six selectors and four rules. <span data-css-lymnee>Lymnee</span> uses four selectors and four rules.</p>
+            <p data-lang="fr">Le code <span data-js-abbreviation>Html</span>, valide&#x202f;! est verbeux (lu communément par un logiciel…), mais la solution <span data-css-lymnee>Lymnee</span> présente plusieurs avantages…</p>
+            <p data-lang="en">The <span data-js-abbreviation>Html</span> code is valid and verbose (read by a software…), but <span data-css-lymnee>Lymnee</span> has several advantages…</p>
+            <ul data-lang="fr">
+               <li>La lecture du code <span data-js-abbreviation>Html</span> évoque le rendu visuel.</li>
+               <li>La quête du nom de classe idéal n’existe plus.</li>
+               <li>Le code <span data-js-abbreviation>Css</span> est factorisé, il n’y a plus de redondance.</li>
+               <li>La syntaxe est élémentaire. Après ajout d’un préfixe comme <span data-css-quote>data-ym-</span>, le couple sélecteur - valeur est utilisé&#x202f;: il suffit de suivre la grammaire de <span data-js-abbreviation>Css</span>.</li>
+               <li>Le code <span data-js-abbreviation>Css</span> superflu devient évident et peut être éliminé sans effort.</li>
+               <li>Seuls sont réinitialisés les styles des balises utilisées, et cette réinitialisation est optionnelle.</li>
+               <li><span data-ym-text-decoration="line-through">La facilité de lecture de <span data-css-lymnee>Lymnee</span> par un humain facilite son traitement logique. C’est pourquoi, sont proposées deux librairies, sous forme de paquet <span data-js-link>Node.js</span> avec dépendances, d’une part, et, d’autre part, d’un fichier <span data-js-abbreviation>Php</span>. Ces librairies, paramétrables, analysent tous les fichiers d’un répertoire contenant des fragments au format <span data-js-abbreviation>Html</span> et extraient les <span data-js-link>attributs de données</span> afin de produire le code <span data-js-abbreviation>Css</span>, compressé ou pas au choix de l’auteur. Un fichier JavaScript, local ou distant, est aussi disponible pour mettre à l’épreuve la méthode en quelques instants. Le présent document utilise JavaScript pour générer le code <span data-js-abbreviation>Css</span> à la volée&#x202f;; quelques sophistications superflues montrent la polyvalence de <span data-css-lymnee>Lymnee</span>.</span></li>
+               <li>La facilité de lecture de <span data-css-lymnee>Lymnee</span> par un humain facilite son traitement logique. C’est pourquoi, est proposée une librairie en JavaScript. Ce fichier, local ou distant, permet de mettre à l’épreuve la méthode en quelques instants. Le présent document utilise évidemment cette librairie pour générer le code <span data-js-abbreviation>Css</span> à la volée&#x202f;; quelques sophistications superflues montrent la polyvalence de <span data-css-lymnee>Lymnee</span>. Le code, refactorisé et plus concis, s’appuie désormais sur la version <span data-css-quote data-js-link>Ecma 6</span>. La maturité de ce travail de développement ne justifie plus d’entretenir les librairies <span data-js-link>Node.js</span> et <span data-js-abbreviation>Php</span>.</li>
+               <li>Écrire le code <span data-js-abbreviation>Css</span> à la main demeure envisageable&#x202f;: l’exercice ne réclame pas un effort inouï&#x202f;!</li>
+            </ul>
+            <ul data-lang="en">
+               <li>The reading of the <span data-js-abbreviation>Html</span> code indicates the visual rendering.</li>
+               <li>The search for the ideal class name no longer exists.</li>
+               <li>The <span data-js-abbreviation>Css</span> code is factorized, there is no more redundancy. The rules are sorted. (Two differences, and not the least, with inline styles!)</li>
+               <li>The syntax is elementary. After adding a prefix like <span data-css-quote>data-ym-</span>, the couple selector - value is used: it is enough to follow the grammar of <span data-js-abbreviation>Css</span>.</li>
+               <li>Unnecessary <span data-js-abbreviation>Css</span> code becomes obvious and can be eliminated effortlessly.</li>
+               <li>Only the styles of the tags used are reset. This reset is optional.</li>
+               <li><span data-ym-text-decoration="line-through">The ease of reading <span data-css-lymnee>Lymnee</span> by a human facilitates its logical processing. That’s why, two libraries are proposed: a <span data-js-link>Node.js</span> package with dependencies, on one hand, and, on the other hand, a <span data-js-abbreviation>Php</span> file. These customizable libraries analyze all the files in a directory containing fragments in <span data-js-abbreviation>Html</span> format and extract the <span data-js-link>data attributes</span> in order to produce the <span data-js-abbreviation>Css</span> code, compressed or not at the author’s choice. A JavaScript file, local or remote, is also available to test the method in a few moments. This document uses JavaScript to generate the <span data-js-abbreviation>Css</span> code on the fly; some superfluous sophistication shows the versatility of <span data-css-lymnee>Lymnee</span>.</span></li>
+               <li>The ease of reading <span data-css-lymnee>Lymnee</span> by a human facilitates its logical treatment. This is why a library in JavaScript is proposed. This file, local or remote, allows to test the method in a few moments. The present document obviously uses this library to generate the <span data-js-abbreviation>Css</span> code on the fly; some superfluous sophistications show the versatility of Lymnee. The code, refactored and more concise, is now based on the <span data-js-link>Ecma 6</span> version. The maturity of this development work no longer justifies maintaining the <span data-js-link>Node.js</span> and <span data-js-abbreviation>Php</span> libraries.</li>
+               <li>Writing the Css code by hand is still possible: the exercise does not require an incredible effort!</li>
+            </ul>
+            <h3 data-lang="fr">État des lieux</h3>
+            <h3 data-lang="en">State of the art</h3>
+            <p data-lang="fr">Depuis des temps immémoriaux (!), les auteurs.autrices sont en quête de la structure idéale pour organiser le code <span data-js-abbreviation>Css</span>.</p>
+            <p data-lang="en">Since the beginning of time (!), authors have been looking for the ideal structure to organize the <span data-js-abbreviation>Css</span> code.</p>
+            <p data-lang="fr">Les méthodes comme <span data-js-link>Object-Oriented CSS</span>, <span data-js-link>BEM — Block Element Modifier</span>, <span data-js-link>Atomic Design</span> ajoutent une couche d’abstraction. Comment reconnaître un premier et un deuxième objet, un <span data-css-quote>bloc</span> et un <span data-css-quote>élement</span>, un <span data-css-quote>organisme</span> et un <span data-css-quote>modèle</span>&#x202f;?… Collective et individuelle sont les variabilités… Le travail collaboratif, dans l’espace ou dans le temps, devient chaotique. Un.e auteur.autrice (le substantif <span data-css-quote>développeur.se</span> constitue un abus de langage, car <span data-js-abbreviation>Css</span> comme <span data-js-abbreviation>Html</span> n’utilisent pas la programmation) interprète différemment les règles au fil du temps, voire oublie le raisonnement qui l’a conduit à préférer une <span data-css-quote>molécule</span> à un <span data-css-quote>atome</span>.</p>
+            <p data-lang="en">Methods like <span data-js-link>Object-Oriented CSS</span>, <span data-js-link>BEM — Block Element Modifier</span>, <span data-js-link>Atomic Design</span> add a layer of abstraction. How to recognize a first and a second object, a <span data-css-quote>block</span> and an <span data-css-quote>element</span>, an <span data-css-quote>organism</span> and a <span data-css-quote>template</span>?… Collective and individual are the variabilities… Collaborative work, in space or in time, becomes chaotic. An author interprets the rules differently over time, and even forgets the reasoning that led him to prefer a <span data-css-quote>molecule</span> to an <span data-css-quote>atom</span>.</p>
+            <p data-lang="fr">Les préprocesseurs, comme <span data-js-link>Less</span>, visent notamment à rationaliser le code <span data-js-abbreviation>Css</span>. Le contenu est souvent divisé en fragments gigognes qui suivent une logique aléatoire. La recherche d’une règle impose de parcourir plusieurs fichiers. Comme la plupart des navigateurs interprète maintenant les <span data-js-link>variables Css</span> [<span data-js-link>Can I use &#x23; CSS Variables (Custom Properties)</span>] et utilise la fonction (hélas limitée aux opérations arithmétiques traditionnelles&#x202f;!) <span data-js-link>Calc()</span> [<span data-js-link>Can I use calc() as CSS unit value</span>], l’intérêt des préprocesseurs est moindre.</p>
+            <p data-lang="en">Preprocessors, such as <span data-js-link>Sass</span> or <span data-js-link>Less</span>, aim in particular to streamline <span data-js-abbreviation>Css</span> code. The content is often divided into fragments that follow a random logic. Searching for a rule requires browsing several files. As most browsers now interpret <span data-js-link>Can I use &#x23; CSS Variables (Custom Properties)</span> [<span data-js-link>Can I use &#x23; CSS Variables (Custom Properties)</span>] and use the function (alas limited to traditional arithmetic operations!) <span data-js-link>Calc()</span> [<span data-js-link>Can I use calc() as CSS unit value</span>], the interest of preprocessors is less.</p>
+            <h3 data-lang="fr">D’<span lang="en">At&#xad;tributes Mod&#xad;ules for CSS</span>…</h3>
+            <h3 data-lang="en">From At&#xad;tributes Mod&#xad;ules for CSS…</h3>
+            <p data-lang="fr">En 2014, Glen Maddern et Ben Schwarz commettent l’article <span data-css-quote data-js-link>Attributes Modules for CSS</span>. Ils y proposent une syntaxe comme…</p>
+            <p data-lang="en">In 2014, Glen Maddern and Ben Schwarz wrote the article <span data-css-quote data-js-link>Attributes Modules for CSS</span>. In it, they propose a syntax as…</p>
+<pre>
+&#x3c;a am-Button="primary large"&#x3e;Large primary button&#x3c;/a&#x3e;
+&#x3c;a am-Button&#x3e;&#x3c;/a&#x3e;
+&#x3c;a am-Button="info small"&#x3e;&#x3c;/a&#x3e;
+&#x3c;a am-Button="danger extra-small"&#x3e;&#x3c;/a&#x3e;
+</pre>
+            <p data-lang="fr">(L’exemple est repris de la documentation.)</p>
+            <p data-lang="en">(The example is taken from the documentation.)</p>
+            <p data-lang="fr">Il s’agit d’un usage des <span data-js-link>attributs de données</span>, qui est aussi préconisé par <span data-js-link>Object-Oriented CSS</span>.</p>
+            <p data-lang="en">This is a use of <span data-js-link>data attributes</span>, which is also advocated by <span data-js-link>Object-Oriented CSS</span>.</p>
+            <h3 data-lang="fr">… Via <span lang="en">Atomic CSS</span></h3>
+            <h3 data-lang="en">… Via Atomic CSS</h3>
+            <p data-lang="fr"><span data-js-link>Atomic CSS</span>, conçu par Thierry Koblentz, style directement les composants. Cette méthodologie évite de concevoir des classes difficiles à maintenir. Ainsi, le code <span data-js-abbreviation>Html</span>…</p>
+            <p data-lang="en"><span data-js-link>Atomic CSS</span>, designed by Thierry Koblentz, styles components directly. This methodology avoids designing classes that are difficult to maintain. Thus, the <span data-js-abbreviation>Html</span> code…</p>
+<pre>
+<code>&#x3c;div class="D(b) Va(t) Fz(20px)"&#x3e;Hello World!&#x3c;/div&#x3e;</code>
+</pre>
+            <p data-lang="fr">… est traduit comme suit en <span data-js-abbreviation>Css</span>…</p>
+            <p data-lang="en">… is translated into <span data-js-abbreviation>Css</span> as follows…</p>
+<pre>
+<code>.D(b) {
+    display: block
+}
+.Va(t) {
+    vertical-align: top
+}
+.Fz(20px) {
+    font-size: 20px
+}</code>
+</pre>
+            <p data-lang="fr">(L’exemple est repris de la documentation.)</p>
+            <p data-lang="en">(The example is taken from the documentation.)</p>
+            <p data-lang="fr">Cette méthode est captivante&#x202f;! <span data-js-link>Atomic CSS</span> n’utilise pas les styles en ligne. Le code <span data-js-abbreviation>Css</span> est mis en cache et factorisé. La syntaxe alourdit le poids d’un fichier <span data-js-abbreviation>Html</span>, mais la compression est performante.</p>
+            <p data-lang="en">This method is captivating! <span data-js-link>Atomic CSS</span> does not use inline styles. The <span data-js-abbreviation>Css</span> code is cached and factored. The syntax increases the weight of an <span data-js-abbreviation>Html</span> file, but the compression is efficient.</p>
+            <p data-lang="fr">Cependant, <span data-js-link>Atomic CSS</span> présente deux écueils…</p>
+            <p data-lang="en">However, <span data-js-link>Atomic CSS</span> has two pitfalls…</p>
+            <ol data-lang="fr" data-ym-list-style-type="lower-greek">
+                <li>Les classes sont difficiles à mémoriser et à relire. Elles s’appuient sur la syntaxe <span data-js-link>Emmet</span>, dont les abréviations ne sont pas intuitives. <span data-js-link>Emmet</span> n’est pas maintenu à jour&#x202f;: ainsi, comment recourir à <span data-js-link>Css Grid Layout</span>&#x202f;?</li>
+                <li>L’échappement des caractères spéciaux est pénible&#x202f;!
+                    <p>Par exemple, en utilisant les <span data-js-link>Media queries</span>, le code <span data-js-abbreviation>Html</span>…</p>
+<pre>
+<code>&#x3c;div class="bdrs@large"&#x3e;&#x3c;/div&#x3e;</code>
+</pre>   
+                    <p>… est traduit comme suit en <span data-js-abbreviation>Css</span>…</p>
+<pre>
+<code>@media only screen and (min-width: 768px) {
+    .bdrs\@large {
+        border-radius: .5rem
+    }
+}</code>
+</pre>
+                    <p>JavaScript échappe les caractères spéciaux avec la méthode <code>CSS.escape()</code>.</p>     
+                </li>
+            </ol>
+            <ol data-lang="en" data-ym-list-style-type="lower-greek">
+                <li>The classes are difficult to memorize and to read back. They are based on <span data-js-link>Emmet</span>  syntax, whose abbreviations are not intuitive. <span data-js-link>Emmet</span> is not kept up to date: so how to use <span data-js-link>Css Grid Layout</span>>?</li>
+                <li>Escaping special characters is a pain!
+                    <p>For example, using <span data-js-link>Media queries</span>, <span data-js-abbreviation>Html</span> code…</p>
+<pre>
+<code>&#x3c;div class="bdrs@large"&#x3e;&#x3c;/div&#x3e;</code>
+</pre>   
+                    <p>… is translated as follows in <span data-js-abbreviation>Css</span>…</p>
+<pre>
+<code>@media only screen and (min-width: 768px) {
+    .bdrs\@large {
+        border-radius: .5rem
+    }
+}</code>
+</pre>
+                    <p>JavaScript escapes special characters with the <code>CSS.escape()</code> method.</p>     
+                </li>
+            </ol>
+            <p data-lang="fr">Autrement dit, les concepts d’<span data-js-link>Atomic CSS</span> méritent quelque intérêt, mais sont difficiles à appréhender au quotidien.</p>
+            <p data-lang="en">In other words, the concepts of <span data-js-link>Atomic CSS</span> are interesting, but difficult to use in everyday life.</p>
+            <h3 data-lang="fr">… À Lym&#xad;nee</h3>
+            <h3 data-lang="en">… To Lym&#xad;nee</h3>
+            <p data-lang="fr">Or, la philosophie d’<span data-js-link>Atomic CSS</span> est applicable aux <span data-js-link>attributs de données</span>&#x202f;: les codes <span data-js-abbreviation>Html</span> et <span data-js-abbreviation>Css</span> deviennent simples à écrire et à lire&#x202f;! Par un humain. Par un logiciel.</p>
+            <p data-lang="en"><span data-js-link>Atomic CSS</span> philosophy is applicable to <span data-js-link>data attributes</span>: <span data-js-abbreviation>Html</span> and <span data-js-abbreviation>Css</span> codes become easy to write and read! By a human. By a software.</p>
+            <p data-js-summarize data-lang="fr">Les <span data-ym-font-weight="var(--font-weight-bold)">valeurs</span> des <span data-js-link>attributs de données</span> peuvent contenir n’importe quel caractère&#x202f;: <q cite="https://www.w3.org/TR/2014/REC-html5-20141028/dom.html#attributes" lang="en">(…) attributes on HTML elements may have any string value, including the empty string. (…)</q>.</p>
+            <p data-js-summarize data-lang="en"><span data-js-link>Data attributes</span> <span data-ym-font-weight="var(--font-weight-bold)">values</span>  can contain any character: <q cite="https://www.w3.org/TR/2014/REC-html5-20141028/dom.html#attributes">(…) attributes on HTML elements may have any string value, including the empty string. (…)</q>.</p>
+            <h4 data-lang="fr">At&#xad;tri&#xad;buts de données</h4>
+            <h4 data-lang="en">Data at&#xad;tributes</h4>
+            <p data-lang="fr">Les <span data-js-link>attributs de données</span> permettent d’ajouter des informations à un élément <span data-js-abbreviation>Html</span>.</p>
+            <p data-lang="en"><span data-js-link>Data attributes</span> are used to add information to an <span data-js-abbreviation>Html</span> element.</p>
+            <p data-lang="fr">Par exemple, pour stocker le nombre d’habitants d’une ville sans recourir à une base de données, peut être écrit… <code>&#x3c;p id="paris" data-population="2148271"&#x3e;Paris&#x3c;/p&#x3e;</code>. L’information est facile à extraire en JavaScript&#x202f;: <code>console.log(document.querySelector(`#paris`).dataset.population);</code>, voire <code>console.log(document.querySelector(`#paris`).getAttribute(`data-population`));</code>.</p>
+            <p data-lang="en">For example, to store the number of inhabitants of a city without using a database, we can write… <code>&#x3c;p id="paris" data-population="2148271"&#x3e;Paris&#x3c;/p&#x3e;</code>. The information is easy to extract in JavaScript: <code>console.log(document.querySelector(`#paris`).dataset.population);</code> or <code>console.log(document.querySelector(`#paris`).getAttribute(`data-population`));</code>.</p>
+            <p data-js-summarize data-lang="fr">Les <span data-js-link>attributs de données</span> doivent être préfixés <code >data-</code> pour être valides. Une balise <span data-js-abbreviation>Html</span> peut en recevoir plusieurs.</p>
+            <p data-js-summarize data-lang="en"><span data-js-link>Data attributes</span> must be prefixed with <code>data-</code> to be valid. An <span data-js-abbreviation>Html</span> tag can receive several of them.</p>
+            <p data-lang="fr">Les <span data-js-link>attributs de données</span> peuvent aussi servir à styler un élément, comme le rappelle Chris Coyier dans son article <span data-css-quote data-js-link>A Complete Guide to Data Attributes</span>.</p>
+            <p data-lang="en"><span data-js-link>>Data Attributes</span> can also be used to style an element. Chris Coyier explains this in his article <span data-css-quote data-js-link>A Complete Guide to Data Attributes</span>.</p>
+            <h4 data-lang="fr">Classes</h4>
+            <h4 data-lang="en">Classes</h4>
+            <p data-lang="fr">En <span data-js-abbreviation>Css</span>, chaque sélecteur a une spécificité. La hiérarchie s’organise comme suit en schématisant&#x202f;: balise (priorité 1), classe (priorité 10), identifiant (priorité 100). En cas de conflit, la dernière règle s’applique grâce à la cascade. (La règle <span data-css-quote>!important</span> a une priorité de 10&#x202f;000&#x202f;; elle signe un travail bâclé.)</p>
+            <p data-lang="en">In <span data-js-abbreviation>Css</span>, each selector has a specificity. The hierarchy is organized as follows: tag (priority 1), class (priority 10), identifier (priority 100). In case of conflict, the last rule applies thanks to the cascade. (The !important rule has a priority of 10,000; it signals sloppy work).</p>
+            <p data-lang="fr">Les <span data-js-link>attributs de données</span> ont la même spécificité que les classes.</p>
+            <p data-lang="en"><span data-js-link>Data attributes</span> have the same specificity as classes.</p>
+            <p data-lang="fr">Afin d’éviter les conflits, une bonne pratique consiste à n’utiliser que des classes pour la mise en forme. Les identifiants sont réservés aux interactions avec JavaScript. En revanche, dans les deux cas, les <span data-js-link>attributs de données</span> peuvent trouver un emploi&#x202f;!</p>
+            <p data-lang="en">To avoid conflicts, a good practice is to use only classes for formatting. Identifiers are reserved for interactions with JavaScript. On the other hand, in both cases, <span data-js-link>data attributes</span> can find a use!</p>
+            <h4 data-lang="fr">Ba&#xad;lises</h4>
+            <h4 data-lang="en">Tags</h4>
+            <p data-lang="fr">Les balises servent exclusivement à structurer le contenu.</p>
+            <p data-lang="en">Tags are used exclusively to structure content.</p>
+            <p data-lang="fr">Souvenir des balbutiements du Web, chaque navigateur attribue aux balises un style par défaut, qui compromet la <strong>sémantique</strong>, d’une part, et, d’autre part, parasite la mise en forme. Aussi convient-il de réinitialiser les styles et d’obtenir le rendu visuel souhaité exclusivement au moyen de classes (ou d’<span data-js-link>attributs de données</span>).</p>
+            <p data-lang="en">Reminiscent of the early days of the Web, each browser assigns a default style to tags, which compromises <strong>semantics</strong> on the one hand and, on the other, interferes with formatting. It is therefore advisable to reset the styles and to obtain the desired visual rendering exclusively by means of classes (or <span data-js-link>data attributes</span>).</p>
+            <p data-lang="fr">Plutôt que recourir à une librairie comme <span data-js-link>Normalize.css</span> pour citer la plus connue, la propriété raccourcie <code>all: unset</code> gagne à être utilisée.</p>
+            <p data-lang="en">Instead of using a library like <span data-js-link>Normalize.css</span> to name the best known, the shortened property <code>all: unset</code> can be used.</p>
+            <p data-lang="fr">Ainsi…</p>
+            <p data-lang="en">Thus…</p>
+<pre>
+<code>a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, body, br, button, canvas, caption, cite, code, col, colgroup, data, datalist, dd, del, details, dfn, dialog, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, head, header, hgroup, hr, html, i, iframe, img, input, ins, kbd, label, legend, li, link, main, map, mark, math, menu, menuitem, meta, meter, nav, noscript, object, ol, optgroup, option, output, p, param, picture, pre, progress, q, rb, rp, rt, rtc, ruby, s, samp, script, section, select, slot, small, source, span, strong, style, sub, summary, sup, svg, table, tbody, td, template, textarea, tfoot, th, thead, time, title, tr, track, u, ul, var, video, wbr {
+    all: unset
+}</code>
+</pre>
+            <p data-lang="fr">… ou, en ne ciblant, que les éléments visuels…</p>
+            <p data-lang="en">… or, by targeting only the visual elements…</p>
+<pre>
+<code>a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, body, br, button, canvas, caption, cite, code, col, colgroup, data, datalist, dd, del, details, dfn, dialog, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, html, i, iframe, img, input, ins, kbd, label, legend, li, main, map, mark, math, menu, menuitem, meter, nav, object, ol, optgroup, option, output, p, param, picture, pre, progress, q, rb, rp, rt, rtc, ruby, s, samp, section, select, slot, small, source, span, strong, sub, summary, sup, svg, table, tbody, td, template, textarea, tfoot, th, thead, time, tr, track, u, ul, var, video, wbr {
+    all: unset
+}</code>
+</pre>
+            <p data-lang="fr">… réinitialise chaque balise.</p>
+            <p data-lang="en">… resets each tag.</p>
+            <p data-lang="fr">Un travail rigoureux commande de réinitialiser les seules balises pertinentes&#x202f;: la ressource est rare&#x202f;! n’en déplaise aux amateurs de vastes librairies <span data-js-abbreviation>Css</span> prêtes à l’emploi.</p>
+            <p data-lang="en">A rigorous work orders to reset only the relevant tags: the resource is rare! Notwithstanding the amateurs of vast <span data-js-abbreviation>Css</span> libraries ready to use.</p>
+            <p data-lang="fr"><span data-js-link>CSS Default Values Reference</span> indique les valeurs <span data-js-abbreviation>Css</span> par défaut de chaque sélecteur. La réinitialisation proposée peut paraître déconcertante quand les classes (ou les <span data-js-link>attributs de données</span>&#x202f;!) n’existent pas encore.</p>
+            <p data-lang="en"><span data-js-link>CSS Default Values Reference</span> shows the default <span data-js-abbreviation>Css</span> values for each selector. The proposed reset may seem confusing when the classes (or data attributes!) do not exist yet.</p>
+            <p data-lang="fr">Le support de la propriété <span data-css-quote>all</span> est universel, comme l’indique <span data-js-link>Can I use CSS unset value</span>.</p>
+            <p data-lang="en">The support of the <span data-css-quote>all</span> property is universal, as indicated in <span data-js-link>Can I use CSS unset value</span>.</p>
+            <p data-lang="fr">Cependant, la réinitialisation n’est pas parfaite, par exemple avec les éléments <code>&#x3c;details&#x3e;</code> et <code>&#x3c;summary&#x3e;</code>&#x202f;: une recherche devient alors nécessaire afin de déterminer comment les navigateurs gèrent ces balises. Avec cette syntaxe, l’astuce <code>*{box-sizing:border-box}</code> semble inopérante (le paramètre <span data-css-quote>boxSizingLymnee</span> y remédie) et les césures automatiques ne sont pas correctement prises en charge (une césure manuelle s’impose, <span data-css-quote>hy&#x26;#xad;phen</span>).</p>
+            <p data-lang="en">However, the reset is not perfect, for example with <code>&#x3c;details&#x3e;</code> and <code>&#x3c;summary&#x3e;</code> elements: a search then becomes necessary to determine how browsers handle these tags. With this syntax, the trick <code>*{box-sizing:border-box}</code> seems inoperative (the parameter <span data-css-quote>boxSizingLymnee</span> remedies this) and automatic hyphenation is not properly supported (manual hyphenation is required, <span data-css-quote>hy&#x26;#xad;phen</span>).</p>
+            <p data-lang="fr">Privé.e des éléments visuels imposés par le navigateur, l’auteur.autrice emploie la <strong>sémantique</strong> à bon escient… Pourquoi recourir à <code>&#x3c;strong&#x3e;</code> pour afficher du <span data-ym-font-weight="bold">gras</span>&#x202f;? Ce contenu a-t-il une haute importance&#x202f;? Pourquoi utiliser <code>&#x3c;em&#x3e;</code> pour obtenir de l’<span data-ym-font-style="italic">italique</span>&#x202f;? Ce texte mérite-t-il une emphase&#x202f;? (Une portion de texte en italique parmi du romain créée une rupture visuelle incongrue comme le soulignement des liens et autres acronymes, d’ailleurs&#x202f;!) Ne vaut-il mieux utiliser un élement générique <code>&#x3c;span&#x3e;</code> aux fins de décoration&#x202f;?</p>
+            <p data-lang="en">Deprived of the visual elements imposed by the browser, the author employs <strong>semantics</strong> to good effect… Why use <code>&#x3c;strong&#x3e;</code> to display <span data-ym-font-weight="bold">bold</span>? Is this content of high importance? Why use <code>&#x3c;em&#x3e;</code> to get <span data-ym-font-style="italic">italics</span>? Does this text deserve emphasis? (A portion of italicized text among Roman creates an incongruous visual break like underlining links and other acronyms, by the way!) Isn’t it better to use a generic <code>&#x3c;span&#x3e;</code> element for decorative purposes?</p>
+            <p data-lang="fr">Le respect de la <strong>sémantique</strong> favorise le référencement par les moteurs de recherche et la compréhension du contenu par les agents utilisateurs, notamment ceux qui n’offrent pas de restitution visuelle.</p>
+            <p data-lang="en">The respect of <strong>semantics</strong> favors the referencing by search engines and the comprehension of the content by user agents, especially those that do not offer visual restitution.</p>
+            <p data-lang="fr">Un lien peut servir à la compréhension du contenu par les robots d’indexation, mais ne pas être heureux à signaler au.à la lecteur.lectrice. Cette pratique est néanmoins déconseillée.</p>
+            <p data-lang="en">A link can be used for the understanding of the content by the indexing robots, but not be happy to report to the reader. This practice is however not recommended.</p>
+            <p data-lang="fr">Assigner un style à une balise oblige à modifier son apparence dans les cas spécifiques. Par exemple, afin de maintenir le rythme vertical nécessaire à une composition harmonieuse, est attribuée par défaut une marge supérieure aux paragraphes avec <code>p {margin-block-start: 1.5 rem}</code>&#x202f;; si cette marge devient indésirable, par exemple pour un paragraphe inclus dans un item de liste, l’emploi d’une classe comme <code>.unwelcome {margin-block-start: 0}</code> s’impose. Approche guère rationnelle…</p>
+            <p data-lang="en">Assigning a style to a tag forces to modify its appearance in specific cases. For example, in order to maintain the vertical rhythm necessary for a harmonious composition, a top margin is assigned by default to paragraphs with <code>p {margin-block-start: 1.5 rem}</code>; if this margin becomes undesirable, for example for a paragraph included in a list item, the use of a class such as <code>.unwelcome {margin-block-start: 0}</code> is required. Hardly a rational approach…</p>
+            <p data-lang="fr">À ce propos, incise, oublions les dimensions physiques au profit des <span data-js-link>propriétés et valeurs logiques</span> bien plus flexibles&#x202f;!</p>
+            <p data-lang="en">By the way, let’s forget the physical dimensions in favor of the much more flexible <span data-js-link>logical properties and values</span>!</p>
+            <p data-lang="fr" data-ym-text-decoration="line-through">Il peut paraître commode de styler directement (<span data-css-quote>en dur</span>) les balises qui reçoivent des <span data-js-link>pseudo-elements</span> par exemple guillemets ou ornements textuels, si leur apparence dans la page ne varie pas.</p>
+            <p data-lang="en" data-ym-text-decoration="line-through">It may seem convenient to style directly the tags that receive <span data-js-link>pseudo-elements</span>, for example quotation marks or textual ornaments, if their appearance in the page does not vary.</p>
+            <h2 data-lang="fr" data-js-summarize>Syn&#xad;taxe</h2>
+            <h2 data-lang="en" data-js-summarize>Syn&#xad;tax</h2>
+            <p data-js-summarize data-lang="fr">Un attribut s’écrit <code>data-ym-selecteur&#x3d;&#x22;valeur&#x22;</code>. La valeur reçoit des guillemets doubles de part et d’autre… <code>&#x22;valeur&#x22;</code>. Le sélecteur et la valeur doivent être <span data-ym-font-weight="var(--font-weight-bold)">conformes</span> aux <span data-js-link>spécifications Css</span>.</p>
+            <p data-js-summarize data-lang="en">An attribute is written <code>data-ym-selector&#x3d;&#x22;value&#x22;</code>. The value gets double quotes on both sides… <code>&#x22;value&#x22;</code>. The selector and the value must <span data-ym-font-weight="var(--font-weight-bold)">conform</span> to the <span data-js-link>CSS specifications</span>.</p>
+            <p data-js-summarize data-lang="fr">Connaissant la syntaxe <span data-js-abbreviation>Css</span>…</p>
+            <p data-js-summarize data-lang="en">Knowing the <span data-js-abbreviation>Css</span> syntax…</p>
+<pre data-js-summarize>
+<code>.myclass {
+    background-color: yellow;
+    display: flex
+}</code>
+</pre>
+            <p data-js-summarize data-lang="fr">… il est facile d’en déduire par rétroaction les <span data-js-link>attributs de données</span> <span data-js-abbreviation>Html</span>…</p>
+            <p data-js-summarize data-lang="en">… it is easy to deduce by feedback <span data-js-abbreviation>Html</span> <span data-js-link>Data Attributes</span>…</p>
+<pre data-js-summarize>
+<code>&#x3c;div data-ym-background-color="yellow" data-ym-display="flex"&#x3e;Div&#x3c;/div&#x3e;</code>
+</pre>
+            <p data-js-summarize data-lang="fr">La syntaxe utilisée par <span data-css-lymnee>Lymnee</span> utilise deux opérateurs booléens, de gauche à droite&#x202f;: <code>&#x202f;&#x26;&#x26;&#x202f;</code> (<span data-css-quote>and</span>, c’est le sélecteur contextuel), <code>&#x202f;&#x7c;&#x7c;&#x202f;</code> (<span data-css-quote>or</span>). L’arobase, <code>&#xff20;</code>, spécifie une règle (<span data-css-quote>@media</span> ou <span data-css-quote>@supports</span>), les pseudo-sélecteurs un pseudo-élement (<span data-css-quote>:</span>) ou une pseudo-classe (<span data-css-quote>::</span>), comme en <span data-js-abbreviation>Css</span>.</p>
+            <p data-lang="en">The syntax used by <span data-css-lymnee>Lymnee</span> uses two Boolean operators, from left to right: <code>&#x202f;&#x26;&#x26;&#x202f;</code> (<span data-css-quote>and</span>, this is the contextual selector), <code>&#x202f;&#x7c;&#x7c;&#x202f;</code> (<span data-css-quote>or</span>). The arobase, <code>&#xff20;</code>, specifies a rule (<span data-css-quote>@media</span> or <span data-css-quote>@supports</span>), the pseudo-selectors a pseudo-element (<span data-css-quote>:</span>) or a pseudo-class (<span data-css-quote>::</span>), as in <span data-js-abbreviation>Css</span>.</p>
+            <p data-lang="fr">La présente page est évidemment mise en forme grâce à <span data-css-lymnee>Lymnee</span>&#x202f;! La console du navigateur présente des dizaines d’exemples.</p>
+            <p data-lang="en">This page is obviously formatted thanks to <span data-css-lymnee>Lymnee</span>! The console of the navigator presents dozens of examples.</p>
+            <p data-lang="fr">Pour tester rapidement les exemples présentés, le fichier <span data-css-quote data-js-link>lymnee.sandbox.html</span> peut être utilisé. <span data-css-quote>Nota</span>. Avec un autre fichier, le paramètre <code>unsetLymnee</code> doit être défini <span data-css-quote>false</span> ou non défini.</p>
+            <p data-lang="en">To quickly test the examples presented, the file <span data-css-quote data-js-link>lymnee.sandbox.html</span> can be used. Note: With another file, the <code>unsetLymnee</code> parameter must be set to <span data-css-quote>false</span> or not set.</p>
+            <dl>
+                <dt data-js-summarize data-lang="fr">Attribut simple</dt>
+                <dt data-js-summarize data-lang="en">Simple attribute</dt>
+                <dd>
+<pre data-js-summarize>
+<code>&#x3c;p data-ym-color="#0000ff"&#x3e;Paragraph&#x3c;/p&#x3e;</code>
+</pre>
+<pre data-js-summarize>
+<code>[data-ym-color="#0000ff"] {
+    color: #0000ff
+}</code>
+</pre>
+                    <p data-lang="fr">Une balise peut recevoir un nombre infini d’<span data-js-link>attributs de données</span>…</p>
+                    <p data-lang="en">A tag can receive an infinite number of <span data-js-link>data attributes</span>…</p>
+<pre data-js-summarize>
+<code>&#x3c;p data-ym-color="blue" data-ym-font-size="medium"&#x3e;Paragraph&#x3c;/p&#x3e;</code>
+</pre>
+                    <p data-lang="fr">Le nom d’un attribut n’est pas duplicable&#x202f;: l’opérateur <code>&#x202f;&#x7c;&#x7c;&#x202f;</code> répond à cet usage.</p>
+                    <p data-lang="en">The name of an attribute is not duplicable: the <code>&#x202f;&#x7c;&#x7c;&#x202f;</code> operator is used for this purpose.</p>
+                    <p data-lang="fr"><span data-js-link>Pseudo-éléments</span> et <span data-js-link>pseudo-classes</span> s’écrivent…</p>
+                    <p data-lang="en"><span data-js-link>Pseudo-elements</span>  and <span data-js-link>pseudo-classes</span> are written…</p>
+<pre data-js-summary>
+<code>&#x3c;p data-ym-color="red::first-letter"&#x3e;Paragraph&#x3c;/p&#x3e;</code>
+</pre>
+<pre data-js-summary>
+<code>[data-ym-color="red::first-letter"]::first-letter {
+    color: red
+}</code>
+</pre>
+<pre data-js-summary>
+<code>&#x3c;a data-ym-content="' ['attr(href)']'::after" href="http://info.cern.ch/hypertext/WWW/TheProject.html"&#x3e;The World Wide Web project&#x3c;/a&#x3e;</code>
+</pre>
+<pre data-js-summary>
+<code>[data-ym-content="' ['attr(href)']'::after"]::after {
+    content: ' ['attr(href)']'
+}</code>
+</pre>
+<pre data-js-summary>
+<code>&#x3c;p data-ym-color="red::before" data-ym-content="'♩Ox2001'::before"&#x3e;Paragraph&#x3c;/p&#x3e;</code>
+</pre>
+<pre data-js-summary>
+<code>[data-ym-color="red::before"]::before {
+    color: red
+}
+[data-ym-content="'♩Ox2001'::before"]::before {
+    content:'♩\2001'
+}</code>
+</pre>
+<pre data-js-summary>
+<code>&#x3c;p data-ym-content="'Ox266B'::before"&#x3e;Paragraph&#x3c;/p&#x3e;</code>
+</pre>
+<pre data-js-summary>
+<code>[data-ym-content="'Ox266B'::before"]::before {
+    content: '\266B'
+}</code>
+</pre>
+                    <p data-lang="fr">Les caractères <span data-css-quote>Unicode</span> peuvent être écrits directement ou encodés au format <span data-css-quote>UTF-16</span>. Deux entités encodées au format <span data-css-quote>UTF-16</span> ne peuvent se suivre. Ces caractères doivent être encadrés par un guillemet droit, <span data-css-quote>'</span>.</p>
+                    <p data-lang="en"><span data-css-quote>Unicode</span> characters can be written directly or encoded in <span data-css-quote>UTF-16</span> format. Two entities in <span data-css-quote>UTF-16</span>  format cannot follow each other. These characters must be surrounded by a right quotation mark, , <span data-css-quote>'</span>.</p>
+                    <p data-lang="fr">La pseudo-classe de négation <span data-css-quote data-js-link><em>:not</em></span> est supportée…</p>
+                    <p data-lang="en">The negation pseudo-class <span data-css-quote data-js-link><em>:not</em></span> is supported…</p>
+                    <p data-lang="fr">Avec une classe et un paragraphe, le code s’utilise comme suit…</p>
+                    <p data-lang="en">With a class and a paragraph, this functional notation is used as follows…</p>
+<pre data-js-summary>
+&#x3c;div data-ym-color="red :not(.😂, p)"&#x3e;
+    &#x3c;h1&#x3e;Title&#x3c;/h1&#x3e;
+    &#x3c;h2 class="😂"&#x3e;Title&#x3c;/h2&#x3e;
+    &#x3c;p&#x3e;Paragraph&#x3c;/p&#x3e;
+&#x3c;/div&#x3e;
+</pre>
+<pre data-js-summary>
+<code>[data-ym-color="red :not(.😂, p)"] :not(.😂, p) {
+    color: red
+}</code>
+</pre>
+                    <p data-lang="fr">Noter l’espace <span data-css-quote>&#x20;</span> avant <span data-css-quote><em>:not</em></span>, car sont ciblés les descendants.</p>
+                    <p data-lang="en">Note the <span data-css-quote>&#x20;</span> before <span data-css-quote><em>:not</em></span>, because descendants are targeted.</p>
+                    <p data-lang="fr">Un attribut de données fonctionne également…</p>
+                    <p data-lang="en">A data attribute also works…</p>
+<pre data-js-summary>
+<code>&#x3c;div data-ym-color="red :not([data-foo])"&#x3e;
+    &#x3c;h1&#x3e;Title&#x3c;/h1&#x3e;
+    &#x3c;p data-foo&#x3e;Paragraph&#x3c;/p&#x3e;
+&#x3c;/div&#x3e;</code>
+</pre>
+<pre data-js-summary>
+<code>[data-ym-color="red :not([data-foo])"] :not([data-foo]) {
+    color: red
+}</code>
+</pre>
+                    <p data-js-summarize data-lang="fr"><span data-css-quote>Nota</span>. Le nom de cet attribut ne peut commencer par <span data-css-quote>data-ym-</span> ou l’espace de nom équivalent (<span data-css-quote>data-hello-</span>…) qui sert à déclarer les styles.</p>
+                    <p data-js-summarize data-lang="en">Note: The name of this attribute cannot start with <span data-css-quote>data-ym-</span> or the equivalent namespace (<span data-css-quote>data-hello-</span>…) used to declare styles.</p>
+                    <p data-lang="fr">Les <span data-js-link>Media queries</span> (<span data-css-quote>requêtes media</span>) sont prises en charge.</p>
+                    <p data-lang="en"><span data-js-link>Media queries</span> are supported.</p>
+<pre data-js-summarize>
+<code>&#x3c;div data-ym-max-width="1024px@media screen and (min-width: 1024px)"&#x3e;Div&#x3c;/div&#x3e;</code>
+</pre>
+<pre data-js-summarize>
+<code>@media screen and (min-width: 1024px) {
+    [data-ym-max-width="1024px@media screen and (min-width: 1024px)"] {
+        max-width: 1024px
+    }
+}</code>
+</pre>
+                    <p data-js-summarize data-lang="fr">Les règles <span data-js-link>@supports</span> fonctionnent…</p>
+                    <p data-js-summarize data-lang="en">The <span data-js-link>@supports</span> rules work…</p>
+<pre data-js-summarize>
+<code>&#x3c;div data-ym-display="flex@supports (display: grid)"&#x3e;
+    &#x3c;p&#x3e;A&#x3c;/p&#x3e;
+    &#x3c;p&#x3e;B&#x3c;/p&#x3e;
+&#x3c;/div&#x3e;</code>
+</pre>
+<pre data-js-summarize>
+<code>@supports (display: grid) {
+    [data-ym-display="flex@supports (display: grid)"] {
+        display: flex
+    }
+}</code>
+</pre>
+                    <p data-js-summarize data-lang="fr">Les <span data-js-link>variables Css</span> sont utilisables…</p>
+                    <p data-js-summarize data-lang="en"><span data-js-link>CSS variables</span> can be used…</p>
+<pre data-js-summarize>
+<code>&#x3c;p data-ym-font-weight="var(--font-weight-bold)"&#x3e;Paragraph&#x3c;/p&#x3e;</code>
+</pre>
+<pre data-js-summarize>
+<code>:root {
+    --font-weight-bold: 700
+}
+
+[data-ym-font-weight="var(--font-weight-bold)"] {
+    font-weight: var(--font-weight-bold)
+}</code>
+</pre>
+                    <p data-lang="fr">Une valeur peut comprendre n’importe quel caractère, hormis le guillemet <span data-css-quote>&#x22;</span>…</p>
+                    <p data-lang="en">A value can include any character, except the quote <span data-css-quote>&#x22;</span>…</p>
+<pre data-js-summarize>
+<code>&#x3c;img data-ym-filter="invert(13%) sepia(92%) saturate(7286%) hue-rotate(0deg) brightness(94%) contrast(117%)"&#x3e;</code>
+</pre>
+<pre data-js-summarize>
+<code>[data-ym-filter="invert(13%) sepia(92%) saturate(7286%) hue-rotate(0deg) brightness(94%) contrast(117%)"] {
+    filter: invert(13%) sepia(92%) saturate(7286%) hue-rotate(0deg) brightness(94%) contrast(117%)
+}</code>
+</pre>
+                    <p data-lang="fr">Dernière illustration…</p>
+                    <p data-lang="en">Latest example…</p>
+<pre data-js-summarize>
+<code>&#x3c;div data-ym-animation="sweep 1.5s ease-in-out"&#x3e;&#x3c;/div&#x3e;</code>
+</pre>
+<pre data-js-summarize>
+<code>[data-ym-animation="sweep 1.5s ease-in-out"] {
+    animation: sweep 1.5s ease-in-out
+}</code>
+</pre>
+                </dd>
+                <dt data-js-summarize data-lang="fr">Attribut avec l’opérateur <code>&#x202f;&#x7c;&#x7c;&#x202f;</code></dt>
+                <dt data-js-summarize data-lang="en">Attribute with the <code>&#x202f;&#x7c;&#x7c;&#x202f;</code> operator</dt>
+                <dd>
+                    <p data-lang-fr>Avec le booléen <span data-css-quote>or</span> sont appliquées plusieurs valeurs au même attribut. C’est utile notamment pour les <span data-js-link>Media queries</span> (<span data-css-quote>requêtes media</span>).</p>
+                    <p data-lang="en">With the boolean <span data-css-quote>or</span> several values are applied to the same attribute. This is useful especially for <span data-js-link>Media queries</span>.</p>
+                    <p data-lang="fr">Premier exemple…</p>
+                    <p data-lang="en">First exemple…</p>
+<pre data-js-summarize>
+<code>&#x3c;p data-ym-font-family="sans-serif@media screen || monospace@media print"&#x3e;Paragraph&#x3c;/p&#x3e;</code>
+</pre>
+<pre data-js-summarize>
+<code>@media screen {
+    [data-ym-font-family="sans-serif@media screen || monospace@media print"] {
+        font-family: sans-serif
+    }
+}
+@media print {
+    [data-ym-font-family="sans-serif@media screen || monospace@media print"] {
+        font-family: monospace
+    }
+}</code>
+</pre>
+                    <p data-lang="fr">Deuxième illustration…</p>
+                    <p data-lang="en">Second illustration…</p>
+<pre data-js-summary>
+<code>&#x3c;a data-ym-color="blue:link || grey:visited || yellow:focus || orange:hover || teal:active" data-ym-cursor="pointer" href="https://www.w3.org/" title="go to W3C" target="_blank" lang="en"&#x3e;W3c&#x3c;/a&#x3e;</code>
+</pre>
+<pre data-js-summary>
+<code>[data-ym-color="blue:link || grey:visited || yellow:focus || orange:hover || teal:active"]:link {
+    color: blue
+}
+[data-ym-color="blue:link || grey:visited || yellow:focus || orange:hover || teal:active"]:visited {
+    color: grey
+}
+[data-ym-color="blue:link || grey:visited || yellow:focus || orange:hover || teal:active"]:focus {
+    color: yellow
+}
+[data-ym-color="blue:link || grey:visited || yellow:focus || orange:hover || teal:active"]:hover {
+    color: orange
+}
+[data-ym-color="blue:link || grey:visited || yellow:focus || orange:hover || teal:active"]:active {
+    color: teal
+}
+[data-ym-cursor="pointer"] {
+    cursor: pointer
+}</code>
+</pre>
+                    <p data-lang="fr">L’ordre des sélecteurs (l’acronyme <span data-css-quote>LoVe Fears HAte</span> constitue un moyen mnémotechnique) est respecté dans la feuille de style produite.</p>
+                    <p data-lang="en">The order of the selectors (the acronym <span data-css-quote>LoVe Fears HAte</span> is a mnemonic) is respected in the produced style sheet.</p> 
+                    <p data-lang="fr">Troisième exemple…</p>
+                    <p data-lang="en">Third example…</p>
+<pre data-js-summarize>
+<code>&#x3c;div data-ym-display="flex@media screen and (min-width: 30em) and (max-width: 49em) || inline@media screen and (min-width: 50em)"&#x3e;Div&#x3c;/div&#x3e;</code>
+</pre>
+<pre data-js-summarize>
+<code>@media screen and (min-width: 30em) and (max-width: 49em) {
+    [data-ym-display="flex@media screen and (min-width: 30em) and (max-width: 49em) || inline@media screen and (min-width: 50em)"] {
+        display: flex
+    }
+}
+@media screen and (min-width: 50em) {
+    [data-ym-display="flex@media screen and (min-width: 30em) and (max-width: 49em) || inline@media screen and (min-width: 50em)"] {
+        display: inline
+    }
+}</code>
+</pre> 
+                    <p data-lang="fr">La quatrième illustration est plus complexe à appréhender…</p>
+                    <p data-lang="en">The fourth illustration is more complex to understand…</p>
+<pre data-js-summarize>
+<code>&#x3c;div data-ym-display="inline-block::before || block"&#x3e;Div&#x3c;/div&#x3e;</code>
+</pre>
+<pre data-js-summarize>
+<code>[data-ym-display="inline-block::before || block"]::before {
+    display: inline-block
+}
+[data-ym-display="inline-block::before || block"] {
+    display: block
+}</code>
+</pre>
+                </dd>
+                <dt data-js-summarize data-lang="fr">Attribut avec l’opérateur <code>&#x202f;&#x26;&#x26;&#x202f;</code></dt>
+                <dt data-js-summarize data-lang="en">Attribute with the <code>&#x202f;&#x26;&#x26;&#x202f;</code> operator</dt>
+                <dd>
+                    <p data-lang="fr">Le booléen <span data-css-quote>and</span> permet l’usage d’un sélecteur contextuel.</p>
+                    <p data-lang="en">The boolean <span data-css-quote>and</span> allows the use of a contextual selector.</p>
+                    <p data-lang="fr">Premier exemple…</p>
+                    <p data-lang="en">First exemple…</p>
+<pre data-js-summarize>
+<code>&#x3c;div class="ispage"&#x3e;
+    &#x3c;div data-ym-background-color="red && .ispage"&#x3e;Div&#x3c;/div&#x3e;
+&#x3c;/div&#x3e;</code>
+</pre>
+<pre data-js-summarize>
+<code>.ispage [data-ym-background-color="red && .ispage"] {
+    background-color: red
+}</code>
+</pre>
+                    <p data-lang="fr">Deuxième illustration, avec deux sélecteurs contextuels différents…</p>
+                    <p data-lang="en">Second illustration, with two different contextual selectors…</p>
+<pre data-js-summarize>
+<code>&#x3c;div class="ishome"&#x3e;
+    &#x3c;div data-ym-font-weight="600@media screen and (min-width: 30em) and (max-width: 49em) && .ishome || 700@media screen and (min-width: 50em) && .ishome"&#x3e;Div&#x3c;/div&#x3e;
+&#x3c;/div&#x3e;
+
+&#x3c;div class="ispage"&#x3e;
+    &#x3c;div data-ym-font-weight="600@media screen and (min-width: 30em) and (max-width: 49em) && .ispage || 700@media screen and (min-width: 50em) && .ispage"&#x3e;Div&#x3c;/div&#x3e;
+&#x3c;/div&#x3e;</code>
+</pre>
+<pre data-js-summarize>
+<code>@media screen and (min-width: 30em) and (max-width: 49em) {
+    .ishome [data-ym-font-weight="600@media screen and (min-width: 30em) and (max-width: 49em) && .ishome || 700@media screen and (min-width: 50em) && .ishome"] {
+        font-weight: 600
+    }
+}
+
+@media screen and (min-width: 50em) {
+    .ishome [data-ym-font-weight="600@media screen and (min-width: 30em) and (max-width: 49em) && .ishome || 700@media screen and (min-width: 50em) && .ishome"] {
+        font-weight: 700
+    }
+}
+
+@media screen and (min-width: 30em) and (max-width: 49em) {
+    .ispage [data-ym-font-weight="600@media screen and (min-width: 30em) and (max-width: 49em) && .ispage || 700@media screen and (min-width: 50em) && .ispage"] {
+        font-weight: 600
+    }
+}
+
+@media screen and (min-width: 50em) {
+    .ispage [data-ym-font-weight="600@media screen and (min-width: 30em) and (max-width: 49em) && .ispage || 700@media screen and (min-width: 50em) && .ispage"] {
+        font-weight: 700
+    }
+}</code>
+</pre>
+                    <p data-lang="fr">Ultimes exemples…</p>
+                    <p data-lang="en">Finals examples…</p>
+<pre data-js-summarize>
+<code>&#x3c;div data-js-summary="open"&#x3e;
+    &#x3c;p data-ym-color="blue && [data-js-summary=close] || red && [data-js-summary=open]"&#x3e;Summary&#x3c;/p&#x3e;
+&#x3c;/div&#x3e;</code>
+</pre>
+<pre data-js-summarize>
+<code>[data-js-summary=close] [data-ym-color="blue && [data-js-summary=close] || red && [data-js-summary=open]"] {
+    color: blue
+}
+
+[data-js-summary=open] [data-ym-color="blue && [data-js-summary=close] || red && [data-js-summary=open]"] {
+    color: red
+}</code>
+</pre>
+<pre data-js-summarize>
+<code>&#x3c;details open&#x3e;
+    &#x3c;summary&#x3e;Summary&#x3c;/summary&#x3e;
+    &#x3c;p data-ym-color="blue && details[open]"&#x3e;Details&#x3c;/p&#x3e;
+&#x3c;/details&#x3e;</code>
+</pre>
+<pre data-js-summarize>
+<code>details[open] [data-ym-color="blue && details[open]"] {
+    color: blue
+}</code>
+</pre>
+                    <p data-lang="fr">Le sélecteur contextuel peut être un identifiant <code>#monidentifiant</code>, une classe <code>.maclasse</code> ou un attribut <code>&#x5b;monattribut&#x5d;</code>.</p>
+                    <p data-lang="en">The contextual selector can be an identifier <code>#myidentifier</code>, a class <code>.myclass</code> or an attribute <code>&#x5b;myattribute&#x5d;</code>.</p>
+                    <p data-lang="fr">Le sélecteur contextuel est commode pour <span data-css-quote>préparer</span> un contenu invisible au chargement de la page, qui s’affichera ultérieurement grâce à JavaScript…</p>
+                    <p data-lang="en">The contextual selector is convenient for <span data-css-quote>preparing</span> content that is invisible when the page loads, and that will be displayed later thanks to JavaScript…</p>
+<pre data-js-summarize>
+<code>&#x3c;div id="foo"&#x3e;
+    &#x3c;div data-ym-background-color="red && [data-js-bar]"&#x3e;Div&#x3c;/div&#x3e;
+&#x3c;/div&#x3e;</code>
+</pre>
+<pre data-js-summarize>
+<code>&#x3c;script&#x3e;
+document.querySelector('#foo').setAttribute('data-js-bar', '');
+&#x3c;/script&#x3e;</code>
+</pre>
+                    <p data-lang="fr">Pour viser en plus un élément <code>&#x3c;span&#x3e;</code>, la syntaxe devient…</p>
+                    <p data-lang="en">To additionally target a <code>&#x3c;span&#x3e;</code> element, the syntax becomes…</p>
+<pre data-js-summarize>
+<code>&#x3c;script&#x3e;
+document.querySelector('#foo').setAttribute('data-js-bar', '');
+document.querySelector('#foo span').setAttribute('data-js-bar', '');
+&#x3c;/script&#x3e;</code>
+</pre>
+                    <p data-lang="fr">Afin d’ajouter l’attribut à tous les <span data-css-quote>enfants</span>, nous utilisons…</p>
+                    <p data-lang="en">In order to add the attribute to all <span data-css-quote>children</span>, we use…</p>
+<pre data-js-summarize>
+<code>&#x3c;script&#x3e;
+document.querySelector('#foo').setAttribute('data-js-bar', '');
+document.querySelector('#foo > *').setAttribute('data-js-bar', '');
+&#x3c;/script&#x3e;</code>
+</pre>
+                </dd>
+            </dl>
+            <p data-lang="fr">Le codage manuel du style de ces <span data-js-link>attributs de données</span> est facile, mais il peut être automatisé.</p>
+            <p data-lang="en">Hand coding the style of these <span data-js-link>data attributes</span> is easy, but it can be automated.</p>
+            <h2 data-lang="fr" data-js-summarize>Li&#xad;brai&#xad;rie</h2>
+            <h2 data-lang="en" data-ym-margin-block-start="var(--margin-block)" data-js-summarize>Li&#xad;brarie</h2>
+            <p data-lang="fr">La simplicité de lecture de <span data-css-lymnee>Lymnee</span> par un humain facilite son traitement logique…</p>
+            <p data-lang="en">The simplicity of reading <span data-css-lymnee>Lymnee</span> by a human facilitates its logical treatment…</p>
+            <h3 data-lang="fr" data-js-summarize>Avec XPath&#x202f;?</h3>
+            <h3 data-lang="en" data-js-summarize>With XPath?</h3>
+            <p data-lang="fr">… Surtout que le langage de requête <span data-js-link>XML Path Language</span> localise les nœuds.</p>
+            <p data-lang="en">… Especially since the <span data-js-link>XML Path Language</span> query locates the nodes.</p>
+            <p data-lang="fr">En <span data-js-abbreviation>Php</span>, la syntaxe pour identifier ces nœuds s’écrit…</p>
+            <p data-lang="en">In <span data-js-abbreviation>Php</span>, the syntax for identifying these nodes is…</p>
+<pre>
+<code>$prefixDataAttributes = 'data-ym-';
+$nodesYm = $xpath->query('//@*[starts-with(name(), "'.substr($prefixDataAttributes, 0, -1).'")]');</code>
+</pre>
+            <p data-lang="fr">Avec le paquet <span data-js-link>xpath</span> dans <span data-js-link>Node.js</span>, la syntaxe pour identifier ces nœuds s’écrit…</p>
+            <p data-lang="en">With the <span data-js-link>xpath</span> package in <span data-js-link>Node.js</span>, the syntax for identifying these nodes is written…</p>
+<pre>
+<code>var prefixDataAttributes = 'data-ym-';
+var nodesYm = xpath.select('//@*[starts-with(name(), "' +  prefixDataAttributes.slice(0, -1) + '")]', doc);</code>
+</pre>
+            <p data-lang="fr">En JavaScript, la syntaxe pour identifier ces nœuds s’écrit…</p>
+            <p data-lang="en">In JavaScript, the syntax for identifying these nodes is written…</p>
+<pre>
+<code>var prefixDataAttributes = 'data-ym-';
+var nodesYm = document.evaluate('//@*[starts-with(name(), "' +  prefixDataAttributes.slice(0, -1) + '")]', document, null, XPathResult.ANY_TYPE, null);</code>
+</pre>
+            <p data-lang="fr">La méthode <span data-js-link>iterateNext()</span> effectue une itération sur chaque nœud.</p>
+            <p data-lang="en">The <span data-js-link>iterateNext()</span> method performs an iteration on each node.</p>
+            <p data-lang="fr">Les trois prédicats sont identiques, bien évidemment&#x202f;!</p>
+            <p data-lang="en">The three predicates are identical, of course!</p>
+            <p data-lang="fr">Pour identifier toutes les balises en JavaScript, la syntaxe est…</p>
+            <p data-lang="en">To identify all tags in JavaScript, the syntax is…</p>
+<pre>
+<code>var tags = document.evaluate('//*', document, null, XPathResult.ANY_TYPE, null);</code>
+</pre>
+            <p data-lang="fr">Pour identifier uniquement les balises comportant l'attribut <span data-css-quote>data-ym-</span>, la requête devient…</p>
+            <p data-lang="en">To identify only tags with the attribute <span data-css-quote>data-ym-</span>, the query becomes…</p>
+<pre>
+<code>var prefixDataAttributes = `data-ym-`;
+var tags = document.evaluate('//*[starts-with(name(@*), "' +  prefixDataAttributes.slice(0, -1) + '")]', document, null, XPathResult.ANY_TYPE, null);</code>
+</pre>
+            <p data-lang="fr">… ou…</p>
+            <p data-lang="en">… or…</p>
+<pre>
+<code>var prefixDataAttributes = `data-ym-`;
+var tags = document.evaluate(`//@*[starts-with(name(), "` +  prefixDataAttributes.slice(0, -1) + `")]/..`, document, null, XPathResult.ANY_TYPE, null);</code>
+</pre>
+            <h3 data-lang="fr" data-js-summarize>… avec la mé&#xad;thode <span data-css-quote data-js-link>Document.querySelectorAll()</span></h3>
+            <h3 data-lang="en" data-js-summarize>… with the method <span data-css-quote data-js-link>Document.querySelectorAll()</span></h3>
+            <p data-lang="fr">En dernier ressort, la méthode <span data-css-quote data-js-link>Document.querySelectorAll()</span> plus simple et concise est préférée…</p>
+            <p data-lang="en">As a last resort, the simpler and more concise <span data-css-quote data-js-link>Document.querySelectorAll()</span> method is preferred…</p>
+<pre>
+<code>var prefixDataAttributes = `data-ym-`;
+var nodesYm = document.querySelectorAll(`*`);
+nodesYm.forEach((nodeYm) => {
+    for (let attribute of nodeYm.getAttributeNames()) {
+        if (attribute.startsWith(prefixDataAttributes.slice(0, -1))) {
+        }
+    }
+});</code>
+</pre>
+            <p data-js-summarize data-lang="fr">Le fichier en JavaScript, <span data-css-quote data-js-link>lymnee.reload.js</span>, injecte une feuille de style dans le <span data-js-abbreviation>Dom</span> à partir des <span data-js-link>attributs de données</span> qui respectent la syntaxe <span data-css-lymnee>Lymnee</span>.</p>
+            <p data-js-summarize data-lang="en">The file in JavaScript, <span data-css-quote data-js-link>lymnee.reload.js</span>, injects a style sheet into the <span data-js-abbreviation>Dom</span> from the <span data-js-link>data attributes</span> that respect the <span data-css-lymnee>Lymnee</span> syntax.</p>
+            <p data-js-summarize data-lang="fr">Le code <span data-js-abbreviation>Css</span> s’inscrit juste avant la fermeture de la balise <code>&#x3c;head&#x3e;</code>.</p>
+            <p data-js-summarize data-lang="en">The <span data-js-abbreviation>Css</span> code is written just before the <code>&#x3c;head&#x3e;</code> tag is close.</p>
+            <p data-js-summarize data-lang="fr">L’analyse puis la génération ne ralentissent pas significativement l’affichage du document.</p>
+            <p data-js-summarize data-lang="en">The analysis and then the generation do not significantly slow down the display of the document.</p>
+            <p data-js-summarize data-lang="fr">Cette option permet de tester une règle de style, instantanément, c’est-à-dire à la volée.</p>
+            <p data-js-summarize data-lang="en">This option also allows you to test a style rule, instantly, i.e. on the fly.</p>
+            <p data-js-summarize data-lang="fr">Le fichier doit être inclus à la fin de chaque page…</p>
+            <p data-js-summarize data-lang="en">The file must be included at the end of each page…</p>
+<pre>
+<code>&#x3c;script src="lymnee.reload.js"&#x3e;&#x3c;/script&#x3e;</code>
+</pre>
+            <p data-js-summarize data-lang="fr">Afin de ne pas gêner les utilisateurs, l’ancienne version <span data-css-quote data-js-link>lymnee.live.min.js</span> est toujours en ligne. Comme l’actuelle version, <span data-css-quote data-js-link>lymnee.reload.js</span>, utilise la version <span data-css-quote data-js-link>Ecma 6</span>, le code ne se compresse pas.</p>
+            <p data-js-summarize data-lang="en">In order not to bother users, the old version <span data-css-quote data-js-link>lymnee.live.min.js</span> is still online. As the current version, <span data-css-quote data-js-link>lymnee.reload.js</span>, uses the <span data-css-quote data-js-link>Ecma 6</span>, version, the code does not compress.
+            </p>
+            <h4 data-lang="fr" data-js-summarize>Pa&#xad;ra&#xad;mètres</h4>
+            <h4 data-lang="en" data-js-summarize>Pa&#xad;ram&#xad;e&#xad;ters</h4>
+            <p data-js-summarize data-lang="fr">Tous les paramètres, facultatifs, sont définis <span data-css-quote>false</span>. Ils doivent être déclarés avant l’appel de <span data-css-quote data-js-link>lymnee.reload.js</span>.</p>
+            <p data-js-summarize data-lang="en">All parameters, optional, are set to <span data-css-quote>false</span>. They must be declared before calling <span data-css-quote data-js-link>lymnee.reload.js</span>.</p>
+            <p data-lang="fr"><span data-css-lymnee>Lymnee</span> analyse les chaînes en Javascript qui s’affichent au chargement de la page. Seule condition&#x202f;: le script <span data-css-quote data-js-link>lymnee.reload.js</span> doit être appelé juste avant la balise <code>&#x3c;/body&#x3e;</code>.</p>
+            <p data-lang="en"><span data-css-lymnee>Lymnee</span> parses the strings in Javascript that are displayed when the page are displayed at page load. The only condition: the script <span data-css-quote data-js-link>lymnee.reload.js</span> must be called just before the <code>&#x3c;/body&#x3e;</code> tag.</p>
+            <dl>
+                <dt data-js-summarize data-lang="fr">Paramètre <code>boxSizingLymnee</code></dt>
+                <dt data-js-summarize data-lang="en">Parameter<code>boxSizingLymnee</code></dt>
+                <dd>
+                    <p data-js-summarize data-lang="fr">Si ce paramètre est défini <span data-css-quote>true</span> avec le paramètre <code>unsetLymnee</code>, les éléments réinitialisés recevront la règle <code>box-sizing:border-box</code>.</p>
+                    <p data-js-summarize data-lang="en">If this parameter is set to <span data-css-quote>true</span> with the <code>unsetLymnee</code> parameter, the reset elements will receive the rule <code>box-sizing:border-box</code>.</p>
+                </dd>
+                <dt data-js-summarize data-lang="fr">Paramètre <code>cssAfterLymnee</code></dt>
+                <dt data-js-summarize data-lang="en">Parameter<code>cssAfterLymnee</code></dt>
+                <dd>
+                    <p data-js-summarize data-lang="fr">Ce paramètre permet d’ajouter un code <span data-js-abbreviation>Css</span> qui s’inscrira <span data-ym-font-weight="var(--font-weight-bold)">après</span> les styles générés par <span data-css-lymnee>Lymnee</span> à l’issue de l’analyse des <span data-js-link>attributs de données</span>.</p>
+                    <p data-js-summarize data-lang="en">This parameter allows to add a <span data-js-abbreviation>Css</span> code which will be written <span data-ym-font-weight="var(--font-weight-bold)">after</span>  the styles generated by <span data-css-lymnee>Lymnee</span> after the analysis of the <span data-js-link>data attributes</span>.</p>
+                </dd>
+                <dt data-js-summarize data-lang="fr">Paramètre <code>cssBeforeLymnee</code></dt>
+                <dt data-js-summarize data-lang="en">Parameter<code>cssBeforeLymnee</code></dt>
+                <dd>
+                    <p data-js-summarize data-lang="fr">Ce paramètre permet d’ajouter un code <span data-js-abbreviation>Css</span> qui s’inscrira <span data-ym-font-weight="var(--font-weight-bold)">avant</span> les styles générés par <span data-css-lymnee>Lymnee</span> à l’issue de l’analyse des <span data-js-link>attributs de données</span>.</p>
+                    <p data-js-summarize data-lang="en">This parameter makes it possible to add a <span data-js-abbreviation>Css</span> code which will be registered <span data-ym-font-weight="var(--font-weight-bold)">before</span> the styles generated by <span data-css-lymnee>Lymnee</span> at the end of the analysis of the <span data-js-link>data attributes</span>.</p>
+                    <p data-lang="fr">Il est aussi possible d’ajouter ce code directement dans la balise <code>&#x3c;head&#x3e; &#x3c;/head&#x3e;</code>.</p>
+                    <p data-lang="en">It is also possible to add this code directly in the <code>&#x3c;head&#x3e; &#x3c;/head&#x3e;</code>tag.</p>
+                </dd>
+                <dt data-js-summarize data-lang="fr">Paramètre <code>entriesLymnee</code></dt>
+                <dt data-js-summarize data-lang="en">Parameter<code>entriesLymnee</code></dt>
+                <dd>
+                    <p data-js-summarize data-lang="fr">Ce paramètre, défini par un objet <span data-css-quote>Set</span>, spécifie des <span data-js-link>attributs de données</span> non présents lors du chargement de la page&#x202f;: ils sont analysés par <span data-css-lymnee>Lymnee</span> et ajoutés aux styles. Ils doivent avoir le même préfixe que les autres <span data-js-link>attributs de données</span> (<span data-css-quote>data-ym-</span>, <span data-css-quote>data-hello-</span> et autres espaces de nom équivalents…). Cette option est pratique afin de styler un contenu qui s’affichera plus tard. Par exemple…</p>
+                    <p data-js-summarize data-lang="en">This parameter, defined by a <span data-css-quote>Set</span> object, specifies <span data-js-link>data attributes</span> not present when the page is loaded: they are parsed by <span data-css-lymnee>Lymnee</span> and added to the styles. They must have the same prefix as the other data attributes (<span data-css-quote>data-ym-</span>, <span data-css-quote>data-hello-</span> and other equivalent namespaces…). This option is useful to style content that will be displayed later. For example…</p>
+<pre>
+<code>var entriesLymnee = new Set([`data-ym-background-color="black"`, `data-ym-color="red"`, `data-ym-font-size="large@media screen || medium@media screen and (max-width: 768px) || 12pt@media print"`]);</code>
+</pre>
+                    <p data-js-summarize data-lang="fr">Si les <span data-js-link>attributs de données</span> existent déjà, il sont fusionnés.</p>
+                    <p data-js-summarize data-lang="en">If the <span data-js-link>data attributes</span> already exist, they are merged.</p>
+                </dd>
+                <dt data-js-summarize data-lang="fr">Paramètre <code>prefixDataAttributes</code></dt>
+                <dt data-js-summarize data-lang="en">Parameter<code>prefixDataAttributes</code></dt>
+                <dd>
+                    <p data-js-summarize data-lang="fr">Si ce paramètre n’est pas défini, <span data-css-lymnee>Lymnee</span> analysera les <span data-js-link>attributs de données</span> préfixés par <span data-css-quote>data-ym-</span>. Le choix de l’espace de nom équivalent est sans importance&#x202f;: il doit débuter par <span data-css-quote>data-</span> et être suivi du nom choisi puis d’un tiret, par exemple <span data-css-quote>data-prefix-</span>.</p>
+                    <p data-js-summarize data-lang="en">If this parameter is not set, <span data-css-lymnee>Lymnee</span> will parse <span data-js-link>data attributes</span> prefixed with <span data-css-quote>data-ym-</span>. The choice of the equivalent namespace is irrelevant: it must start with <span data-css-quote>data-</span> and be followed by the chosen name and a dash, for example <span data-css-quote>data-prefix-</span>.</p>
+                </dd>
+                <dt data-js-summarize data-lang="fr">Paramètre <code>printLymnee</code></dt>
+                <dt data-js-summarize data-lang="en">Parameter<code>printLymnee</code></dt>
+                <dd>
+                    <p data-js-summarize data-lang="fr">Si ce paramètre est défini <span data-css-quote>true</span>, la console du navigateur affichera la feuille de style.</p>
+                    <p data-js-summarize data-lang="en">If this parameter is set to <span data-css-quote>true</span>, the browser console will display the stylesheet.</p>
+                </dd>
+                <dt data-js-summarize data-lang="fr">Paramètre <code>unsetLymnee</code></dt>
+                <dt data-js-summarize data-lang="en">Parameter<code>unsetLymnee</code></dt>
+                <dd>
+                    <p data-js-summarize data-lang="fr">Si ce paramètre est défini <span data-css-quote>true</span>, sont réinitialisés les styles par défaut des éléments qui reçoivent l’attribut <span data-css-quote>data-ym-</span> ou un espace de nom équivalent.</p>
+                    <p data-js-summarize data-lang="en">If this parameter is set to <span data-css-quote>true</span>, the default styles of elements that receive the attribute <span data-css-quote>data-ym-</span> or an equivalent namespace are reset.</p>
+                    <p data-js-summarize data-lang="fr"><span data-css-quote data-js-link>Browser Default Styles</span> indique comment les navigateurs stylent par défaut les éléments <span data-js-abbreviation>Html</span>.</p>
+                    <p data-js-summarize data-lang="en"><span data-css-quote data-js-link>Browser Default Styles</span> indicates how browsers style <span data-js-abbreviation>Html</span> elements by default.</p>
+                    <p data-js-summarize data-lang="fr">Ce paramètre peut aussi défini être défini par un objet <span data-css-quote>Set</span>&#x202f;: il vaut alors <span data-css-quote>true</span> et réinitialise en plus les élements <span data-js-abbreviation>Html</span> énumérés. Par exemple…</p>
+                    <p data-js-summarize data-lang="en">This parameter can also be defined by a <span data-css-quote>Set</span> object: it is then <span data-css-quote>true</span> and resets the listed <span data-js-abbreviation>Html</span> elements. For example.…</p>
+<pre>
+<code>var unsetLymnee = new Set([`h1`, `h2`, `h3`, `h4`, `h5`, `h6`]);</code>
+</pre>
+                    <p data-js-summarize data-lang="fr">Si les élements <span data-js-abbreviation>Html</span> énumérés existent déjà car ils ont reçu l’attribut <span data-css-quote>data-ym-</span>, ils sont fusionnés.</p>
+                    <p data-js-summarize data-lang="en">If the listed <span data-js-abbreviation>Html</span> elements already exist because they have been given the attribute data-ym-, they are merged.</p>
+                    <p data-js-summarize data-lang="fr" data-ym-text-decoration="line-through">Le recours à l’objet <span data-css-quote>unsetLymnee</span> s’impose notamment si des <span data-js-link>attributs de données</span> sont servis par JavaScript avant le chargement de la page.</p>
+                    <p data-js-summarize data-lang="en" data-ym-text-decoration="line-through">The use of the <span data-css-quote>unsetLymnee</span> object is particularly necessary if <span data-js-link>data attributes</span> are served by JavaScript before the page is loaded.</p>
+                </dd>
+                <dt data-js-summarize data-lang="fr">Tous les paramètres (à titre d’exemple)</dt>
+                <dt data-js-summarize data-lang="en">All parameters (for example)</dt>
+                <dd>
+<pre>
+<code>&#x3c;script&#x3e;
+var cssAfterLymnee = `
+:lang(fr) {  
+    quotes: '«\u202F' '\u202F»'
+}
+:lang(en) {  
+    quotes: '“' '”'
+}`,
+cssBeforeLymnee = `
+:root {
+    --font-size: medium;
+    --font-weight-bold: 700;
+    --font-weight-regular: 400;
+    --font-weight-strong: 600;
+}`,
+boxSizingLymnee = true,
+entriesLymnee = new Set([`data-ym-background-color="black"`, `data-ym-color="red"`, `data-ym-font-size="large@media screen || medium@media screen and (max-width: 768px) || 12pt@media print"`]),
+prefixDataAttributes = `data-ym-`,
+printLymnee = true,
+unsetLymnee = new Set([`h1`, `h2`, `h3`, `h4`, `h5`, `h6`]);
+&#x3c;/script&#x3e;</code>
+</pre>
+                </dd>
+            </dl>
+            <h4 data-js-summarize>Cdn</h4>
+            <p data-js-summarize data-lang="fr">Une version distante, accessible à l’<span data-js-abbreviation>Url</span> <span data-css-quote data-css-line-break>https://cdn.jsdelivr.net/gh/lymnee/lymnee/lymnee.reload.js</span>, est aussi utilisable en production…</p>
+            <p data-js-summarize data-lang="en">A remote version, accessible at the <span data-js-abbreviation>Url</span> <span data-css-quote data-css-line-break>https://cdn.jsdelivr.net/gh/lymnee/lymnee/lymnee.reload.js</span>, can also be used in production…</p>
+<pre data-js-summarize>
+<code>&#x3c;script src="https://cdn.jsdelivr.net/gh/lymnee/lymnee/lymnee.reload.js"&#x3e;&#x3c;/script&#x3e;</code>
+</pre>
+            <p data-js-summarize data-lang="fr">Ce fichier distant fonctionne comme le fichier local.</p>
+            <p data-js-summarize data-lang="en">This remote file works like the local file.</p>
+            <h3 data-lang="fr" data-js-summarize>Trai&#xad;te&#xad;ment</h3>
+            <h3 data-lang="en" data-js-summarize>Pro&#xad;cess&#xad;ing</h3>
+            <p data-js-summarize data-lang="fr">À l’issue de l’analyse des <span data-js-link>attributs de données</span>, les styles générés par <span data-css-lymnee>Lymnee</span> sont ajoutés à l’élement <span data-css-quote>&#x3c;head&#x3e;</span>.</p>
+            <p data-js-summarize data-lang="en">Upon completion of the <span data-js-link>data attribute</span> analysis, the styles generated by <span data-css-lymnee>Lymnee</span> are added to the <span data-css-quote>&#x3c;html&#x3e;</span> element.</p>
+            <p data-js-summarize data-lang="fr"><span data-css-lymnee>Lymnee</span> ajoute à la balise <span data-css-quote>&#x3c;html&#x3e;</span> l’attribut de donnée <span data-css-quote>data-lymnee</span> et supprime l’attribut de donnée <span data-css-quote>data-eenmyl</span> s’il existe&#x202f;: ce traitement permet une solution de repli en <span data-js-abbreviation>Css</span> quand le navigateur du client ne permet pas de styler le contenu faute de support <span data-js-link>Ecma 6</span>. Dans le présent document, nous utilisons les règles de style suivantes …</p>
+            <p data-js-summarize data-lang="en"><span data-css-lymnee>Lymnee</span> adds to the <span data-css-quote>&#x3c;html&#x3e;</span> tag the  <span data-css-quote>data-lymnee</span> data attribute and removes the <span data-css-quote>data-eenmyl</span> data attribute if it exists: this treatment allows a fallback solution in <span data-js-abbreviation>Css</span> when the client’s browser does not allow to style the content due to lack of <span data-js-link>Ecma 6</span> support. In this document, we use the following style rules…</p>
+<pre data-js-summarize>
+<code>&#x3c;html data-eenmyl&#x3e;</code>
+</pre>
+<pre data-js-summarize>
+<code>&#x3c;head&#x3e;
+    &#x3c;style&#x3e;
+        [data-eenmyl] [data-lʎɯuǝǝ] {
+            font-family: monospace
+        }
+        [data-eenmyl] [data-ǝǝuɯʎl] {
+            display: none
+        }
+    &#x3c;/style&#x3e;
+&#x3c;/head&#x3e;</code>
+</pre>
+<pre data-js-summarize>
+<code>&#x3c;body&#x3e;
+    &#x3c;div data-lʎɯuǝǝ data-ym-display="none"&#x3e;
+    &#x3c;/div&#x3e;
+    &#x3c;div data-ǝǝuɯʎl&#x3e;
+    &#x3c;/div&#x3e;
+&#x3c;/body&#x3e;</code>
+</pre>
+            <h2 data-js-summarize data-lang="fr">À pro&#xad;pos de ce do&#xad;cu&#xad;ment…</h2>
+            <h2 data-js-summarize data-lang="en">About the do&#xad;c&#xad;ument…</h2>
+            <p data-js-summarize data-lang="fr">Le présent document recourt extensivement aux <span data-js-link>attributs de données</span>&#x202f;: ils servent à styler le contenu, à afficher les abbréviations et les liens, à générer le sommaire et à servir quatre versions différentes…</p>
+            <p data-js-summarize data-lang="en">This document makes extensive use of <span data-js-link>data attributes</span>: they are used to style the content, to display abbreviations and links, to generate the summary and to serve four different versions…</p>
+            <ol data-js-summarize data-lang="fr">
+                <li>le texte en français&#x202f;;</li>
+                <li>le texte en anglais&#x202f;;</li>
+                <li>un résumé en français&#x202f;;</li>
+                <li>un résumé en anglais.</li>
+            </ol>
+            <ol data-js-summarize data-lang="en">
+                <li>the French text;</li>
+                <li>the English text;</li>
+                <li>a summary in French;</li>
+                <li>a summary in English.</li>
+            </ol>
+            <p data-lang="fr">(Les technologies courantes pour produire un contenu multilingue sont pénibles à utiliser et nécessitent un traitement côté serveur.)</p>
+            <p data-lang="en">(Current technologies for producing multilingual content are cumbersome to use and require server-side processing).</p>
+            <p data-lang="fr">L’application des <span data-js-link>attributs de données</span> peut être illimitée et rendre ainsi le <span data-js-abbreviation>Html</span>… <span data-css-quote>extensible</span>.</p>
+            <p data-lang="en">The application of <span data-js-link>data attributes</span> can be unlimited and thus make <span data-js-abbreviation>Html</span>… <span data-css-quote>extensible</span>.</p>
+            <p data-lang="fr">Les <span data-js-link>attributs de données</span> sont aussi faciles à utiliser en <span data-js-abbreviation>Html</span> qu’en JavaScript.</p>
+            <p data-lang="en"><span data-js-link>Data attributes</span> are as easy to use in <span data-js-abbreviation>Html</span> as in JavaScript.</p>
+            <div data-ym-color="var(--primary-color)" data-ym-display="none@media screen and (max-width: 767px) || block@media screen and (min-width: 768px)" data-ym-font-size="calc(var(--xx) * 1rem)" data-ym-margin-block-start="var(--margin-block)"><span data-css-line-break>&#x3c;/de&#xad;tails&#x3e;</span></div>
+            <p data-js-summarize>Contact, &#108;&#121;&#109;&#110;&#110;&#101;&#101;&#64;&#111;&#117;&#116;&#108;&#111;&#107;&#46;&#102;&#114;.</p>
+            <p data-js-summarize><span data-ym-display="inline:lang(fr) || none:lang(en)">Contenu à parfaire mis à jour le</span> <span data-ym-display="inline:lang(en) || none:lang(fr)">Perfectible content updated on</span> <span data-js-update></span>.</p>
+        </div>
+        <p data-js-back data-ym-color="var(--accent-color)" data-ym-cursor="pointer" data-ym-display="block" data-ym-font-size="calc(var(--x) * 1rem)@media screen and (max-width: 467px) || calc(var(--xx) * 1rem)@media screen and (min-width: 468px)" data-ym-margin-block-start="var(--margin-block)" data-ym-text-align="right" data-js-translation="back to top" title="retourner en haut de page" class="material-symbols-outlined">arrow_circle_up</p>
+    </div>
+<script src="doc.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/gh/lymnee/lymnee/lymnee.reload.js"></script>-->
+<script src="lymnee.reload.js"></script>
+</body>
+</html>
