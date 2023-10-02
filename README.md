@@ -1,5 +1,7 @@
 # lymnee.github.io
 
+## Lymnee Css
+
 > Attributs de données avec… style.
 
 > Classies… data-attributes.
@@ -8,12 +10,17 @@
 
 > Presentation of [Lymnee](https://github.com/lymnee/lymnee)… This method uses data attributes to style a Web content: the <abbr title="Cascading Styles Sheets">Css</abbr> code becomes easy to design and to maintain. [Lymnee](https://github.com/lymnee/lymnee) has a file in JavaScript, remote or local, to generate the styles with this method.
 
-> Css, Html, JavaScript, XPath
+## Lymnee Print
 
-## License
+## Fun calculator with Css calc()
+
+
+> Css, Html, JavaScript
+
+### License
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-## Author
+### Author
 
 Vincent Top-Roulet
