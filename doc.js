@@ -743,10 +743,20 @@ const shapeContent = () => {
 
                     switch (entry.getAttribute('data-lang'))  {
 
+
+                            if (entry.nextElementSibling && entry.nextElementSibling.getAttribute('data-lang') === 'en') {
+
+                                 console.log('oui');
+
+                            } else {
+
+                                console.log('non');
+                            }
+
+
                         case 'fr':
 
                             entry.setAttribute('data-ym-display', 'block:lang(fr) || none:lang(en)');
-
                         break;
 
                         default:
@@ -759,7 +769,6 @@ const shapeContent = () => {
                 if (!entry.hasAttribute('data-lang')) {
 
                     entry.setAttribute('data-ym-display', 'block');
-
 
                 }
     
@@ -799,7 +808,7 @@ const shapeContent = () => {
 
                 }
 
-                entry.setAttribute('data-ym-margin-block-start', 'var(--margin-block)');/**/
+                entry.setAttribute('data-ym-margin-block-start', 'var(--margin-block)');
 
             });
 
