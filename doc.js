@@ -741,26 +741,25 @@ const shapeContent = () => {
                 
                 if (entry.hasAttribute('data-lang')) {
 
-                    switch (entry.getAttribute('data-lang'))  {
+                    if (entry.nextElementSibling && entry.nextElementSibling.getAttribute('data-lang') === 'en') {
 
+                        switch (entry.getAttribute('data-lang'))  {
 
-                        case 'fr':
+                            case 'fr':
 
-                            entry.setAttribute('data-ym-display', 'block:lang(fr) || none:lang(en)');
+                                entry.setAttribute('data-ym-display', 'block:lang(fr) || none:lang(en)');
 
-                            if (entry.nextElementSibling && entry.nextElementSibling.getAttribute('data-lang') === 'en') {
+                            break;
 
-                                 console.log('oui');
+                            default:
 
-                            } else {
+                                entry.setAttribute('data-ym-display', 'block:lang(en) || none:lang(fr)');
+                        }
 
-                                console.log('non');
-                            }
-                        break;
+                    } else {
 
-                        default:
+                        entry.setAttribute('data-ym-display', 'block');
 
-                            entry.setAttribute('data-ym-display', 'block:lang(en) || none:lang(fr)');
                     }
     
                 }
