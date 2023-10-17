@@ -744,6 +744,10 @@ const shapeContent = () => {
                     switch (entry.getAttribute('data-lang'))  {
 
 
+                        case 'fr':
+
+                            entry.setAttribute('data-ym-display', 'block:lang(fr) || none:lang(en)');
+
                             if (entry.nextElementSibling && entry.nextElementSibling.getAttribute('data-lang') === 'en') {
 
                                  console.log('oui');
@@ -752,11 +756,6 @@ const shapeContent = () => {
 
                                 console.log('non');
                             }
-
-
-                        case 'fr':
-
-                            entry.setAttribute('data-ym-display', 'block:lang(fr) || none:lang(en)');
                         break;
 
                         default:
