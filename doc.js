@@ -799,6 +799,8 @@ const shapeContent = () => {
 
                 }
 
+                entry.setAttribute('data-ym-margin-block-start', 'var(--margin-block)');/**/
+
             });
 
         }
@@ -865,7 +867,7 @@ const shapeContent = () => {
 
         }
 
-        if (main.querySelectorAll('[data-css-html').length) {/* Ajout */
+        if (main.querySelectorAll('[data-css-html').length) {
 
             document.querySelectorAll('[data-css-html]').forEach((entry) => {
 
