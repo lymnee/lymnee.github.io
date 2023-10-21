@@ -736,30 +736,37 @@ const shapeContent = () => {
         }
     
         if (main.querySelectorAll('dt, h2, h3, h4, h5, h6, p, ol, ul').length) {
-    
+
+            const elements = main.querySelectorAll('dt, dd, h2, h3, h4, h5, h6, p, ol, ul');
+
             main.querySelectorAll('dt, dt, h2, h3, h4, h5, h6, p, ol, ul').forEach((entry) => {
                 
                 if (entry.hasAttribute('data-lang')) {
 
-                    if (entry.nextElementSibling && entry.nextElementSibling.getAttribute('data-lang') === 'en') {
+                    switch (entry.getAttribute('data-lang')) {
 
-                        switch (entry.getAttribute('data-lang'))  {
+                        /*
+                            *
+                                La syntaxe est boîteuse. Si le français est la langue exclusive, nous nous contentons d'afficher les élements en français. Sinon, nous affichons et cachons. L'élement écrit en anglais doit suivre l'élement écrit en français. Quid des autres langues en cas d'évolution future ?
+                            *
+                        */
 
-                            case 'fr':
+                        case 'fr':
+
+                            if (entry.nextElementSibling && entry.nextElementSibling.getAttribute('data-lang') !== 'en') {
+
+                                entry.setAttribute('data-ym-display', 'block');
+
+                            } else {
 
                                 entry.setAttribute('data-ym-display', 'block:lang(fr) || none:lang(en)');
+                            }
 
-                            break;
+                        break;
 
-                            default:
+                        default:
 
-                                entry.setAttribute('data-ym-display', 'block:lang(en) || none:lang(fr)');
-                        }
-
-                    } else {
-
-                        entry.setAttribute('data-ym-display', 'block');
-
+                            entry.setAttribute('data-ym-display', 'block:lang(en) || none:lang(fr)');
                     }
     
                 }
