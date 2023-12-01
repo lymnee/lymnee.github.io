@@ -709,8 +709,6 @@ const shapeContent = () => {
     
             main.querySelectorAll('code').forEach((entry) => {
 
-                /*entry.setAttribute('data-css-quote', '');*/
-
                 if (!entry.closest('pre')) {
 
                     entry.setAttribute('data-ym-color', 'var(--accent-color)::before || var(--accent-color)::after');
