@@ -709,7 +709,7 @@ const shapeContent = () => {
     
             main.querySelectorAll('code').forEach((entry) => {
 
-                entry.setAttribute('data-css-quote', '');
+                /*entry.setAttribute('data-css-quote', '');*/
 
                 if (!entry.closest('pre')) {
 
