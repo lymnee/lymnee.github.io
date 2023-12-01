@@ -719,6 +719,8 @@ const shapeContent = () => {
 
                     entry.setAttribute('data-ym-line-break', 'anywhere');
 
+                    entry.setAttribute('data-css-quote', '');
+
                 }
 
             });
