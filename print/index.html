@@ -195,6 +195,12 @@
 		<div data-css-html><p>Madame Marie CURIE</p><p>21, rue de l’École de Médecine</p><p>75006 PARIS</p></div>
 		<p data-lang="fr">Explication dispensable&#x202f;: <strong>Lymnee Print</strong> utilise des <span data-js-link>littéraux de gabarit</span>&#x202f;; les valeurs dans les chaînes entre <span data-css-quote>${</span> et <span data-css-quote>}</span> sont remplacées lors de l’affichage de la lettre. Par exemple <code>${prénom}</code> sera remplacé par la valeur contenue dans <code>&lt;prénom&gt;&lt;/prénom&gt;</code>, <code>&lt;prénom&gt;Marie&lt;/prénom&gt;</code>.</p>
 		<p data-lang="fr">Quel est donc l’intérêt de recourir à la balise <code>&lt;civilité&gt;&lt;/civilité&gt;</code> dans la première variante&#x202f;? Imaginons que la formule finale de la lettre soit <q>Je vous prie d’agréer, M…, mes salutations distinguées.</q>&#x202f;: nous pouvons écrire <q>Je vous prie d’agréer, ${civilité}, mes salutations distinguées.</q> C’est utile, notamment, pour un modèle ou pour un polypostage.</p>
+		<p data-lang="fr">Incise, nous pourrions écrire pour afficher en caractères gras l’expéditeur…</p>
+<pre lang="fr">&lt;div id="à"&gt;
+    &lt;p&gt;&lt;strong&gt;${identité}&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;${adresse}&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;${codepostaletville}&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;</pre
 		<h4 data-lang="fr">Paire de balises <code>&lt;expéditeur&gt;&lt;/expéditeur&gt;</code></h4>
 <pre lang="fr">&lt;expéditeur&gt;
 	&lt;prénom&gt;Victor&lt;/prénom&gt;
