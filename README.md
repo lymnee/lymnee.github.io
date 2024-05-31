@@ -12,8 +12,9 @@
 
 ## Lymnee Print
 
-## [Fun calculator with Css calc()](https://lymnee.github.io/css-calculator.html)
+> Composition de lettre et de polypostage / publipostage grâce à Html, Css et Javascript.
 
+## [Fun calculator with Css calc()](https://lymnee.github.io/css-calculator.html)
 
 > Css, Html, JavaScript
 
