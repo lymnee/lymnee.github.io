@@ -10,7 +10,7 @@
 
 > Presentation of [Lymnee](https://github.com/lymnee/lymnee)… This method uses data attributes to style a Web content: the <abbr title="Cascading Styles Sheets">Css</abbr> code becomes easy to design and to maintain. [Lymnee](https://github.com/lymnee/lymnee) has a file in JavaScript, remote or local, to generate the styles with this method.
 
-## Lymnee Print
+## [Lymnee Print](https://lymnee.github.io/print/index.html)
 
 > Composition de lettre et de polypostage / publipostage grâce à Html, Css et Javascript.
 
