@@ -218,10 +218,10 @@
 		<p data-lang="fr">Peuvent être ajoutées d’autres informations comme l’adresse électronique, le numéro d’appel…</p>
 		<h4 data-lang="fr">Paires de balise <code>&lt;expédition&gt;&lt;/expédition&gt;</code></h4>
 <pre lang="fr">&lt;expédition&gt;
-	&lt;date&gt;12 septembre 2023&lt;/date&gt;
+	&lt;date&gt;12 mai 2024&lt;/date&gt;
 	&lt;localité&gt;Bordeaux&lt;/localité&gt;
 	&lt;objet&gt;Genération d’une lettre&lt;/objet&gt;
-	&lt;références&gt;Envoi 2023-09-12-v1&lt;/références&gt;
+	&lt;références&gt;Envoi 2024-05-12-v1&lt;/références&gt;
 &lt;/expédition&gt;</pre>
 		<p data-lang="fr">Avec cet exemple de structure, le texte à écrire est…</p>
 <pre lang="fr">&lt;div id="élément"&gt;
@@ -281,7 +281,7 @@
 	&lt;p&gt;${prénom} ${nom}&lt;/p&gt;
 &lt;/div&gt;</pre>
 		<p data-lang="fr">Si un signataire est défini, il s’affichera à la fin de lettre ou des lettres dans le cadre d’un polypostage. Sa marge gauche sera alignée avec le bloc de l’adresse, conformément à l’usage.</p>
-		<p data-lang="fr">Le nom de la paire de balises <code>&lt;signature&gt;&lt;/signature&gt;</code> est nécessaire afin d’utiliser éventuellement une image de la signature. Elle contient le chemin et le nom du fichier (seulement le nom du fichier s’il figure dans le même répertoire que le document, solution la plus simple). Elle est insérée sous la signature textuelle. Elle est redimensionnée par le navigateur si nécessaire. La lettre peut évidemment être signée scripturalement après impression&#x202f;!</p>
+		<p data-lang="fr">Le nom de la paire de balises <code>&lt;signature&gt;&lt;/signature&gt;</code> est nécessaire afin d’utiliser éventuellement une image de la signature. Elle contient le chemin et le nom du fichier (seulement le nom du fichier s’il figure dans le même répertoire que le document, solution la plus simple). Elle est insérée sous la signature textuelle. Elle est redimensionnée par le navigateur si nécessaire. Un saut de page manuel peut s’imposer cependant. La lettre peut évidemment être signée scripturalement après impression&#x202f;!</p>
 		<h2 data-lang="fr">Polypostage</h2>
 		<p data-lang="fr">Lymnee Print est nativement conçue pour prendre en charge le polypostage. Il suffit de dupliquer la paire de balises <code>&lt;destinataire&gt;&lt;/destinataire&gt;</code> et d’en modifier les informations. Les paires de balises internes doivent être identiques. Une lettre par destinataire est produite dans le même document. La numérotation des pages recommence à 1 pour chaque lettre. Les valeurs définies dans chaque paire de balises &lt;destinataire&gt;&lt;/destinataire&gt; personnalisent le texte dupliqué.</p>
 		<p data-lang="fr">Il est possible d’accorder une portion de texte ou un mot au sexe du destinataire. Deux conditions sont nécessaires&#x202f;:</p>
