@@ -288,7 +288,7 @@ const manageToc = () => {
 
             let entries = main.querySelectorAll('h2[data-ym-display^="block:lang('+ document.documentElement.lang +')"], h2[data-ym-display="block"], h3[data-ym-display^="block:lang('+ document.documentElement.lang +')"], h3[data-ym-display="block"], h4[data-ym-display^="block:lang('+ document.documentElement.lang +')"], h4[data-ym-display="block"], h5[data-ym-display^="block:lang('+ document.documentElement.lang +')"], h5[data-ym-display="block"], h6[data-ym-display^="block:lang('+ document.documentElement.lang +')"], h6[data-ym-display="block"]');
         
-            let toc = `<p data-ym-color="var(--text-color)::before@media screen and (max-width: 468px) || var(--primary-color)" data-ym-display="block" data-ym-content="'=Ox00A0'::before@media screen and (max-width: 467px)" data-ym-font-size="calc(var(--x) * 1rem)@media screen and (min-width: 468px)">`;
+            let toc = `<p data-ym-color="var(--text-color)::before@media screen and (max-width: 468px) || var(--primary-color)" data-ym-display="block" data-ym-content="'=Ox00A0'::before@media screen and (max-width: 467px)" data-ym-font-size="var(--x)@media screen and (min-width: 468px)">`;
         
             if (document.documentElement.lang === 'fr') {
         
@@ -623,7 +623,7 @@ const shapeContent = () => {
 
                         entry.setAttribute('data-ym-color', 'var(--primary-color)');
 
-                        entry.setAttribute('data-ym-font-size', 'calc(var(--x) * 1rem)@media screen and (max-width: 467px) || calc(var(--xxx) * 1rem)@media screen and (min-width: 468px)');
+                        entry.setAttribute('data-ym-font-size', 'var(--x)@media screen and (max-width: 467px) || var(--xxx)@media screen and (min-width: 468px)');
 
                         entry.setAttribute('data-ym-font-variant', 'small-caps')
 
@@ -635,7 +635,7 @@ const shapeContent = () => {
 
                         entry.setAttribute('data-ym-content', '"=Ox00A0"::before@media screen and (max-width: 467px)');
 
-                        entry.setAttribute('data-ym-font-size', 'calc(var(--xx) * 1rem)@media screen and (min-width: 468px)');
+                        entry.setAttribute('data-ym-font-size', 'var(--xx)@media screen and (min-width: 468px)');
 
                     break;
 
@@ -645,7 +645,7 @@ const shapeContent = () => {
 
                         entry.setAttribute('data-ym-content', '"==Ox00A0"::before@media screen and (max-width: 467px)');
 
-                        entry.setAttribute('data-ym-font-size', 'calc(var(--x) * 1rem)@media screen and (min-width: 468px)');
+                        entry.setAttribute('data-ym-font-size', 'var(--x)@media screen and (min-width: 468px)');
 
                     break;
 
@@ -655,7 +655,7 @@ const shapeContent = () => {
 
                         entry.setAttribute('data-ym-content', '"===Ox00A0"::before@media screen and (max-width: 467px)');
 
-                        entry.setAttribute('data-ym-font-size', 'calc(var(--xs) * 1rem)@media screen and (min-width: 468px)');
+                        entry.setAttribute('data-ym-font-size', 'var(--xs)@media screen and (min-width: 468px)');
 
                 }
 
@@ -811,7 +811,7 @@ const shapeContent = () => {
     
             main.querySelectorAll('pre').forEach((entry) => {
 
-                entry.setAttribute('data-ym-border-inline-start', 'calc(var(--sssssssss) * 1rem) solid var(--accent-color)');
+                entry.setAttribute('data-ym-border-inline-start', 'var(--sssssssss) solid var(--accent-color)');
 
                 entry.setAttribute('data-ym-display', 'block');
 
@@ -819,7 +819,7 @@ const shapeContent = () => {
 
                 entry.setAttribute('data-ym-margin-block-start', 'var(--margin-block)');
 
-                entry.setAttribute('data-ym-padding-inline-start', 'calc(var(--s) * 1rem)');
+                entry.setAttribute('data-ym-padding-inline-start', 'var(--s)');
 
                 entry.setAttribute('data-ym-white-space', 'pre-wrap');
     
@@ -845,13 +845,13 @@ const shapeContent = () => {
 
             document.querySelectorAll('[data-css-html]').forEach((entry) => {
 
-                entry.setAttribute('data-ym-border-inline-start', 'calc(var(--sssssssss) * 1rem) solid var(--accent-color)');
+                entry.setAttribute('data-ym-border-inline-start', 'var(--sssssssss) solid var(--accent-color)');
 
                 entry.setAttribute('data-ym-display', 'block');
 
                 entry.setAttribute('data-ym-margin-block-start', 'var(--margin-block)');
 
-                entry.setAttribute('data-ym-padding-inline-start', 'calc(var(--s) * 1rem)'); 
+                entry.setAttribute('data-ym-padding-inline-start', 'var(--s)'); 
         
             });
 
