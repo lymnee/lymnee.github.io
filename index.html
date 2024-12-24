@@ -28,7 +28,7 @@
 </style>
 <title>Lymnee</title>
 </head>
-<body data-ym-color="var(--text-color)" data-ym-display="block" data-ym-font-family="var(--font-family-sans-serif)" data-ym-font-weight="var(--font-weight-regular)" data-ym-hypens="auto" data-ym-margin="auto" data-ym-padding-inline="calc(var(--xs) * 1rem)@media screen and (max-width: 640px)"  data-ym-max-width="480px" data-ym-width="calc(100vw - calc(var(--xs) * 1rem))@media screen and (min-width: 640px)">
+<body data-ym-color="var(--text-color)" data-ym-display="block" data-ym-font-family="var(--font-family-sans-serif)" data-ym-font-weight="var(--font-weight-regular)" data-ym-hypens="auto" data-ym-margin="auto" data-ym-padding-inline="var(--xs)@media screen and (max-width: 640px)"  data-ym-max-width="480px" data-ym-width="calc(100vw - var(--xs))@media screen and (min-width: 640px)">
 
         <div data-ym-line-height="var(--line-height)" data-ym-display="none" data-lʎɯuǝǝ >
             <h1>Lym&#xad;nee</h1>
@@ -38,11 +38,11 @@
 
         <div data-ym-display="grid" data-ym-line-height="1" data-ym-place-items="center" data-ym-min-height="100vh" data-ǝǝuɯʎl>
             <div>
-                <h1 data-ym-color="var(--primary-color)" data-ym-font-variant="small-caps" data-ym-font-size="calc(var(--x) * 1rem)@media screen and (max-width: 467px) || var(--xxx)@media screen and (min-width: 468px)">Lym&#xad;nee</h1>
-                <div data-ym-display="block" data-ym-font-size="calc(var(--xs) * 1rem)@media screen and (max-width: 467px) || calc(var(--x) * 1rem)@media screen and (min-width: 468px)" data-ym-margin-block-start="calc(var(--xs) * 1rem)">
-                <p data-ym-align-items="center" data-ym-display="flex" data-ym-gap="calc(var(--xs) * 1rem)"><a href="https://lymnee.github.io/css/index.html" data-ym-color="var(--primary-color)" data-ym-cursor="pointer" data-ym-font-family="sans-serif">䷡</a> Lymnee Css</p>
-                <p data-ym-align-items="center" data-ym-display="flex" data-ym-gap="calc(var(--xs) * 1rem)" data-ym-margin-block-start="calc(var(--xs) * 1rem)"><a href="https://lymnee.github.io/print/index.html" data-ym-color="var(--primary-color)" data-ym-cursor="pointer" data-ym-font-family="sans-serif">䷭</a> Lym&#xad;nee Print</p>
-                <p data-ym-align-items="center" data-ym-display="flex" data-ym-gap="calc(var(--xs) * 1rem)" data-ym-margin-block-start="calc(var(--xs) * 1rem)"><a href="https://lymnee.github.io/css-calculator.html" data-ym-color="var(--primary-color)" data-ym-cursor="pointer" data-ym-font-family="sans-serif">䷃</a> Fun calculator with Css calc()</p>
+                <h1 data-ym-color="var(--primary-color)" data-ym-font-variant="small-caps" data-ym-font-size="var(--x)@media screen and (max-width: 467px) || var(--xxx)@media screen and (min-width: 468px)">Lym&#xad;nee</h1>
+                <div data-ym-display="block" data-ym-font-size="var(--xs)@media screen and (max-width: 467px) || var(--x)@media screen and (min-width: 468px)" data-ym-margin-block-start="var(--xs)">
+                <p data-ym-align-items="center" data-ym-display="flex" data-ym-gap="var(--xs)"><a href="https://lymnee.github.io/css/index.html" data-ym-color="var(--primary-color)" data-ym-cursor="pointer" data-ym-font-family="sans-serif">䷡</a> Lymnee Css</p>
+                <p data-ym-align-items="center" data-ym-display="flex" data-ym-gap="var(--xs)" data-ym-margin-block-start="var(--xs)"><a href="https://lymnee.github.io/print/index.html" data-ym-color="var(--primary-color)" data-ym-cursor="pointer" data-ym-font-family="sans-serif">䷭</a> Lym&#xad;nee Print</p>
+                <p data-ym-align-items="center" data-ym-display="flex" data-ym-gap="var(--xs)" data-ym-margin-block-start="var(--xs)"><a href="https://lymnee.github.io/css-calculator.html" data-ym-color="var(--primary-color)" data-ym-cursor="pointer" data-ym-font-family="sans-serif">䷃</a> Fun calculator with Css calc()</p>
                 </div>
             </div>
         </div>
@@ -97,71 +97,6 @@
 
 };
 
-const getDimensions = () => {
-
-    try {
-
-        let widthScreen = window.screen.width * window.devicePixelRatio;
-
-        let heightScreen = window.screen.height * window.devicePixelRatio;
-
-        var scale = ``;
-
-        if (heightScreen > widthScreen) {
-
-            scale = heightScreen / widthScreen;
-
-        } else {
-
-            scale = widthScreen / heightScreen;
-
-        }
-
-        document.documentElement.style.setProperty('--scaleScreen', scale);
-
-        document.documentElement.style.setProperty('--xs', Math.pow(scale, 0));
-
-        var [backwardEnd, backwardPower, backwardStart, forwardEnd, forwardPower, forwardStart, step] = [-3.5, 0, 0.5, 3, 0, 1, 0.5];
-        
-        while (true) {
-
-            forwardStart = forwardStart + step;
-
-            document.documentElement.style.setProperty('--' + 'x'.repeat(++forwardPower), Math.pow(scale, forwardPower));
-
-            if (forwardStart > forwardEnd) {
-
-                break;
-
-            }
-
-        }
-        
-        while (true) {
-
-            backwardStart = backwardStart - step;
-
-            document.documentElement.style.setProperty('--' + 's'.repeat(++backwardPower), Math.pow(scale, -backwardPower));
-
-            if (backwardStart < backwardEnd) {
-
-                break;
-
-            }
-
-        }   
-
-        document.documentElement.style.setProperty('--line-height', Math.pow(scale, 1));
-
-
-
-    } catch {  
-
-        return false; 
-
-    }
-
-};
 
 const setStyles = () => {
 
@@ -183,6 +118,36 @@ const setStyles = () => {
 
         document.documentElement.style.setProperty('--font-weight-regular', '400');
 
+        document.documentElement.style.setProperty('--x', 'calc(1.41421356237 * 1rem)');
+
+        document.documentElement.style.setProperty('--xx', 'calc(2 * 1rem)');
+
+        document.documentElement.style.setProperty('--xxx', 'calc(2.82842712475 * 1rem)');
+
+        document.documentElement.style.setProperty('--xxx', 'calc(4 * 1rem)');
+
+        document.documentElement.style.setProperty('--xxxx', 'calc(5.65685424949 * 1rem)');
+
+        document.documentElement.style.setProperty('--xxxxx', 'calc(8 * 1rem)');
+
+        document.documentElement.style.setProperty('--xxxxx', 'calc(11.313708499 * 1rem)');
+
+        document.documentElement.style.setProperty('--xs', '1rem');
+
+        document.documentElement.style.setProperty('--s', 'calc(0.70710678118 * 1rem)');
+
+        document.documentElement.style.setProperty('--ss', 'calc(0.5) * 1rem)');
+
+        document.documentElement.style.setProperty('--sss', 'calc(0.35355339059 * 1rem)');
+
+        document.documentElement.style.setProperty('--ssss', 'calc(0.25 * 1rem)');
+
+        document.documentElement.style.setProperty('--sssss', 'calc(0.17677669529 * 1rem)');
+
+        document.documentElement.style.setProperty('--ssssss', 'calc(0.125 * 1rem)');
+
+        document.documentElement.style.setProperty('--margin-block', 'calc(0.70710678118 * 1rem)');
+
     } catch (error) {
 
         console.error(error);
@@ -200,8 +165,6 @@ async function runAsyncTasks() {
         await setStyles();
 
         await drawFromFavicon();
-
-        await getDimensions();
 
     } catch (error) {
 
