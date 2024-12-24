@@ -99,72 +99,6 @@ const formatText = (text) => {
 
 };
 
-const getDimensions = () => {
-
-    try {
-
-        let widthScreen = window.screen.width * window.devicePixelRatio;
-
-        let heightScreen = window.screen.height * window.devicePixelRatio;
-
-        var scale = ``;
-
-        if (heightScreen > widthScreen) {
-
-            scale = heightScreen / widthScreen;
-
-        } else {
-
-            scale = widthScreen / heightScreen;
-
-        }
-
-        document.documentElement.style.setProperty('--scaleScreen', scale);
-
-        document.documentElement.style.setProperty('--xs', Math.pow(scale, 0));
-
-        var [backwardEnd, backwardPower, backwardStart, forwardEnd, forwardPower, forwardStart, step] = [-3.5, 0, 0.5, 3, 0, 1, 0.5];
-        
-        while (true) {
-
-            forwardStart = forwardStart + step;
-
-            document.documentElement.style.setProperty('--' + 'x'.repeat(++forwardPower), Math.pow(scale, forwardPower));
-
-            if (forwardStart > forwardEnd) {
-
-                break;
-
-            }
-
-        }
-        
-        while (true) {
-
-            backwardStart = backwardStart - step;
-
-            document.documentElement.style.setProperty('--' + 's'.repeat(++backwardPower), Math.pow(scale, -backwardPower));
-
-            if (backwardStart < backwardEnd) {
-
-                break;
-
-            }
-
-        }   
-
-        document.documentElement.style.setProperty('--line-height', Math.pow(scale, 1));
-
-
-
-    } catch {  
-
-        return false; 
-
-    }
-
-};
-
 const manageAbbreviations = (selector) => {
 
     try {
@@ -508,13 +442,9 @@ const minifyMyCss = (css) => {
 
         return css
 
-            .replace(/([^0-9a-zA-Z\.#])\s+/g, '$1')
+            .replace(/[\n\r\t]+/g, '')
 
-            .replace(/\s([^0-9a-zA-Z\.#]+)/g, '$1')
-
-            .replace(/;}/g, `}`)
-
-            .replace(/\/\*.*?\*\//g, '');
+            .replace(/\s{2,}/g, ' ');  
 
     } catch (error) {
 
@@ -635,7 +565,37 @@ const setStyles = () => {
 
         document.documentElement.style.setProperty('--font-weight-bold', '700');
 
-        document.documentElement.style.setProperty('--margin-block', 'calc(var(--s) * 1rem');
+        document.documentElement.style.setProperty('--x', 'calc(1.41421356237 * 1rem)');
+
+        document.documentElement.style.setProperty('--xx', 'calc(2 * 1rem)');
+
+        document.documentElement.style.setProperty('--xxx', 'calc(2.82842712475 * 1rem)');
+
+        document.documentElement.style.setProperty('--xxx', 'calc(4 * 1rem)');
+
+        document.documentElement.style.setProperty('--xxxx', 'calc(5.65685424949 * 1rem)');
+
+        document.documentElement.style.setProperty('--xxxxx', 'calc(8 * 1rem)');
+
+        document.documentElement.style.setProperty('--xxxxx', 'calc(11.313708499 * 1rem)');
+
+        document.documentElement.style.setProperty('--xs', '1rem');
+
+        document.documentElement.style.setProperty('--s', 'calc(0.70710678118 * 1rem)');
+
+        document.documentElement.style.setProperty('--ss', 'calc(0.5) * 1rem)');
+
+        document.documentElement.style.setProperty('--sss', 'calc(0.35355339059 * 1rem)');
+
+        document.documentElement.style.setProperty('--ssss', 'calc(0.25 * 1rem)');
+
+        document.documentElement.style.setProperty('--sssss', 'calc(0.17677669529 * 1rem)');
+
+        document.documentElement.style.setProperty('--ssssss', 'calc(0.125 * 1rem)');
+
+        document.documentElement.style.setProperty('--margin-block', 'calc(0.70710678118 * 1rem)');
+
+
 
     } catch (error) {
 
@@ -1113,8 +1073,6 @@ async function runAsyncTasks() {
         await setLanguage();
 
         await translateTags();
-
-        await getDimensions();
 
         await manageLinks();
 
