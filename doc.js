@@ -596,7 +596,6 @@ const setStyles = () => {
         document.documentElement.style.setProperty('--margin-block', 'calc(0.70710678118 * 1rem)');
 
 
-
     } catch (error) {
 
         console.error(error);
@@ -811,7 +810,7 @@ const shapeContent = () => {
     
             main.querySelectorAll('pre').forEach((entry) => {
 
-                entry.setAttribute('data-ym-border-inline-start', 'var(--sssssssss) solid var(--accent-color)');
+                entry.setAttribute('data-ym-border-inline-start', 'var(--ssssss) solid var(--accent-color)');
 
                 entry.setAttribute('data-ym-display', 'block');
 
@@ -845,7 +844,7 @@ const shapeContent = () => {
 
             document.querySelectorAll('[data-css-html]').forEach((entry) => {
 
-                entry.setAttribute('data-ym-border-inline-start', 'var(--sssssssss) solid var(--accent-color)');
+                entry.setAttribute('data-ym-border-inline-start', 'var(--ssssss) solid var(--accent-color)');
 
                 entry.setAttribute('data-ym-display', 'block');
 
