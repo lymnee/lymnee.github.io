@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>🔐 Chiffrement AES-GCM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#3498db" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f6f8fa;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 15px;
+      display: block;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      resize: vertical;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    button {
+      background-color: #3498db;
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .result {
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 10px;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🔐 Chiffrement AES-GCM</h2>
+
+    <label for="password">Mot de passe :</label>
+    <input type="password" id="password" placeholder="Entrez un mot de passe" />
+
+    <label for="plaintext">Texte :</label>
+    <textarea id="plaintext" rows="5" placeholder="Entrez une clé ou un message..."></textarea>
+
+    <div class="button-group">
+      <button onclick="encrypt()">Chiffrer</button>
+      <button onclick="decrypt()">Déchiffrer</button>
+    </div>
+
+    <label for="result">Résultat :</label>
+    <textarea id="result" class="result" rows="8" readonly placeholder="Résultat affiché ici..."></textarea>
+  </div>
+
+  <script>
+    async function getKeyFromPassword(password, salt) {
+      const encoder = new TextEncoder();
+      const keyMaterial = await window.crypto.subtle.importKey(
+        "raw", encoder.encode(password), "PBKDF2", false, ["deriveKey"]
+      );
+      return await window.crypto.subtle.deriveKey(
+        {
+          name: "PBKDF2",
+          salt: salt,
+          iterations: 100000,
+          hash: "SHA-256"
+        },
+        keyMaterial,
+        { name: "AES-GCM", length: 256 },
+        false,
+        ["encrypt", "decrypt"]
+      );
+    }
+
+    async function encrypt() {
+      const password = document.getElementById("password").value;
+      const plaintext = document.getElementById("plaintext").value;
+      if (!password || !plaintext) return alert("Mot de passe ou texte manquant.");
+
+      const encoder = new TextEncoder();
+      const iv = window.crypto.getRandomValues(new Uint8Array(12));
+      const salt = window.crypto.getRandomValues(new Uint8Array(16));
+      const key = await getKeyFromPassword(password, salt);
+
+      const encrypted = await window.crypto.subtle.encrypt(
+        { name: "AES-GCM", iv: iv },
+        key,
+        encoder.encode(plaintext)
+      );
+
+      const result = {
+        iv: btoa(String.fromCharCode(...iv)),
+        salt: btoa(String.fromCharCode(...salt)),
+        ciphertext: btoa(String.fromCharCode(...new Uint8Array(encrypted)))
+      };
+
+      document.getElementById("result").value = JSON.stringify(result, null, 2);
+    }
+
+    async function decrypt() {
+      const password = document.getElementById("password").value;
+      let input;
+      try {
+        input = JSON.parse(document.getElementById("plaintext").value);
+      } catch {
+        return alert("Entrée invalide (pas un JSON valide).");
+      }
+
+      const decoder = new TextDecoder();
+      const iv = Uint8Array.from(atob(input.iv), c => c.charCodeAt(0));
+      const salt = Uint8Array.from(atob(input.salt), c => c.charCodeAt(0));
+      const data = Uint8Array.from(atob(input.ciphertext), c => c.charCodeAt(0));
+      const key = await getKeyFromPassword(password, salt);
+
+      try {
+        const decrypted = await window.crypto.subtle.decrypt(
+          { name: "AES-GCM", iv: iv },
+          key,
+          data
+        );
+        document.getElementById("result").value = decoder.decode(decrypted);
+      } catch {
+        alert("Erreur de déchiffrement. Mot de passe incorrect ?");
+      }
+    }
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').then(() => {
+        console.log("✅ Service worker enregistré !");
+      });
+    }
+  </script>
+</body>
+</html>
