@@ -1,183 +1,187 @@
+<!-- https://royalfig.github.io/fluid-typography-calculator/ -->
+<!-- https://fluidtypography.com/#usarusFluidTypographyGetStarted -->
 <!DOCTYPE html>
-<html lang="fr">
+<html data-eenmyl data-ym-display="block" data-ym-font-size="medium || clamp(1em, 0.909vw + 0.773em, 1.5em)" data-ym-font-weight="var(--font-weight-regular)" data-ym-line-height="1.5 || clamp(1.5em, 0.818vw + 1.295em, 1.95em)" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>🔐 Chiffrement AES-GCM</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#3498db" />
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f6f8fa;
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 40px 20px;
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Vincent Top-Roulet's developments in Html, Css, JavaScript and Latex. Développements de Vincent Top-Roulet en Html, Css, JavaScript et Latex.">
+<meta name="keywords" content="Html, Css, JavaScript">
+<meta name="author" content="Vincent Top-Roulet">
+<link rel="icon" href="%20" data-icon="䷀" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    [data-eenmyl] [data-lʎɯuǝǝ] {
+        font-family: monospace
     }
-
-    .container {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
-      width: 100%;
+    [data-eenmyl] [data-lʎɯuǝǝ] h1 {
+        font-size: x-large
     }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #2c3e50;
+    [data-eenmyl] [data-lʎɯuǝǝ] {
+        font-size: large
     }
-
-    label {
-      font-weight: bold;
-      margin-top: 15px;
-      display: block;
+    [data-eenmyl] [data-ǝǝuɯʎl] {
+        display: none
     }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 5px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 1em;
-      resize: vertical;
-    }
-
-    .button-group {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    button {
-      background-color: #3498db;
-      border: none;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-size: 1em;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #2980b9;
-    }
-
-    .result {
-      background: #f9f9f9;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 12px;
-      margin-top: 10px;
-      font-family: monospace;
-      white-space: pre-wrap;
-    }
-  </style>
+</style>
+<title>Lymnee</title>
 </head>
-<body>
-  <div class="container">
-    <h2>🔐 Chiffrement AES-GCM</h2>
+<body data-ym-color="var(--text-color)" data-ym-display="block" data-ym-font-family="var(--font-family-sans-serif)" data-ym-font-weight="var(--font-weight-regular)" data-ym-hypens="auto" data-ym-margin="auto" data-ym-padding-inline="var(--xs)@media screen and (max-width: 640px)"  data-ym-max-width="480px" data-ym-width="calc(100vw - var(--xs))@media screen and (min-width: 640px)">
 
-    <label for="password">Mot de passe :</label>
-    <input type="password" id="password" placeholder="Entrez un mot de passe" />
+        <div data-ym-line-height="var(--line-height)" data-ym-display="none" data-lʎɯuǝǝ >
+            <h1>Lym&#xad;nee</h1>
+            <p>You cannot access the content: either JavaScript is disabled in your browser or your browser is outdated.</p>
+            <p lang="fr">Il vous est impossible d’accéder au contenu&#x202f;: soit JavaScript est désactivé dans votre navigateur, soit votre navigateur est obsolescent.</p>
+        </div>
 
-    <label for="plaintext">Texte :</label>
-    <textarea id="plaintext" rows="5" placeholder="Entrez une clé ou un message..."></textarea>
+        <div data-ym-display="grid" data-ym-line-height="1" data-ym-place-items="center" data-ym-min-height="100vh" data-ǝǝuɯʎl>
+            <div>
+                <h1 data-ym-color="var(--primary-color)" data-ym-font-variant="small-caps" data-ym-font-size="var(--x)@media screen and (max-width: 467px) || var(--xxx)@media screen and (min-width: 468px)">Lym&#xad;nee</h1>
+                <div data-ym-display="block" data-ym-font-size="var(--xs)@media screen and (max-width: 467px) || var(--x)@media screen and (min-width: 468px)" data-ym-margin-block-start="var(--xs)">
+                <p data-ym-align-items="center" data-ym-display="flex" data-ym-gap="var(--xs)"><a href="https://lymnee.github.io/css/index.html" data-ym-color="var(--primary-color)" data-ym-cursor="pointer" data-ym-font-family="sans-serif">䷡</a> Lymnee Css</p>
+                <p data-ym-align-items="center" data-ym-display="flex" data-ym-gap="var(--xs)" data-ym-margin-block-start="var(--xs)"><a href="https://lymnee.github.io/print/index.html" data-ym-color="var(--primary-color)" data-ym-cursor="pointer" data-ym-font-family="sans-serif">䷭</a> Lym&#xad;nee Print</p>
+                <p data-ym-align-items="center" data-ym-display="flex" data-ym-gap="var(--xs)" data-ym-margin-block-start="var(--xs)"><a href="https://lymnee.github.io/css-calculator.html" data-ym-color="var(--primary-color)" data-ym-cursor="pointer" data-ym-font-family="sans-serif">䷃</a> Fun calculator with Css calc()</p>
+                </div>
+            </div>
+        </div>
+<script>
+    const drawFromFavicon = () => {
 
-    <div class="button-group">
-      <button onclick="encrypt()">Chiffrer</button>
-      <button onclick="decrypt()">Déchiffrer</button>
-    </div>
+    try {
 
-    <label for="result">Résultat :</label>
-    <textarea id="result" class="result" rows="8" readonly placeholder="Résultat affiché ici..."></textarea>
-  </div>
+        let favicon = document.querySelector('link[rel=icon]');
 
-  <script>
-    async function getKeyFromPassword(password, salt) {
-      const encoder = new TextEncoder();
-      const keyMaterial = await window.crypto.subtle.importKey(
-        "raw", encoder.encode(password), "PBKDF2", false, ["deriveKey"]
-      );
-      return await window.crypto.subtle.deriveKey(
-        {
-          name: "PBKDF2",
-          salt: salt,
-          iterations: 100000,
-          hash: "SHA-256"
-        },
-        keyMaterial,
-        { name: "AES-GCM", length: 256 },
-        false,
-        ["encrypt", "decrypt"]
-      );
+        let htmlStyle = getComputedStyle(document.documentElement);
+
+        let color = htmlStyle.getPropertyValue('--primary-color');
+
+        if (favicon) {
+        
+            let icon = favicon.getAttribute('data-icon');
+
+            if (icon) {
+
+                var canvas = document.createElement('canvas');
+
+                canvas.height = 64;
+
+                canvas.width = 64;
+
+                var ctx = canvas.getContext('2d');
+
+                ctx.fillStyle = color;
+
+                ctx.font = '500 64px sans-serif';
+
+                ctx.textAlign = 'center';
+
+                ctx.textBaseline = 'middle';
+                
+                ctx.fillText(icon, canvas.height/2, canvas.width/2);
+
+                favicon.href = canvas.toDataURL();
+
+                canvas.remove();
+                
+            }
+        
+        }
+
+    } catch {
+
+        return false;
+
     }
 
-    async function encrypt() {
-      const password = document.getElementById("password").value;
-      const plaintext = document.getElementById("plaintext").value;
-      if (!password || !plaintext) return alert("Mot de passe ou texte manquant.");
+};
 
-      const encoder = new TextEncoder();
-      const iv = window.crypto.getRandomValues(new Uint8Array(12));
-      const salt = window.crypto.getRandomValues(new Uint8Array(16));
-      const key = await getKeyFromPassword(password, salt);
 
-      const encrypted = await window.crypto.subtle.encrypt(
-        { name: "AES-GCM", iv: iv },
-        key,
-        encoder.encode(plaintext)
-      );
+const setStyles = () => {
 
-      const result = {
-        iv: btoa(String.fromCharCode(...iv)),
-        salt: btoa(String.fromCharCode(...salt)),
-        ciphertext: btoa(String.fromCharCode(...new Uint8Array(encrypted)))
-      };
+    try {
 
-      document.getElementById("result").value = JSON.stringify(result, null, 2);
+        /* https://www.materialpalette.com/red/green */
+
+        document.documentElement.style.setProperty('--accent-color', '#4cAf50');
+
+        document.documentElement.style.setProperty('--dark-primary-color', '#d32f2f');
+
+        document.documentElement.style.setProperty('--divider-color', '#bdbdbd');
+
+        document.documentElement.style.setProperty('--primary-color', '#f44336');
+
+        document.documentElement.style.setProperty('--text-color', '#212121');
+
+        document.documentElement.style.setProperty('--font-family-sans-serif', '"IBM Plex Sans", sans-serif');
+
+        document.documentElement.style.setProperty('--font-weight-regular', '400');
+
+        document.documentElement.style.setProperty('--x', 'calc(1.41421356237 * 1rem)');
+
+        document.documentElement.style.setProperty('--xx', 'calc(2 * 1rem)');
+
+        document.documentElement.style.setProperty('--xxx', 'calc(2.82842712475 * 1rem)');
+
+        document.documentElement.style.setProperty('--xxx', 'calc(4 * 1rem)');
+
+        document.documentElement.style.setProperty('--xxxx', 'calc(5.65685424949 * 1rem)');
+
+        document.documentElement.style.setProperty('--xxxxx', 'calc(8 * 1rem)');
+
+        document.documentElement.style.setProperty('--xxxxx', 'calc(11.313708499 * 1rem)');
+
+        document.documentElement.style.setProperty('--xs', '1rem');
+
+        document.documentElement.style.setProperty('--s', 'calc(0.70710678118 * 1rem)');
+
+        document.documentElement.style.setProperty('--ss', 'calc(0.5) * 1rem)');
+
+        document.documentElement.style.setProperty('--sss', 'calc(0.35355339059 * 1rem)');
+
+        document.documentElement.style.setProperty('--ssss', 'calc(0.25 * 1rem)');
+
+        document.documentElement.style.setProperty('--sssss', 'calc(0.17677669529 * 1rem)');
+
+        document.documentElement.style.setProperty('--ssssss', 'calc(0.125 * 1rem)');
+
+        document.documentElement.style.setProperty('--margin-block', 'calc(0.70710678118 * 1rem)');
+
+    } catch (error) {
+
+        console.error(error);
+
+        return false;
+
     }
 
-    async function decrypt() {
-      const password = document.getElementById("password").value;
-      let input;
-      try {
-        input = JSON.parse(document.getElementById("plaintext").value);
-      } catch {
-        return alert("Entrée invalide (pas un JSON valide).");
-      }
+};
 
-      const decoder = new TextDecoder();
-      const iv = Uint8Array.from(atob(input.iv), c => c.charCodeAt(0));
-      const salt = Uint8Array.from(atob(input.salt), c => c.charCodeAt(0));
-      const data = Uint8Array.from(atob(input.ciphertext), c => c.charCodeAt(0));
-      const key = await getKeyFromPassword(password, salt);
+async function runAsyncTasks() {
 
-      try {
-        const decrypted = await window.crypto.subtle.decrypt(
-          { name: "AES-GCM", iv: iv },
-          key,
-          data
-        );
-        document.getElementById("result").value = decoder.decode(decrypted);
-      } catch {
-        alert("Erreur de déchiffrement. Mot de passe incorrect ?");
-      }
+    try {
+
+        await setStyles();
+
+        await drawFromFavicon();
+
+    } catch (error) {
+
+        console.log(error.name);
+
+        console.log(error.message);
+
     }
 
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js').then(() => {
-        console.log("✅ Service worker enregistré !");
-      });
-    }
-  </script>
+}
+
+runAsyncTasks();
+
+var boxSizingLymnee = true,
+
+unsetLymnee =  new Set(['a']);
+</script>
+<script src="https://cdn.jsdelivr.net/gh/lymnee/lymnee/lymnee.reload.js"></script>
 </body>
 </html>
