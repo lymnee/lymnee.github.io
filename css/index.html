@@ -369,9 +369,9 @@ data-ym-font-size="medium"
 			<p data-lang="fr">Les césures automatiques ne sont pas correctement prises en charge (une césure manuelle s’impose, <span data-css-quote>hy&#x26;#xad;phen</span>). Sous Chrome, il est aussi possible d’imposer les césures…</p>
 			<p data-lang="en">Automatic hyphenation is not supported correctly (manual hyphenation is required, <span data-css-quote>hy&#x26;#xad;phen</span>). In Chrome, it is also possible to enforce hyphenation…</p>
 			<pre>
-<code>[lang='fr'] {
+<code>[lang="fr"] {
     -webkit-locale: 'fr';
-    font-language-override: 'FRA';
+    font-language-override: 'FRA'
 }</code>
 </pre>
             <p data-lang="en">However, the reset is not perfect, for example with <code>&#x3c;details&#x3e;</code> and <code>&#x3c;summary&#x3e;</code> elements: a search then becomes necessary to determine how browsers handle these tags. With this syntax, the trick <code>*{box-sizing:border-box}</code> seems inoperative (the parameter <span data-css-quote>boxSizingLymnee</span> remedies this) and automatic hyphenation is not properly supported (manual hyphenation is required, <span data-css-quote>hy&#x26;#xad;phen</span>).</p>
